@@ -77,7 +77,7 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    color: $gnb-color;
+    color: $gray-200;
 
     @include desktop {
       gap: 52px;
