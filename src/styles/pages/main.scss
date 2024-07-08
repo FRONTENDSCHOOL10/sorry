@@ -80,6 +80,13 @@ footer {
     width: 100%;
     gap: 15px;
     margin-top: 0.9375rem;
+
+    h3 {
+      font-size: 1.125rem;
+      margin-top: 0.625rem;
+      color: $gnb-color;
+      font-weight: 500;
+    }
   }
 }
 
@@ -91,16 +98,80 @@ footer {
   }
 }
 
-.quickView {
-  h3 {
-    font-size: 1.25rem;
-    margin-top: 0.625rem;
-    color: $gnb-color;
-  }
 
-  .vod__chapter {
-    margin-top: 0.3125rem;
-    color: grey;
+.vod__chapter {
+  margin-top: 0.3125rem;
+  color: grey;
+}
+
+
+.popularLive__ul {
+  position: relative;
+
+  li {
+    // width: inherit;
+
+    div {
+      // width: inherit;
+      display: flex;
+      position: relative;
+      align-items: end;
+      text-align: center;
+      top: -0.9375rem;
+      background-color: gray;
+
+      span {
+        flex: 0 0 auto;
+      }
+
+      img {
+        // 숫자 이미지
+        height: 6vh;
+        // flex-grow: 0;
+        // flex-shrink: 0;
+      }
+
+      h3 {
+        flex: 1 1 auto;
+        // flex-grow: 0;
+        background-color: blue;
+        margin-left: 0.9375rem;
+        padding-bottom: 0.1875rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        // flex-shrink: 0;
+      }
+    }
+  }
+}
+
+.liveProgram__ul {
+
+  .liveProgram__ul__info {
+    display: flex;
+    margin-top: 0.625rem;
+
+    div {
+      display: block;
+      margin-left: 0.9375rem;
+
+      h3 {
+        margin: 0 0 0 0.9375rem;
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 0.625rem;
+      }
+
+      div {
+        color: $gnb-color;
+        margin-bottom: 0.625rem;
+      }
+    }
+
+    img {
+      height: 7vh;
+    }
   }
 }
 
