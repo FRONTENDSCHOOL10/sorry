@@ -1,5 +1,6 @@
-$primary-color: #3498db;
+@use "./modules/" as *;
+@use "./pages/" as *;
 
 body {
-  background-color: black;
+  background-color: $background-color;
 }

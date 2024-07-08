@@ -1,0 +1,20 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+
+body *,
+body *::before,
+body *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $base-font-family;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* 숨김 콘텐츠 */
+.sr-only {
+  @include a11yHidden;
+}
