@@ -10,9 +10,11 @@
   z-index: 200;
   display: flex;
   flex-flow: row nowrap;
-  background: linear-gradient(180deg,
-      rgba(0, 0, 0, 0.7) 0%,
-      rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 
   @include desktop {
     padding: 1.8125rem 4.375rem;
