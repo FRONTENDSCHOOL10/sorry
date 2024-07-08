@@ -1,0 +1,178 @@
+@use "./../modules/" as *;
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+main,
+footer {
+  padding: 0 4.375rem;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  // 배너 블러 효과
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  }
+
+  @include desktop {
+    margin-top: 6.25rem;
+  }
+
+  @include tablet {
+    margin-top: 3.5rem;
+  }
+
+  @include mobile {
+    margin-top: 2.6875rem;
+  }
+}
+
+
+.contentsName {
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+  }
+}
+
+.mostContents,
+.quickView,
+.liveProgram,
+.popularLive,
+.onlyTving,
+.ads,
+.events,
+.footer {
+
+  color: #fff;
+  font-weight: 400;
+
+  h3 {
+    font-size: 1.666rem;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 3.75rem;
+  }
+
+
+  ul {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    margin-top: 0.9375rem;
+  }
+}
+
+
+.mostContents__ul {
+  div {
+    color: $gnb-color;
+    margin-top: 0.625rem;
+  }
+}
+
+.quickView {
+  h3 {
+    font-size: 1.25rem;
+    margin-top: 0.625rem;
+    color: $gnb-color;
+  }
+
+  .vod__chapter {
+    margin-top: 0.3125rem;
+    color: grey;
+  }
+}
+
+.ads {
+  margin-top: 3.75rem;
+}
+
+.footer {
+  margin-top: 9.375rem;
+  color: gray;
+  font-weight: 200;
+
+  .util__div {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      display: inherit;
+
+      p {
+        margin-right: 0.9375rem;
+      }
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  .goto {
+    hr {
+      border-bottom-width: 1px;
+      border-top-width: 20px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    div {
+      margin: 0 0.9375rem;
+      color: #fff;
+    }
+  }
+
+  .info {
+    margin-top: 3.125rem;
+
+    .info__link {
+      color: #fff;
+
+      span {
+        margin-right: 1.25rem;
+      }
+    }
+
+    .info__adress {
+      margin-top: 1.875rem;
+
+      span {
+        margin-right: 0.625rem;
+      }
+
+      p {
+        margin: 0.625rem 0;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .community {
+    margin: 1.875rem 0;
+  }
+}
