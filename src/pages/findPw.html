@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +6,15 @@
     <title>비밀번호 찾기</title>
   </head>
   <body>
-    <div>
+    <header class="header">
+      <h1 class="header__logo">
+        <a class="header__logo__link" href="/">
+          <span class="sr-only">타잉 로고</span>
+        </a>
+      </h1>
+    </header>
+
+    <section class="wrapper">
       <h1>비밀번호 찾기</h1>
       <p>
         아이디 확인 후 등록된 이메일 주소로 비밀번호 재설정을 위한 인증 이메일이
@@ -15,6 +23,6 @@
       </p>
       <input type="text" class="userId" placeholder="아이디" />
       <button type="button">확인</button>
-    </div>
+    </section>
   </body>
 </html>
