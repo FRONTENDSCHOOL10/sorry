@@ -10,6 +10,7 @@ body {
 main,
 footer {
   padding: 0 4.375rem;
+  color: $gray-200;
 }
 
 .banner {
@@ -29,11 +30,7 @@ footer {
     left: 0;
     right: 0;
     height: 300px;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 1) 100%
-    );
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
   }
 
   @include desktop {
@@ -48,6 +45,7 @@ footer {
     margin-top: 2.6875rem;
   }
 }
+
 
 .contentsName {
   display: flex;
@@ -68,6 +66,12 @@ footer {
 .ads,
 .events,
 .footer {
+  position: relative;
+
+  i {
+    color: #Fff;
+  }
+
   h3 {
     font-size: 1.666rem;
     color: #fff;
@@ -75,10 +79,11 @@ footer {
     margin-top: 3.75rem;
   }
 
+
   ul {
     display: flex;
     width: 100%;
-    gap: 15px;
+    gap: 10px;
     margin-top: 0.9375rem;
 
     span {
@@ -88,19 +93,49 @@ footer {
       font-weight: 500;
     }
   }
-}
 
-.mostContents__ul {
-  div {
-    color: $gnb-color;
-    margin-top: 0.625rem;
+  .prevButton,
+  .nextButton {
+    top: 60%;
+  }
+
+  .prevButton {
+    left: -50px;
+  }
+
+  .nextButton {
+    right: -30px;
   }
 }
+
+.mostContents {
+  &__ul {
+    white-space: nowrap;
+    overflow-x: hidden;
+
+    div {
+      color: $gnb-color;
+      margin-top: 0.625rem;
+    }
+
+    &__li {
+      width: 100%;
+      max-width: 240px;
+      min-width: 240px;
+      display: flex;
+      flex-flow: column nowrap;
+      overflow-y: hidden;
+    }
+  }
+
+}
+
 
 .vod__chapter {
   margin-top: 0.3125rem;
   color: grey;
 }
+
 
 .popularLive {
   &__ul {
@@ -116,6 +151,8 @@ footer {
       display: flex;
       flex-flow: column nowrap;
     }
+
+
   }
 
   &__name {
@@ -133,7 +170,7 @@ footer {
 
     span {
       flex: 1 1 auto;
-      margin-left: 1.25rem;
+      margin-left: 0.9375rem;
       padding-bottom: 0.1875rem;
       white-space: nowrap;
       overflow: hidden;
@@ -156,6 +193,7 @@ footer {
 }
 
 .liveProgram__ul {
+
   &__info {
     display: flex;
     margin-top: 0.625rem;
@@ -171,17 +209,17 @@ footer {
       }
 
       div:nth-child(2) {
-        color: #a6a6a6;
+        color: #A6A6A6;
         margin: 0.625rem 0;
       }
 
       div:last-child {
-        color: #6b6b6b;
+        color: #6B6B6B;
       }
     }
 
     img {
-      height: 7vh;
+      height: 6vh;
     }
   }
 }

@@ -1,3 +1,1 @@
-import "../styles/style.scss";
-
-// import Swiper from "swiper";
+import '../styles/style.scss';
