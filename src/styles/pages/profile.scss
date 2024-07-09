@@ -211,7 +211,7 @@
     }
   }
   &__euid {
-    opacity: 100%;
+    opacity: 50%;
     @include desktop {
       width: 234px;
       height: 234px;
@@ -244,92 +244,3 @@
     }
   }
 }
-
-.profile__list :nth-child(4) .link__lock {
-  background: none;
-}
-
-/* @include tablet {
-  width: 132px;
-  height: 132px;
-  background: url('/src/assets/profile/Tablet-seulbi.svg');
-}
-@include mobile {
-  width: 114px;
-  height: 114px;
-  background: url('/src/assets/profile/Mobile-seulbi.svg');
-}
- */
-/* &__select__title {
-    color: $gray-200;
-    
-    font-weight: 700;
-    font-size: 51px;
-    margin-bottom: 20px;
-  }
-
-  &__select__subtitle {
-    color: $gray-200;
-    font-weight: 600;
-    font-size: 29px;
-    font-style: normal;
-    line-height: 150%;
-  } */
-
-/*   &__select__list {
-    // desktop
-    padding-top: 44px;
-    padding-bottom: 66px;
-  }
-}
-
-.profile__list {
-  display: flex;
-  flex-flow: row nowrap;
-}
- */
-/* .profile {
-  display: flex;
-
-  padding-top: 44px;
-  flex-direction: column;
-  align-items: center;
-  gap: 52px;
-  flex-shrink: 0;
-
-  &__title {
-    display: flex;
-    margin-right: auto;
-    margin-left: auto;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  &__list {
-    display: flex;
-    align-items: flex-start;
-    gap: 52px;
-  }
-
-  .profile__button__wrapper {
-    display: flex;
-    width: 1095px;
-    flex-direction: column;
-    align-items: center;
-    line-height: 150%;
-
-    .profile__edit__button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 4px;
-      background-color: transparent;
-      color: $gray-300;
-      border: 1px solid #565656;
-      text-align: center;
-      padding: 22px 64px;
-    }
-  }
-}
- */
