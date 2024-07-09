@@ -1,5 +1,4 @@
 @use './../modules/' as *;
-@use 'footer' as *;
 
 body {
   width: 100vw;
@@ -80,13 +79,6 @@ footer {
     width: 100%;
     gap: 15px;
     margin-top: 0.9375rem;
-
-    span {
-      font-size: 1.125rem;
-      margin-top: 0.625rem;
-      color: $gnb-color;
-      font-weight: 500;
-    }
   }
 }
 
@@ -97,95 +89,174 @@ footer {
   }
 }
 
-.vod__chapter {
-  margin-top: 0.3125rem;
-  color: grey;
-}
-
-.popularLive {
-  &__ul {
-    position: relative;
-    white-space: nowrap;
-    // overflow: hidden;
-    overflow-x: auto;
-
-    &__li {
-      width: 100%;
-      max-width: 240px;
-      min-width: 100px;
-      display: flex;
-      flex-flow: column nowrap;
-    }
-  }
-
-  &__name {
-    width: 100%;
-    display: flex;
-    align-items: end;
-    text-align: center;
-    flex: 0 0 auto;
-
-    img {
-      // 숫자 이미지
-      height: 6vh;
-      flex: 0 0 auto;
-    }
-
-    span {
-      flex: 1 1 auto;
-      margin-left: 1.25rem;
-      padding-bottom: 0.1875rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      text-align: left;
-    }
-  }
-}
-
 .quickView {
-  &__ul {
-    &__li {
-      width: 100%;
-      max-width: 345px;
-      min-width: none;
+  h3 {
+    font-size: 1.25rem;
+    .vod__chapter {
+      margin-top: 0.3125rem;
+      color: grey;
+    }
+
+    .popularLive {
+      &__ul {
+        position: relative;
+        white-space: nowrap;
+        // overflow: hidden;
+        overflow-x: auto;
+
+        &__li {
+          width: 100%;
+          max-width: 240px;
+          min-width: 100px;
+          display: flex;
+          flex-flow: column nowrap;
+        }
+      }
+
+      &__name {
+        width: 100%;
+        display: flex;
+        align-items: end;
+        text-align: center;
+        flex: 0 0 auto;
+
+        img {
+          // 숫자 이미지
+          height: 6vh;
+          flex: 0 0 auto;
+        }
+
+        span {
+          flex: 1 1 auto;
+          margin-left: 1.25rem;
+          padding-bottom: 0.1875rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          text-align: left;
+        }
+      }
+    }
+
+    .quickView {
+      &__ul {
+        &__li {
+          width: 100%;
+          max-width: 345px;
+          min-width: none;
+          display: flex;
+          flex-flow: column nowrap;
+        }
+      }
+    }
+
+    .liveProgram__ul {
+      &__info {
+        display: flex;
+        margin-top: 0.625rem;
+        color: $gnb-color;
+      }
+
+      .vod__chapter {
+        margin-top: 0.3125rem;
+        color: grey;
+      }
+      .liveProgram__name {
+        display: block;
+        margin-left: 0.9375rem;
+
+        span {
+          margin-bottom: 0.625rem;
+          font-weight: 700;
+          font-size: 20px;
+        }
+
+        div:nth-child(2) {
+          color: #a6a6a6;
+          margin: 0.625rem 0;
+        }
+
+        div:last-child {
+          color: #6b6b6b;
+        }
+      }
+
+      img {
+        height: 7vh;
+      }
+    }
+  }
+
+  .ads {
+    margin-top: 3.75rem;
+  }
+
+  .footer {
+    margin-top: 9.375rem;
+    color: gray;
+    font-weight: 200;
+
+    .util__div {
       display: flex;
-      flex-flow: column nowrap;
+      justify-content: space-between;
+
+      div {
+        display: inherit;
+
+        p {
+          margin-right: 0.9375rem;
+        }
+
+        a {
+          color: #fff;
+        }
+      }
+    }
+
+    .goto {
+      hr {
+        border-bottom-width: 1px;
+        border-top-width: 20px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      div {
+        margin: 0 0.9375rem;
+        color: #fff;
+      }
+    }
+
+    .info {
+      margin-top: 3.125rem;
+
+      .info__link {
+        color: #fff;
+
+        span {
+          margin-right: 1.25rem;
+        }
+      }
+
+      .info__adress {
+        margin-top: 1.875rem;
+
+        span {
+          margin-right: 0.625rem;
+        }
+
+        p {
+          margin: 0.625rem 0;
+        }
+
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .community {
+      margin: 1.875rem 0;
     }
   }
-}
-
-.liveProgram__ul {
-  &__info {
-    display: flex;
-    margin-top: 0.625rem;
-
-    .liveProgram__name {
-      display: block;
-      margin-left: 0.9375rem;
-
-      span {
-        margin-bottom: 0.625rem;
-        font-weight: 700;
-        font-size: 20px;
-      }
-
-      div:nth-child(2) {
-        color: #a6a6a6;
-        margin: 0.625rem 0;
-      }
-
-      div:last-child {
-        color: #6b6b6b;
-      }
-    }
-
-    img {
-      height: 7vh;
-    }
-  }
-}
-
-.ads {
-  margin-top: 3.75rem;
 }

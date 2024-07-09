@@ -8,50 +8,43 @@
     <script type="module" src="/main.js"></script>
   </head>
   <body>
-    <!-- 헤더 영역 시작 -->
-
     <header class="header">
       <h1 class="header__logo">
         <a class="header__logo__link" href="/">
           <span class="sr-only">타잉 로고</span>
         </a>
       </h1>
-      <nav class="header__nav">
-        <ul class="header__nav__menu">
-          <li>
-            <a class="nav__live" href="/">
-              <div class="live__img"></div>
-              실시간
-            </a>
-          </li>
-          <li>
-            <a class="nav__program" href="/">TV프로그램</a>
-          </li>
-          <li>
-            <a class="nav__movie" href="/">영화</a>
-          </li>
-          <li>
-            <a class="nav__paramount" href="/">
-              <div class="paramount__img"></div>
-              <span class="sr-only">파라마운트플러스</span>
-            </a>
-          </li>
-        </ul>
-        <div class="header__nav__add">
-          <button type="button" class="nav__search">
-            <span class="sr-only">검색 아이콘</span>
-          </button>
-          <button
-            type="button"
-            class="nav__profile"
-            aria-haspopup="true"
-            aria-controls="my-profile-layer"
+    </header>
+
+    <!-- <section class="wrapper">
+      <div class="main">
+        <h2>TVING ID 로그인</h2>
+        <form>
+          <input type="text" class="main__user__id" placeholder="아이디" />
+          <label class="main__eyes" for="">
+            <input
+              type="password"
+              class="main__user__password"
+              placeholder="비밀번호"
+            />
+            <img class="eyes" src="/assets/icon/eyes.svg" alt="" />
+          </label>
+        </form>
+        <div class="auto">
+          <input type="checkbox" class="auto__checkbox" />
+          <img class="auto__image" src="/assets/icon/check.svg" alt="" />
+          <a> 자동로그인</a>
+        </div>
+        <button type="button" class="auto__button">로그인하기</button>
+        <div class="find">
+          <a class="find__id" href="/pages/findId.html">아이디 찾기</a>
+          <a class="find__line">|</a>
+          <a class="find__password" href="/pages/findPw.html"
+            >비밀번호 찾기</a
           >
-            <span class="sr-only">사용자 프로필 이미지</span>
-          </button>
         </div>
       </nav>
-    </header>
+    </header> -->
     <!-- 헤더 영역 끝 -->
     <main class="main">
       <section class="banner">
@@ -389,12 +382,6 @@
     <footer class="footer">
       <div class="util">
         <div class="util__div">
-          <div class="announce">
-            <p>공지사항</p>
-            <a href="/sorry/index.html"
-              >[안내] 합병보고 주주총회에 갈음하는 공고</a
-            >
-          </div>
           <div class="goto">
             <div>브랜드 바로가기 +</div>
             <hr />

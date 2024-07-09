@@ -12,7 +12,7 @@
   flex-flow: row nowrap;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.7) 0%,
     rgba(0, 0, 0, 0) 100%
   );
 
@@ -80,7 +80,7 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    color: $gray-200;
+    color: $gnb-color;
 
     @include desktop {
       gap: 52px;

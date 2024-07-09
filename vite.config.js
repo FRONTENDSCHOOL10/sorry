@@ -14,8 +14,17 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(root, 'index.html'),
+        findid: resolve(root, 'pages', 'findId.html'),
+        findpw: resolve(root, 'pages', 'findPw.html'),
         login: resolve(root, 'pages', 'login.html'),
+        logout: resolve(root, 'pages', 'logout.html'),
+        onboarding: resolve(root, 'pages', 'onboarding.html'),
+        popup: resolve(root, 'pages', 'popup.html'),
+        profilepopup: resolve(root, 'pages', 'profilePopup.html'),
         profiles: resolve(root, 'pages', 'profiles.html'),
+        profilesForEdit: resolve(root, 'pages', 'profilesForEdit.html'),
+        search: resolve(root, 'pages', 'search.html'),
+        signup: resolve(root, 'pages', 'signUp.html'),
       },
     },
   },
