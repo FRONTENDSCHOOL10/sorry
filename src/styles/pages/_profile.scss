@@ -139,17 +139,17 @@
       top: 50%;
       transform: translate(-50%, -50%);
       @include desktop {
-        background: url(/src/assets/profile/Desktop-lock.svg);
+        background: url(/assets/profile/Desktop-lock.svg);
         width: 60px;
         height: 60px;
       }
       @include tablet {
-        background: url(/src/assets/profile/Mobile&Tablet-lock.svg);
+        background: url(/assets/profile/Mobile&Tablet-lock.svg);
         width: 50px;
         height: 50px;
       }
       @include mobile {
-        background: url(/src/assets/profile/Mobile&Tablet-lock.svg);
+        background: url(/assets/profile/Mobile&Tablet-lock.svg);
         width: 50px;
         height: 50px;
       }
@@ -161,17 +161,17 @@
     @include desktop {
       width: 234px;
       height: 234px;
-      background: url('/src/assets/profile/Desktop-seulbi.svg');
+      background: url('/assets/profile/Desktop-seulbi.svg');
     }
     @include tablet {
       width: 132px;
       height: 132px;
-      background: url('/src/assets/profile/Tablet-seulbi.svg');
+      background: url('/assets/profile/Tablet-seulbi.svg');
     }
     @include mobile {
       width: 114px;
       height: 114px;
-      background: url('/src/assets/profile/Mobile-seulbi.svg');
+      background: url('/assets/profile/Mobile-seulbi.svg');
     }
   }
   &__beom {
@@ -179,17 +179,17 @@
     @include desktop {
       width: 234px;
       height: 234px;
-      background: url('/src/assets/profile/Desktop-beom.svg');
+      background: url('/assets/profile/Desktop-beom.svg');
     }
     @include tablet {
       width: 132px;
       height: 132px;
-      background: url('/src/assets/profile/Tablet-beom.svg');
+      background: url('/assets/profile/Tablet-beom.svg');
     }
     @include mobile {
       width: 114px;
       height: 114px;
-      background: url('/src/assets/profile/Mobile-beom.svg');
+      background: url('/assets/profile/Mobile-beom.svg');
     }
   }
   &__yamoo {
@@ -197,17 +197,17 @@
     @include desktop {
       width: 234px;
       height: 234px;
-      background: url('/src/assets/profile/Desktop-yamoo.svg');
+      background: url('/assets/profile/Desktop-yamoo.svg');
     }
     @include tablet {
       width: 132px;
       height: 132px;
-      background: url('/src/assets/profile/Tablet-yamoo.svg');
+      background: url('/assets/profile/Tablet-yamoo.svg');
     }
     @include mobile {
       width: 114px;
       height: 114px;
-      background: url('/src/assets/profile/Mobile-yamoo.svg');
+      background: url('/assets/profile/Mobile-yamoo.svg');
     }
   }
   &__euid {
@@ -215,17 +215,17 @@
     @include desktop {
       width: 234px;
       height: 234px;
-      background: url('/src/assets/profile/Desktop-euid.svg');
+      background: url('/assets/profile/Desktop-euid.svg');
     }
     @include tablet {
       width: 132px;
       height: 132px;
-      background: url('/src/assets/profile/Tablet-euid.svg');
+      background: url('/assets/profile/Tablet-euid.svg');
     }
     @include mobile {
       width: 114px;
       height: 114px;
-      background: url('/src/assets/profile/Mobile-euid.svg');
+      background: url('/assets/profile/Mobile-euid.svg');
     }
   }
 

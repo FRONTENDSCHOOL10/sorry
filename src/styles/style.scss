@@ -1,6 +1,1 @@
-@use './modules/' as *;
-@use './pages/' as *;
-
-body {
-  background-color: $background-color;
-}
+@use './pages';
