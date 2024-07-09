@@ -5,16 +5,60 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/taing.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script type="module" src="/main.js"></script>
   </head>
   <body>
+    <!-- 헤더 영역 시작 -->
+
     <header class="header">
       <h1 class="header__logo">
         <a class="header__logo__link" href="/">
           <span class="sr-only">타잉 로고</span>
         </a>
       </h1>
+      <nav class="header__nav">
+        <ul class="header__nav__menu">
+          <li>
+            <a class="nav__live" href="/">
+              <div class="live__img"></div>
+              실시간
+            </a>
+          </li>
+          <li>
+            <a class="nav__program" href="/">TV프로그램</a>
+          </li>
+          <li>
+            <a class="nav__movie" href="/">영화</a>
+          </li>
+          <li>
+            <a class="nav__paramount" href="/">
+              <div class="paramount__img"></div>
+              <span class="sr-only">파라마운트플러스</span>
+            </a>
+          </li>
+        </ul>
+        <div class="header__nav__add">
+          <button type="button" class="nav__search">
+            <span class="sr-only">검색 아이콘</span>
+          </button>
+          <button
+            type="button"
+            class="nav__profile"
+            aria-haspopup="true"
+            aria-controls="my-profile-layer"
+          >
+            <span class="sr-only">사용자 프로필 이미지</span>
+          </button>
+        </div>
+      </nav>
     </header>
+    <!-- 헤더 영역 끝 -->
     <main class="main">
       <section class="banner">
         <img src="/assets/poster/banner_img_t.png" alt="배너 재벌집막내아들" />
@@ -351,6 +395,12 @@
     <footer class="footer">
       <div class="util">
         <div class="util__div">
+          <div class="announce">
+            <p>공지사항</p>
+            <a href="/sorry/index.html"
+              >[안내] 합병보고 주주총회에 갈음하는 공고</a
+            >
+          </div>
           <div class="goto">
             <div>브랜드 바로가기 +</div>
             <hr />
