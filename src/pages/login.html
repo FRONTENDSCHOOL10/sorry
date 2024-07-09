@@ -21,14 +21,18 @@
         <h2>TVING ID 로그인</h2>
         <form>
           <input type="text" class="main__user__id" placeholder="아이디" />
-          <input
-            type="password"
-            class="main__user__password"
-            placeholder="비밀번호"
-          />
+          <label class="main__eyes" for="">
+            <input
+              type="password"
+              class="main__user__password"
+              placeholder="비밀번호"
+            />
+            <img class="eyes" src="./src/assets/icon/eyes.svg" alt="" />
+          </label>
         </form>
         <div class="auto">
           <input type="checkbox" class="auto__checkbox" />
+          <img class="auto__image" src="./src/assets/icon/check.svg" alt="" />
           <a> 자동로그인</a>
         </div>
         <button type="button" class="auto__button">로그인하기</button>
@@ -49,12 +53,6 @@
     <footer class="footer">
       <div class="util">
         <div class="util__div">
-          <div class="announce">
-            <p>공지사항</p>
-            <a href="/sorry/index.html"
-              >[안내] 합병보고 주주총회에 갈음하는 공고</a
-            >
-          </div>
           <div class="goto">
             <div>브랜드 바로가기 +</div>
             <hr />
