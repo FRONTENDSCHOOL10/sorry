@@ -1,9 +1,36 @@
 @use './../modules/' as *;
 
 .footer {
+  padding: 0 4.375rem;
   margin: 9.375rem 0 3.125rem 0;
   font-weight: 100;
   color: #6b6b6b;
+  position: relative;
+
+  i {
+    color: #fff;
+  }
+
+  h3 {
+    font-size: 1.666rem;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 3.75rem;
+  }
+
+  ul {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-top: 0.9375rem;
+
+    span {
+      font-size: 1.125rem;
+      margin-top: 0.625rem;
+      color: $gnb-color;
+      font-weight: 500;
+    }
+  }
 
   .util__div {
     display: flex;

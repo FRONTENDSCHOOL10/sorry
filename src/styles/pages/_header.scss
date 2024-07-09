@@ -12,7 +12,7 @@
   flex-flow: row nowrap;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.7) 0%,
     rgba(0, 0, 0, 0) 100%
   );
 
@@ -47,19 +47,19 @@
     display: flex;
 
     @include desktop {
-      background: url('/src/assets/header/logo/Desktop_logo.svg');
+      background: url('/assets/header/logo/Desktop_logo.svg');
       width: 132px;
       height: 42px;
     }
 
     @include tablet {
-      background: url('/src/assets/header/logo/Tablet_logo.svg');
+      background: url('/assets/header/logo/Tablet_logo.svg');
       width: 75px;
       height: 24px;
     }
 
     @include mobile {
-      background: url('/src/assets/header/logo/Mobile_logo.svg');
+      background: url('/assets/header/logo/Mobile_logo.svg');
       width: 45px;
       height: 15px;
     }
@@ -80,7 +80,7 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    color: $gray-200;
+    color: $gnb-color;
 
     @include desktop {
       gap: 52px;
@@ -106,7 +106,7 @@
         gap: 10px;
 
         .live__img {
-          background: url('/src/assets/header/Menu/Desktop_live.svg') no-repeat;
+          background: url('/assets/header/Menu/Desktop_live.svg') no-repeat;
           width: 34px;
           height: 34px;
         }
@@ -116,7 +116,7 @@
         gap: 4px;
 
         .live__img {
-          background: url('/src/assets/header/Menu/Tablet_live.svg') no-repeat;
+          background: url('/assets/header/Menu/Tablet_live.svg') no-repeat;
           width: 20px;
           height: 20px;
         }
@@ -126,7 +126,7 @@
         gap: 4px;
 
         .live__img {
-          background: url('/src/assets/header/Menu/Tablet_live.svg') no-repeat;
+          background: url('/assets/header/Menu/Tablet_live.svg') no-repeat;
           width: 20px;
           height: 20px;
         }
@@ -136,8 +136,7 @@
     // 파라마운트
     .paramount__img {
       @include desktop {
-        background: url('/src/assets/header/Menu/Desktop-paramount.svg')
-          no-repeat;
+        background: url('/assets/header/Menu/Desktop-paramount.svg') no-repeat;
 
         width: 111.917px;
         height: 34px;
@@ -145,8 +144,7 @@
       }
 
       @include tablet {
-        background: url('/src/assets/header/Menu/Tablet-paramount.svg')
-          no-repeat;
+        background: url('/assets/header/Menu/Tablet-paramount.svg') no-repeat;
 
         width: 65px;
         height: 20px;
@@ -172,12 +170,11 @@
       }
 
       .nav__search {
-        background: url('/src/assets/header/Menu/Desktop-search.svg') no-repeat;
+        background: url('/assets/header/Menu/Desktop-search.svg') no-repeat;
       }
 
       .nav__profile {
-        background: url('/src/assets/header/Menu/Desktop-gnb-profile.svg')
-          no-repeat;
+        background: url('/assets/header/Menu/Desktop-gnb-profile.svg') no-repeat;
       }
     }
 
@@ -190,12 +187,11 @@
       }
 
       .nav__search {
-        background: url('/src/assets/header/Menu/Tablet-search.svg') no-repeat;
+        background: url('/assets/header/Menu/Tablet-search.svg') no-repeat;
       }
 
       .nav__profile {
-        background: url('/src/assets/header/Menu/Tablet-gnb-profile.svg')
-          no-repeat;
+        background: url('/assets/header/Menu/Tablet-gnb-profile.svg') no-repeat;
       }
     }
 
@@ -208,12 +204,11 @@
       }
 
       .nav__search {
-        background: url('/src/assets/header/Menu/Mobile-search.svg') no-repeat;
+        background: url('/assets/header/Menu/Mobile-search.svg') no-repeat;
       }
 
       .nav__profile {
-        background: url('/src/assets/header/Menu/Mobile-gnb-profile.svg')
-          no-repeat;
+        background: url('/assets/header/Menu/Mobile-gnb-profile.svg') no-repeat;
       }
     }
   }
