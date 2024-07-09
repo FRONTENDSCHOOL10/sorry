@@ -1,4 +1,5 @@
 @use './../modules/' as *;
+@import './footer.scss';
 
 @mixin text-style(
   $size,
@@ -37,9 +38,11 @@
 body {
   background-color: #000;
   color: #fff;
-  text-align: center;
 }
 
+main {
+  text-align: center;
+}
 section {
   height: 67.5rem;
 }
@@ -107,12 +110,20 @@ button img {
 .mainContents {
   overflow: hidden;
   margin-top: 1.875rem;
-  display: flex;
+  display: flex; // 기본적으로 표시
 }
 
 .mainContents img {
   border-radius: 4px;
   padding-right: 1.5rem;
+}
+
+.mainContentsMobile {
+  display: none; // 기본적으로 숨기기
+}
+
+.mainContentsMobile img {
+  padding-right: 12px;
 }
 
 .imgFlow1,
