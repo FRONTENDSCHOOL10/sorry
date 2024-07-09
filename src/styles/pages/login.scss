@@ -1,71 +1,4 @@
-@use './../modules/' as *;
-
-// 헤더 전체
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 200;
-  display: flex;
-  flex-flow: row nowrap;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-
-  @include desktop {
-    padding: 1.8125rem 4.375rem;
-  }
-
-  @include tablet {
-    padding: 1rem 2.5rem;
-  }
-
-  @include mobile {
-    padding: 0.71875rem 1rem;
-  }
-}
-
-// 헤더 로고
-.header__logo {
-  @include desktop {
-    padding-right: 3.25rem;
-  }
-
-  @include tablet {
-    padding-right: 1.75rem;
-  }
-
-  @include mobile {
-    padding-right: 1.75rem;
-  }
-
-  &__link {
-    display: flex;
-
-    @include desktop {
-      background: url('/src/assets/header/logo/Desktop_logo.svg');
-      width: 132px;
-      height: 42px;
-    }
-
-    @include tablet {
-      background: url('/src/assets/header/logo/Tablet_logo.svg');
-      width: 75px;
-      height: 24px;
-    }
-
-    @include mobile {
-      background: url('/src/assets/header/logo/Mobile_logo.svg');
-      width: 45px;
-      height: 15px;
-    }
-  }
-}
-body {
+.wrapper {
   display: flex;
   padding-top: 125px;
   flex-direction: column;
@@ -109,6 +42,13 @@ form {
   color: #565656;
 }
 
+.main__eyes {
+  display: flex;
+  .eyes {
+    margin: -50px;
+  }
+}
+
 .auto {
   display: inline-flex;
   a {
@@ -119,6 +59,10 @@ form {
 }
 
 .auto__checkbox {
+  display: none;
+}
+
+.auto__image {
   display: flex;
   width: 26px;
   height: 26px;
