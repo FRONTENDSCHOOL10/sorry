@@ -93,8 +93,8 @@ form {
   align-items: flex-start;
 }
 
-.userId,
-.userPw {
+.main__user__id,
+.main__user__password {
   background-color: #212121;
   display: flex;
   width: 732px;
@@ -109,7 +109,7 @@ form {
   color: #565656;
 }
 
-.autoLogin {
+.auto {
   display: inline-flex;
   a {
     color: #6b6b6b;
@@ -118,7 +118,7 @@ form {
   padding-bottom: 32px;
 }
 
-.checkbox {
+.auto__checkbox {
   display: flex;
   width: 26px;
   height: 26px;
@@ -128,7 +128,7 @@ form {
   margin-right: 12px;
 }
 
-.button {
+.auto__button {
   display: flex;
   width: 732px;
   height: 86px;
@@ -148,9 +148,9 @@ form {
   justify-content: center;
 }
 
-.findId,
-.findPw,
-.line {
+.find__id,
+.find__password,
+.find__line {
   display: flex;
   width: 170px;
   justify-content: center;
