@@ -1,0 +1,136 @@
+@charset "UTF-8";
+body *,
+body *::before,
+body *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "SUIT Variable", sans-serif;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* 숨김 콘텐츠 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  -webkit-clip-path: polygon(0 0, 0 0, 0 0);
+          clip-path: polygon(0 0, 0 0, 0 0);
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* 스타일 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+  font-size: 1em;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+fieldset,
+button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+figure {
+  margin: 0;
+}
+
+input,
+textarea,
+select,
+option,
+button {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.profile__button__done {
+  border-radius: 4px;
+  background-color: #e1e1e1;
+  color: black;
+  cursor: pointer;
+}
+@media (min-width: 1920px) {
+  .profile__button__done {
+    width: 272px;
+    height: 86px;
+    font-size: 28.43px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1919px) {
+  .profile__button__done {
+    width: 156px;
+    height: 50px;
+    font-size: 12.003px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .profile__button__done {
+    width: 135px;
+    height: auto;
+    font-size: 12.003px;
+    padding: 12px 0px;
+  }
+}
+
+.link__container {
+  position: relative;
+}
+.link__container .link__edit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 1920px) {
+  .link__container .link__edit {
+    background: url(/src/assets/profile/Desktop-edit.svg);
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1919px) {
+  .link__container .link__edit {
+    background: url(/src/assets/profile/Mobile&Tablet-edit.svg);
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .link__container .link__edit {
+    background: url(/src/assets/profile/Mobile&Tablet-edit.svg);
+    width: 50px;
+    height: 50px;
+  }
+}

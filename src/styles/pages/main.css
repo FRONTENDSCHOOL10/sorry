@@ -1,0 +1,304 @@
+@charset "UTF-8";
+body *,
+body *::before,
+body *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "SUIT Variable", sans-serif;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* 숨김 콘텐츠 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  -webkit-clip-path: polygon(0 0, 0 0, 0 0);
+          clip-path: polygon(0 0, 0 0, 0 0);
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* 스타일 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+  font-size: 1em;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+fieldset,
+button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+figure {
+  margin: 0;
+}
+
+input,
+textarea,
+select,
+option,
+button {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.footer {
+  margin: 9.375rem 0 3.125rem 0;
+  font-weight: 100;
+  color: #6b6b6b;
+}
+.footer .util__div {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .util__div .announce {
+  display: inherit;
+}
+.footer .util__div .announce p {
+  margin-right: 0.9375rem;
+}
+.footer .util__div .announce a {
+  color: #fff;
+}
+.footer .goto {
+  display: flex;
+}
+.footer .goto hr {
+  border-bottom-width: 1px;
+  border-top-width: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.footer .goto div {
+  margin: 0 0.9375rem;
+  color: #fff;
+}
+.footer .info {
+  margin-top: 3.125rem;
+}
+.footer .info .info__link {
+  color: #fff;
+}
+.footer .info .info__link span {
+  margin-right: 1.25rem;
+}
+.footer .info .info__adress {
+  margin-top: 1.875rem;
+}
+.footer .info .info__adress span {
+  margin-right: 0.625rem;
+}
+.footer .info .info__adress p {
+  margin: 0.625rem 0;
+}
+.footer .info .info__adress a {
+  text-decoration: underline;
+}
+.footer .community {
+  margin: 1.875rem 0;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+main,
+footer {
+  padding: 0 4.375rem;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+}
+.banner img {
+  width: 100%;
+  height: auto;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+}
+@media (min-width: 1920px) {
+  .banner {
+    margin-top: 6.25rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1919px) {
+  .banner {
+    margin-top: 3.5rem;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .banner {
+    margin-top: 2.6875rem;
+  }
+}
+
+.contentsName {
+  display: flex;
+  justify-content: space-between;
+}
+.contentsName div {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.mostContents h3,
+.quickView h3,
+.liveProgram h3,
+.popularLive h3,
+.onlyTving h3,
+.ads h3,
+.events h3,
+.footer h3 {
+  font-size: 1.666rem;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 3.75rem;
+}
+.mostContents ul,
+.quickView ul,
+.liveProgram ul,
+.popularLive ul,
+.onlyTving ul,
+.ads ul,
+.events ul,
+.footer ul {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+  margin-top: 0.9375rem;
+}
+.mostContents ul span,
+.quickView ul span,
+.liveProgram ul span,
+.popularLive ul span,
+.onlyTving ul span,
+.ads ul span,
+.events ul span,
+.footer ul span {
+  font-size: 1.125rem;
+  margin-top: 0.625rem;
+  color: gray-200;
+  font-weight: 500;
+}
+
+.mostContents__ul div {
+  color: gray-200;
+  margin-top: 0.625rem;
+}
+
+.vod__chapter {
+  margin-top: 0.3125rem;
+  color: grey;
+}
+
+.popularLive__ul {
+  position: relative;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.popularLive__ul__li {
+  width: 100%;
+  max-width: 240px;
+  min-width: 100px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.popularLive__name {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  text-align: center;
+  flex: 0 0 auto;
+}
+.popularLive__name img {
+  height: 6vh;
+  flex: 0 0 auto;
+}
+.popularLive__name span {
+  flex: 1 1 auto;
+  margin-left: 1.25rem;
+  padding-bottom: 0.1875rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.quickView__ul__li {
+  width: 100%;
+  max-width: 345px;
+  min-width: none;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.liveProgram__ul__info {
+  display: flex;
+  margin-top: 0.625rem;
+}
+.liveProgram__ul__info .liveProgram__name {
+  display: block;
+  margin-left: 0.9375rem;
+}
+.liveProgram__ul__info .liveProgram__name span {
+  margin-bottom: 0.625rem;
+  font-weight: 700;
+  font-size: 20px;
+}
+.liveProgram__ul__info .liveProgram__name div:nth-child(2) {
+  color: #A6A6A6;
+  margin: 0.625rem 0;
+}
+.liveProgram__ul__info .liveProgram__name div:last-child {
+  color: #6B6B6B;
+}
+.liveProgram__ul__info img {
+  height: 7vh;
+}
+
+.ads {
+  margin-top: 3.75rem;
+}
