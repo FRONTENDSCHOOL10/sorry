@@ -105,42 +105,39 @@ footer {
 }
 
 
-.popularLive__ul {
-  position: relative;
+.popularLive {
+  &__ul {
+    position: relative;
+  }
 
   li {
-    // width: inherit;
+    width: 100%;
+    max-width: 240px;
+    min-width: 180px;
+    display: flex;
+    flex-flow: column nowrap;
 
     div {
-      // width: inherit;
+      // 네이밍 해두기!!
+      width: 100%;
       display: flex;
-      position: relative;
       align-items: end;
       text-align: center;
-      top: -0.9375rem;
-      background-color: gray;
-
-      span {
-        flex: 0 0 auto;
-      }
+      flex: 0 0 auto;
 
       img {
         // 숫자 이미지
         height: 6vh;
-        // flex-grow: 0;
-        // flex-shrink: 0;
+        flex: 0 0 auto;
       }
 
-      h3 {
+      span {
         flex: 1 1 auto;
-        // flex-grow: 0;
-        background-color: blue;
         margin-left: 0.9375rem;
         padding-bottom: 0.1875rem;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        // flex-shrink: 0;
       }
     }
   }
