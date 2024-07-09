@@ -1,8 +1,9 @@
-@use "./../modules/" as *;
+@use './../modules/' as *;
 
 body {
   width: 100vw;
   overflow-x: hidden;
+  background-color: $background-color;
 }
 
 main,
@@ -27,7 +28,11 @@ footer {
     left: 0;
     right: 0;
     height: 300px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
   }
 
   @include desktop {
@@ -42,7 +47,6 @@ footer {
     margin-top: 2.6875rem;
   }
 }
-
 
 .contentsName {
   display: flex;
@@ -63,17 +67,12 @@ footer {
 .ads,
 .events,
 .footer {
-
-  color: #fff;
-  font-weight: 400;
-
   h3 {
     font-size: 1.666rem;
     color: #fff;
     font-weight: 700;
     margin-top: 3.75rem;
   }
-
 
   ul {
     display: flex;
@@ -82,7 +81,6 @@ footer {
     margin-top: 0.9375rem;
   }
 }
-
 
 .mostContents__ul {
   div {
@@ -94,85 +92,171 @@ footer {
 .quickView {
   h3 {
     font-size: 1.25rem;
-    margin-top: 0.625rem;
-    color: $gnb-color;
-  }
+    .vod__chapter {
+      margin-top: 0.3125rem;
+      color: grey;
+    }
 
-  .vod__chapter {
-    margin-top: 0.3125rem;
-    color: grey;
-  }
-}
+    .popularLive {
+      &__ul {
+        position: relative;
+        white-space: nowrap;
+        // overflow: hidden;
+        overflow-x: auto;
 
-.ads {
-  margin-top: 3.75rem;
-}
-
-.footer {
-  margin-top: 9.375rem;
-  color: gray;
-  font-weight: 200;
-
-  .util__div {
-    display: flex;
-    justify-content: space-between;
-
-    div {
-      display: inherit;
-
-      p {
-        margin-right: 0.9375rem;
+        &__li {
+          width: 100%;
+          max-width: 240px;
+          min-width: 100px;
+          display: flex;
+          flex-flow: column nowrap;
+        }
       }
 
-      a {
+      &__name {
+        width: 100%;
+        display: flex;
+        align-items: end;
+        text-align: center;
+        flex: 0 0 auto;
+
+        img {
+          // 숫자 이미지
+          height: 6vh;
+          flex: 0 0 auto;
+        }
+
+        span {
+          flex: 1 1 auto;
+          margin-left: 1.25rem;
+          padding-bottom: 0.1875rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          text-align: left;
+        }
+      }
+    }
+
+    .quickView {
+      &__ul {
+        &__li {
+          width: 100%;
+          max-width: 345px;
+          min-width: none;
+          display: flex;
+          flex-flow: column nowrap;
+        }
+      }
+    }
+
+    .liveProgram__ul {
+      &__info {
+        display: flex;
+        margin-top: 0.625rem;
+        color: $gnb-color;
+      }
+
+      .vod__chapter {
+        margin-top: 0.3125rem;
+        color: grey;
+      }
+      .liveProgram__name {
+        display: block;
+        margin-left: 0.9375rem;
+
+        span {
+          margin-bottom: 0.625rem;
+          font-weight: 700;
+          font-size: 20px;
+        }
+
+        div:nth-child(2) {
+          color: #a6a6a6;
+          margin: 0.625rem 0;
+        }
+
+        div:last-child {
+          color: #6b6b6b;
+        }
+      }
+
+      img {
+        height: 7vh;
+      }
+    }
+  }
+
+  .ads {
+    margin-top: 3.75rem;
+  }
+
+  .footer {
+    margin-top: 9.375rem;
+    color: gray;
+    font-weight: 200;
+
+    .util__div {
+      display: flex;
+      justify-content: space-between;
+
+      div {
+        display: inherit;
+
+        p {
+          margin-right: 0.9375rem;
+        }
+
+        a {
+          color: #fff;
+        }
+      }
+    }
+
+    .goto {
+      hr {
+        border-bottom-width: 1px;
+        border-top-width: 20px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      div {
+        margin: 0 0.9375rem;
         color: #fff;
       }
     }
-  }
 
-  .goto {
-    hr {
-      border-bottom-width: 1px;
-      border-top-width: 20px;
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
+    .info {
+      margin-top: 3.125rem;
 
-    div {
-      margin: 0 0.9375rem;
-      color: #fff;
-    }
-  }
+      .info__link {
+        color: #fff;
 
-  .info {
-    margin-top: 3.125rem;
+        span {
+          margin-right: 1.25rem;
+        }
+      }
 
-    .info__link {
-      color: #fff;
+      .info__adress {
+        margin-top: 1.875rem;
 
-      span {
-        margin-right: 1.25rem;
+        span {
+          margin-right: 0.625rem;
+        }
+
+        p {
+          margin: 0.625rem 0;
+        }
+
+        a {
+          text-decoration: underline;
+        }
       }
     }
 
-    .info__adress {
-      margin-top: 1.875rem;
-
-      span {
-        margin-right: 0.625rem;
-      }
-
-      p {
-        margin: 0.625rem 0;
-      }
-
-      a {
-        text-decoration: underline;
-      }
+    .community {
+      margin: 1.875rem 0;
     }
-  }
-
-  .community {
-    margin: 1.875rem 0;
   }
 }

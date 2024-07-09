@@ -1,0 +1,56 @@
+@use './../modules/' as *;
+
+.profile {
+  &__button {
+    &__done {
+      border-radius: 4px;
+      background-color: $gray-100;
+      color: black;
+      cursor: pointer;
+
+      @include desktop {
+        width: 272px;
+        height: 86px;
+        font-size: 28.43px;
+      }
+      @include tablet {
+        width: 156px;
+        height: 50px;
+        font-size: 12.003px;
+      }
+      @include mobile {
+        width: 135px;
+        height: auto;
+        font-size: 12.003px;
+        padding: 12px 0px;
+      }
+    }
+  }
+}
+
+.link {
+  &__container {
+    position: relative;
+    .link__edit {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      @include desktop {
+        background: url(/assets/profile/Desktop-edit.svg);
+        width: 60px;
+        height: 60px;
+      }
+      @include tablet {
+        background: url(/assets/profile/Mobile&Tablet-edit.svg);
+        width: 50px;
+        height: 50px;
+      }
+      @include mobile {
+        background: url(/assets/profile/Mobile&Tablet-edit.svg);
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}

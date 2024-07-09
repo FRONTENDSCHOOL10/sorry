@@ -1,0 +1,144 @@
+@use './../modules/' as *;
+
+@mixin text-style(
+  $size,
+  $weight: null,
+  $color: null,
+  $line-height: null,
+  $margin-bottom: null
+) {
+  font-size: $size;
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $line-height {
+    line-height: $line-height;
+  }
+  @if $margin-bottom {
+    margin-bottom: $margin-bottom;
+  }
+}
+
+@mixin large-text {
+  @include text-style(3.158rem, 700, null, 140%, 1.25rem);
+}
+
+@mixin medium-text {
+  @include text-style(1.775rem, 500, #c4c4c4, 150%, 0.5rem);
+}
+
+@mixin small-text {
+  @include text-style(1.331rem, null, #c4c4c4, 150%);
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+section {
+  height: 67.5rem;
+}
+
+h1 {
+  @include large-text;
+}
+
+h2 {
+  @include medium-text;
+}
+
+p {
+  @include small-text;
+}
+
+.banner {
+  background-image: url('/assets/poster/landing_backgorund.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -12.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: left;
+}
+
+header img {
+  width: 8.25rem;
+  margin: 1.8125rem 4.375rem;
+}
+
+.originalContents {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 31.625rem;
+  height: 5rem;
+  background: #e93945;
+  @include medium-text;
+  color: white;
+  border-radius: 5px;
+}
+
+.contentButton {
+  margin-top: 3.75rem;
+}
+
+button img {
+  margin-bottom: 1.09375rem;
+  position: relative;
+  right: 2.5rem;
+}
+
+.mainContents {
+  overflow: hidden;
+  margin-top: 1.875rem;
+  display: flex;
+}
+
+.mainContents img {
+  border-radius: 4px;
+  padding-right: 1.5rem;
+}
+
+.imgFlow1,
+.imgFlow2 {
+  overflow: hidden;
+  display: flex;
+  margin-top: 1.875rem;
+}
+
+.imgFlow1 img,
+.imgFlow2 img {
+  padding-right: 1.25rem;
+  border-radius: 4px;
+}
+
+.main__forLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main__forLogin h1 {
+  margin-top: 2.25rem;
+}
+
+.forLoginImg img {
+  width: 17.5rem;
+}
