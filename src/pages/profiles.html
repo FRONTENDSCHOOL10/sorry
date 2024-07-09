@@ -18,21 +18,56 @@
       </h1>
     </header>
     <!-- 헤더 영역 끝 -->
-    <main class="main">
-      <div class="profile__select__title">
-        <h1>프로필 선택</h1>
-        <h3>시청할 프로필을 선택해주세요</h3>
+    <main class="profile__wrapper">
+      <div class="profile__title__wrapper">
+        <h1 class="profile__title">프로필 선택</h1>
+        <h3 class="profile__title__sub">시청할 프로필을 선택해주세요</h3>
       </div>
-      <div class="profile__select">
-        <ul class="profile__image__list">
-          <li class="profile__image__seulbi">슬비님</li>
-          <li class="profile__image__beom">범쌤</li>
-          <li class="profile__image__yamoo">야무</li>
-          <li class="profile__image__euid">이듬</li>
+      <div class="profile__list__container">
+        <ul class="profile__list">
+          <li class="profile__image">
+            <a class="profile__image__link" href="/">
+              <div class="link__container">
+                <div class="link__seulbi"></div>
+                <div class="link__lock"></div>
+              </div>
+              <span class="link__image__name">슬비님</span>
+            </a>
+          </li>
+          <li class="profile__image">
+            <a class="profile__image__link" href="/">
+              <div class="link__container">
+                <div class="link__beom"></div>
+                <div class="link__lock"></div>
+              </div>
+              <span class="link__image__name">범쌤</span>
+            </a>
+          </li>
+          <li class="profile__image">
+            <a class="profile__image__link" href="/">
+              <div class="link__container">
+                <div class="link__yamoo"></div>
+                <div class="link__lock"></div>
+              </div>
+              <span class="link__image__name">야무</span>
+            </a>
+          </li>
+          <li class="profile__image">
+            <a class="profile__image__link" href="/">
+              <div class="link__container">
+                <div class="link__euid"></div>
+                <div class="link__lock"></div>
+              </div>
+              <span class="link__image__name">이듬</span>
+            </a>
+          </li>
         </ul>
+        <div class="profile__button__wrapper">
+          <button type="button" class="profile__button__edit">
+            프로필 편집
+          </button>
+        </div>
       </div>
-
-      <button type="button" class="profile__edit__button">프로필 편집</button>
     </main>
     <footer class="footer">
       <div class="util">

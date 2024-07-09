@@ -19,6 +19,53 @@
       padding-top: 44px;
     }
   }
+
+  &__image__link {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    @include desktop {
+      gap: 16px;
+    }
+    @include tablet {
+      gap: 12px;
+    }
+    @include mobile {
+      gap: 12px;
+    }
+  }
+
+  &__button {
+    &__wrapper {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+    }
+    &__edit {
+      border-radius: 4px;
+      border: 1px solid $gray-600;
+      background-color: transparent;
+      color: $gray-300;
+      cursor: pointer;
+
+      @include desktop {
+        width: 272px;
+        height: 86px;
+        font-size: 28.43px;
+      }
+      @include tablet {
+        width: 156px;
+        height: 50px;
+        font-size: 12.003px;
+      }
+      @include mobile {
+        width: 135px;
+        height: auto;
+        font-size: 12.003px;
+        padding: 12px 0px;
+      }
+    }
+  }
 }
 
 .profile__title {
@@ -70,7 +117,7 @@
   flex-flow: row wrap;
   justify-content: center;
   @include desktop {
-    padding-top: 44px;
+    padding: 44px 0;
     gap: 52px;
   }
   @include tablet {
@@ -84,7 +131,33 @@
 }
 
 .link {
+  &__container {
+    position: relative;
+    .link__lock {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      @include desktop {
+        background: url(/src/assets/profile/Desktop-lock.svg);
+        width: 60px;
+        height: 60px;
+      }
+      @include tablet {
+        background: url(/src/assets/profile/Mobile&Tablet-lock.svg);
+        width: 50px;
+        height: 50px;
+      }
+      @include mobile {
+        background: url(/src/assets/profile/Mobile&Tablet-lock.svg);
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
   &__seulbi {
+    opacity: 50%;
     @include desktop {
       width: 234px;
       height: 234px;
@@ -102,6 +175,7 @@
     }
   }
   &__beom {
+    opacity: 50%;
     @include desktop {
       width: 234px;
       height: 234px;
@@ -119,6 +193,7 @@
     }
   }
   &__yamoo {
+    opacity: 50%;
     @include desktop {
       width: 234px;
       height: 234px;
@@ -136,6 +211,7 @@
     }
   }
   &__euid {
+    opacity: 100%;
     @include desktop {
       width: 234px;
       height: 234px;
@@ -152,6 +228,25 @@
       background: url('/src/assets/profile/Mobile-euid.svg');
     }
   }
+
+  &__image__name {
+    text-align: center;
+    color: $gray-300;
+
+    @include desktop {
+      font-size: 28.43px;
+    }
+    @include tablet {
+      font-size: 12.003px;
+    }
+    @include mobile {
+      font-size: 12.003px;
+    }
+  }
+}
+
+.profile__list :nth-child(4) .link__lock {
+  background: none;
 }
 
 /* @include tablet {
