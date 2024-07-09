@@ -1,0 +1,335 @@
+@use './../modules/' as *;
+
+.profile {
+  &__wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    @include desktop {
+      margin-top: 100px;
+      padding: 130px 0;
+    }
+    @include tablet {
+      margin-top: 56px;
+      padding-top: 74px;
+    }
+    @include mobile {
+      margin-top: 38px;
+      padding-top: 44px;
+    }
+  }
+
+  &__image__link {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    @include desktop {
+      gap: 16px;
+    }
+    @include tablet {
+      gap: 12px;
+    }
+    @include mobile {
+      gap: 12px;
+    }
+  }
+
+  &__button {
+    &__wrapper {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+    }
+    &__edit {
+      border-radius: 4px;
+      border: 1px solid $gray-600;
+      background-color: transparent;
+      color: $gray-300;
+      cursor: pointer;
+
+      @include desktop {
+        width: 272px;
+        height: 86px;
+        font-size: 28.43px;
+      }
+      @include tablet {
+        width: 156px;
+        height: 50px;
+        font-size: 12.003px;
+      }
+      @include mobile {
+        width: 135px;
+        height: auto;
+        font-size: 12.003px;
+        padding: 12px 0px;
+      }
+    }
+  }
+}
+
+.profile__title {
+  &__wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    @include mobile {
+      padding-top: 28px;
+      gap: 16px;
+    }
+  }
+
+  color: $white;
+
+  @include desktop {
+    font-weight: 700;
+    font-size: 51px;
+    margin-bottom: 20px;
+  }
+  @include tablet {
+    font-size: 28.43px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  @include mobile {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__sub {
+    color: $gray-200;
+    @include desktop {
+      font-size: 28.43px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+    @include mobile {
+      font-size: 12.003px;
+    }
+  }
+}
+
+.profile__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  @include desktop {
+    padding: 44px 0;
+    gap: 52px;
+  }
+  @include tablet {
+    padding: 28px 0 44px 0;
+    gap: 32px;
+  }
+  @include mobile {
+    padding: 32px 0;
+    gap: 24px;
+  }
+}
+
+.link {
+  &__container {
+    position: relative;
+    .link__lock {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      @include desktop {
+        background: url(/src/assets/profile/Desktop-lock.svg);
+        width: 60px;
+        height: 60px;
+      }
+      @include tablet {
+        background: url(/src/assets/profile/Mobile&Tablet-lock.svg);
+        width: 50px;
+        height: 50px;
+      }
+      @include mobile {
+        background: url(/src/assets/profile/Mobile&Tablet-lock.svg);
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  &__seulbi {
+    opacity: 50%;
+    @include desktop {
+      width: 234px;
+      height: 234px;
+      background: url('/src/assets/profile/Desktop-seulbi.svg');
+    }
+    @include tablet {
+      width: 132px;
+      height: 132px;
+      background: url('/src/assets/profile/Tablet-seulbi.svg');
+    }
+    @include mobile {
+      width: 114px;
+      height: 114px;
+      background: url('/src/assets/profile/Mobile-seulbi.svg');
+    }
+  }
+  &__beom {
+    opacity: 50%;
+    @include desktop {
+      width: 234px;
+      height: 234px;
+      background: url('/src/assets/profile/Desktop-beom.svg');
+    }
+    @include tablet {
+      width: 132px;
+      height: 132px;
+      background: url('/src/assets/profile/Tablet-beom.svg');
+    }
+    @include mobile {
+      width: 114px;
+      height: 114px;
+      background: url('/src/assets/profile/Mobile-beom.svg');
+    }
+  }
+  &__yamoo {
+    opacity: 50%;
+    @include desktop {
+      width: 234px;
+      height: 234px;
+      background: url('/src/assets/profile/Desktop-yamoo.svg');
+    }
+    @include tablet {
+      width: 132px;
+      height: 132px;
+      background: url('/src/assets/profile/Tablet-yamoo.svg');
+    }
+    @include mobile {
+      width: 114px;
+      height: 114px;
+      background: url('/src/assets/profile/Mobile-yamoo.svg');
+    }
+  }
+  &__euid {
+    opacity: 100%;
+    @include desktop {
+      width: 234px;
+      height: 234px;
+      background: url('/src/assets/profile/Desktop-euid.svg');
+    }
+    @include tablet {
+      width: 132px;
+      height: 132px;
+      background: url('/src/assets/profile/Tablet-euid.svg');
+    }
+    @include mobile {
+      width: 114px;
+      height: 114px;
+      background: url('/src/assets/profile/Mobile-euid.svg');
+    }
+  }
+
+  &__image__name {
+    text-align: center;
+    color: $gray-300;
+
+    @include desktop {
+      font-size: 28.43px;
+    }
+    @include tablet {
+      font-size: 12.003px;
+    }
+    @include mobile {
+      font-size: 12.003px;
+    }
+  }
+}
+
+.profile__list :nth-child(4) .link__lock {
+  background: none;
+}
+
+/* @include tablet {
+  width: 132px;
+  height: 132px;
+  background: url('/src/assets/profile/Tablet-seulbi.svg');
+}
+@include mobile {
+  width: 114px;
+  height: 114px;
+  background: url('/src/assets/profile/Mobile-seulbi.svg');
+}
+ */
+/* &__select__title {
+    color: $gray-200;
+    
+    font-weight: 700;
+    font-size: 51px;
+    margin-bottom: 20px;
+  }
+
+  &__select__subtitle {
+    color: $gray-200;
+    font-weight: 600;
+    font-size: 29px;
+    font-style: normal;
+    line-height: 150%;
+  } */
+
+/*   &__select__list {
+    // desktop
+    padding-top: 44px;
+    padding-bottom: 66px;
+  }
+}
+
+.profile__list {
+  display: flex;
+  flex-flow: row nowrap;
+}
+ */
+/* .profile {
+  display: flex;
+
+  padding-top: 44px;
+  flex-direction: column;
+  align-items: center;
+  gap: 52px;
+  flex-shrink: 0;
+
+  &__title {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    gap: 52px;
+  }
+
+  .profile__button__wrapper {
+    display: flex;
+    width: 1095px;
+    flex-direction: column;
+    align-items: center;
+    line-height: 150%;
+
+    .profile__edit__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      background-color: transparent;
+      color: $gray-300;
+      border: 1px solid #565656;
+      text-align: center;
+      padding: 22px 64px;
+    }
+  }
+}
+ */
