@@ -1,0 +1,73 @@
+@use "./../modules/" as *;
+
+.footer {
+  margin: 9.375rem 0 3.125rem 0;
+  font-weight: 100;
+  color: #6B6B6B;
+
+  .util__div {
+    display: flex;
+    justify-content: space-between;
+
+    .announce {
+      display: inherit;
+
+      p {
+        margin-right: 0.9375rem;
+        // color: grey;
+      }
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  .goto {
+    display: flex;
+
+    hr {
+      border-bottom-width: 1px;
+      border-top-width: 20px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    div {
+      margin: 0 0.9375rem;
+      color: #fff;
+    }
+  }
+
+  .info {
+    margin-top: 3.125rem;
+
+    .info__link {
+      color: #fff;
+
+      span {
+        margin-right: 1.25rem;
+      }
+    }
+
+    .info__adress {
+      margin-top: 1.875rem;
+
+      span {
+        margin-right: 0.625rem;
+      }
+
+      p {
+        margin: 0.625rem 0;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .community {
+    margin: 1.875rem 0;
+  }
+}
