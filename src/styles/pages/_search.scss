@@ -1,0 +1,87 @@
+@use './../modules/' as *;
+
+@mixin font-style($font-size, $line-height, $color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin input-style {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 1.9rem;
+  color: $gray-700;
+}
+
+@mixin button-style {
+  background-color: transparent;
+}
+
+@mixin h3-style {
+  @include font-style(1.331rem, 160%, $gray-300);
+}
+
+.main {
+  margin-top: 6.25rem;
+
+  .search__input {
+    display: flex;
+    border-bottom: 1px solid $white;
+    padding-bottom: 1rem;
+
+    input {
+      @include input-style;
+    }
+
+    button {
+      @include button-style;
+    }
+  }
+}
+
+.search__layout {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6.5625rem;
+
+  .searchRecent,
+  .searchPopular {
+    width: 50%;
+
+    .recentSearchWords,
+    .searchPopularWords {
+      @include font-style(1.775rem, 150%, $gray-400);
+      margin-bottom: 1.25rem;
+    }
+
+    .recentNone {
+      @include font-style(1.331rem, 160%, $gray-300);
+    }
+  }
+
+  .searchPopular {
+    padding-left: 3.75rem;
+    border-left: 1px solid $gray-800;
+
+    button {
+      @include button-style;
+      display: flex;
+      margin-bottom: 1rem;
+
+      span {
+        @include font-style(1.331rem, 160%, $brand-red);
+        font-weight: bold;
+        margin-right: 2.125rem;
+      }
+
+      h3 {
+        @include h3-style;
+      }
+    }
+  }
+}
+
+.time {
+  @include font-style(1.331rem, 160%, $gray-300);
+}
