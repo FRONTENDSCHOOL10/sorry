@@ -52,6 +52,7 @@ html {
         width: 50%;
         height: 60px;
         font-size: larger;
+        color: #fff;
       }
 
       hr {
@@ -192,6 +193,16 @@ html {
   }
 }
 
+.quickView,
+.liveProgram {
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 70%;
+  }
+}
+
+
 .popularLive__name,
 .liveProgram__ul__info {
   position: absolute;
@@ -222,6 +233,24 @@ html {
     max-width: 100%;
     width: auto;
     object-fit: contain;
+
+    // @include desktop {
+    //   height: 4hv;
+    //   max-height: 4hv;
+    //   width: auto;
+    // }
+
+    // @include tablet {
+    //   height: 4hv;
+    //   max-height: 2hv;
+    //   width: auto;
+    // }
+
+    // @include mobile {
+    //   height: 4hv;
+    //   max-height: 2hv;
+    //   width: auto;
+    // }
   }
 }
 
