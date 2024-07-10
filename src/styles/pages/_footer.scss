@@ -6,16 +6,10 @@
   font-weight: 100;
   color: #6b6b6b;
   position: relative;
+  font-size: 1.125rem;
 
   i {
     color: #fff;
-  }
-
-  h3 {
-    font-size: 1.666rem;
-    color: #fff;
-    font-weight: 700;
-    margin-top: 3.75rem;
   }
 
   ul {
@@ -25,7 +19,6 @@
     margin-top: 0.9375rem;
 
     span {
-      font-size: 1.125rem;
       margin-top: 0.625rem;
       color: $gnb-color;
       font-weight: 500;
@@ -96,5 +89,34 @@
 
   .community {
     margin: 1.875rem 0;
+  }
+}
+
+@include desktop {}
+
+@include tablet {
+  .footer {
+    font-size: 0.75rem;
+  }
+}
+
+@include mobile {
+  .footer {
+    font-size: 0.875rem;
+  }
+
+  .info__adress {
+    display: none;
+  }
+
+  .goto {
+    display: none !important;
+  }
+
+  .info__link {
+    span {
+      display: block;
+      margin-bottom: 10px;
+    }
   }
 }
