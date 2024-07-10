@@ -19,10 +19,28 @@
   @include text-style(1.33125rem, 160%, $gray-200);
 }
 
+@mixin xsmall-text {
+  @include text-style(1rem, 150%, $gray-200);
+}
+
+@mixin xsmall-text-white {
+  @include text-style(1rem, 150%, $white);
+}
+
+@mixin xxsmall-text {
+  @include text-style(0.75rem, 160%, $gray-400);
+}
+
 @mixin centered-flex {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin respond($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
 }
 
 .main__contents {
@@ -32,6 +50,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 -12.5rem;
+
+  @include respond($tablet) {
+    height: 50rem;
+  }
+
+  @include respond($mobile) {
+    height: 40rem;
+  }
 }
 
 .originalContents {
@@ -41,10 +67,23 @@
   h1 {
     @include large-text;
     padding-bottom: 1.25rem;
+
+    @include respond($tablet) {
+      @include small-text;
+      padding-bottom: 0.5rem;
+      font-weight: bold;
+      color: white;
+    }
   }
+
   h2 {
     @include medium-text;
     padding-bottom: 3.75rem;
+
+    @include respond($tablet) {
+      @include xxsmall-text;
+      padding-bottom: 1.75rem;
+    }
   }
 }
 
@@ -55,17 +94,33 @@
 
 .contentButton {
   @include centered-flex;
-  width: 31.75rem;
-  height: 5rem;
   @include medium-text;
+  width: 31.625rem;
+  height: 5rem;
   border-radius: 0.25rem;
   background: $button-red;
   color: $white;
+
+  @include respond($mobile) {
+    width: 11.75rem;
+  }
+
+  @include respond($tablet) {
+    width: 17.6875rem;
+    height: 3rem;
+    @include xsmall-text-white();
+  }
 
   img {
     margin-bottom: 1.05rem;
     position: relative;
     right: 2.5rem;
+
+    @include respond($tablet) {
+      width: 2.25rem;
+      margin-bottom: 0.4455rem;
+      right: 1.5rem;
+    }
   }
 }
 
@@ -77,35 +132,60 @@
   h1 {
     @include large-text;
     padding-bottom: 1.25rem;
+
+    @include respond($tablet) {
+      @include small-text;
+      padding-bottom: 0.5rem;
+      font-weight: bold;
+      color: white;
+    }
   }
 
   h2 {
     @include medium-text;
     padding-bottom: 0.5rem;
+
+    @include respond($tablet) {
+      color: $gray-200;
+      @include xsmall-text;
+    }
   }
 
   p {
     @include small-text;
     padding-bottom: 1.875rem;
+
+    @include respond($tablet) {
+      @include xxsmall-text;
+      padding-bottom: 1.75rem;
+    }
   }
 }
 
 .main__section {
-  .mainImgs,
-  .mainImgsMobile {
+  .mainImgs {
     display: flex;
 
     img {
       margin-left: 1.5rem;
+    }
 
-      &.mainImgsMobile {
-        margin-left: 0.75rem;
-      }
+    @include respond($tablet) {
+      display: none;
     }
   }
 
   .mainImgsMobile {
     display: none;
+
+    img {
+      margin-right: 0.75rem;
+    }
+
+    @include respond($tablet) {
+      display: flex;
+      width: 17.3125rem;
+    }
   }
 }
 
@@ -118,6 +198,10 @@
 
     img {
       margin-left: 1.25rem;
+
+      @include respond($tablet) {
+        width: 11.25rem;
+      }
     }
   }
 
@@ -131,11 +215,23 @@
 
   a img {
     padding-bottom: 2.25rem;
+
+    @include respond($tablet) {
+      width: 11.25rem;
+      padding: 0.875rem;
+    }
   }
 
   h1 {
     @include large-text;
     padding-bottom: 2.25rem;
+
+    @include respond($tablet) {
+      @include small-text;
+      padding-bottom: 0.875rem;
+      font-weight: bold;
+      color: white;
+    }
   }
 
   margin-bottom: 18.75rem;

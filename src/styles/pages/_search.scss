@@ -22,8 +22,8 @@
   @include font-style(1.331rem, 160%, $gray-300);
 }
 
-.main {
-  margin-top: 6.25rem;
+.search__main {
+  padding: 120px;
 
   .search__input {
     display: flex;
@@ -76,6 +76,8 @@
       }
 
       h3 {
+        font-weight: 200;
+        margin-top: 0;
         @include h3-style;
       }
     }
@@ -83,5 +85,6 @@
 }
 
 .time {
+  font-weight: 100;
   @include font-style(1.331rem, 160%, $gray-300);
 }
