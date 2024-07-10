@@ -11,7 +11,7 @@ a {
   color: #6b6b6b;
 }
 
-h2 {
+.main h2 {
   color: white;
   font-weight: 700;
   font-size: 37.897px;
@@ -90,6 +90,9 @@ form {
   display: flex;
   padding-top: 48px;
   justify-content: center;
+  a {
+    color: #a6a6a6;
+  }
 }
 
 .find__id,
@@ -121,5 +124,6 @@ form {
   a {
     margin: 44px;
     font-weight: bold;
+    color: #a6a6a6;
   }
 }
