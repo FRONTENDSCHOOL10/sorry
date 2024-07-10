@@ -66,6 +66,14 @@
       }
     }
   }
+
+  &__image {
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
 }
 
 .profile__title {

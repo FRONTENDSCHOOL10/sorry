@@ -102,6 +102,25 @@
       display: flex;
       align-items: center;
 
+      &:hover {
+        color: $white;
+        @include desktop {
+          .live__img {
+            background: url('/assets/header/Menu/Desktop_live_hover.svg');
+          }
+        }
+        @include tablet {
+          .live__img {
+            background: url('/assets/header/Menu/Tablet_live_hover.svg');
+          }
+        }
+        @include mobile {
+          .live__img {
+            background: url('/assets/header/Menu/Tablet_live_hover.svg');
+          }
+        }
+      }
+
       @include desktop {
         gap: 10px;
 
@@ -149,6 +168,31 @@
         width: 65px;
         height: 20px;
         padding: 2.001px 0px 2.999px 0px;
+      }
+
+      @include mobile {
+        background: url('/assets/header/Menu/Tablet-paramount.svg') no-repeat;
+
+        width: 65px;
+        height: 20px;
+        padding: 2.001px 0px 2.999px 0px;
+      }
+
+      &:hover {
+        @include desktop {
+          background: url('/assets/header/Menu/Desktop-paramount-hover.svg')
+            no-repeat;
+        }
+
+        @include tablet {
+          background: url('/assets/header/Menu/Tablet-paramount-hover.svg')
+            no-repeat;
+        }
+
+        @include mobile {
+          background: url('/assets/header/Menu/Tablet-paramount-hover.svg')
+            no-repeat;
+        }
       }
     }
   }
@@ -211,5 +255,95 @@
         background: url('/assets/header/Menu/Mobile-gnb-profile.svg') no-repeat;
       }
     }
+  }
+
+  a:hover {
+    color: $white;
+  }
+}
+
+// 프로필 레이어
+.user {
+  display: none;
+  position: absolute;
+  color: $gray-600;
+  z-index: 10;
+  border: 1px solid $gray-700;
+
+  border-radius: 5px;
+  background-color: $primary-color;
+
+  @include desktop {
+    width: 260px;
+    right: 70px;
+    padding: 12px 0;
+  }
+  @include tablet {
+    width: 260px;
+    right: 40px;
+    padding: 12px 0;
+  }
+  @include mobile {
+    width: 200px;
+    right: 16px;
+    padding: 12px 0;
+  }
+
+  &__info {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 26px 20px 26px;
+    gap: 20px;
+    border-bottom: 1px solid $gray-700;
+
+    &__detail {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 4px;
+    }
+  }
+
+  &__img {
+    width: 40px;
+    height: 40px;
+    background: url('/assets/header/Menu/Desktop-gnb-profile.svg');
+  }
+
+  &__name {
+    color: $gnb-color;
+    font-size: 18px;
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  &__change {
+    font-size: 14px;
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  &__menu {
+    padding: 30px 20px 20px 20px;
+    @include mobile {
+      padding: 10px;
+    }
+    &__list {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 10px;
+    }
+  }
+  a:hover {
+    color: $white;
+  }
+}
+
+.nav__profile__wrapper {
+  &:hover .user {
+    display: block;
   }
 }
