@@ -1,229 +1,219 @@
 @use './../modules/' as *;
 @use 'footer' as *;
+@use './mainpages/banner' as *;
 
-body {
-  width: 100vw;
+
+body,
+html {
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
-  background-color: $background-color;
 }
 
-main,
-footer {
-  padding: 0 4.375rem;
-  color: #c4c4c4;
+
+h3 {
+  font-size: 1.666rem;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 4.375rem;
 }
 
-.banner {
+.main_section {
+  padding: 0 70px;
+}
+
+.contents {
   position: relative;
-  overflow: hidden;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
 
-  img {
+  span,
+  div {
+    color: #d9d9d9
+  }
+
+  .swiper-wrapper {
+    position: relative;
+    margin-top: 1.25rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .swiper-slide {
+    flex: 0 0 auto;
+    width: calc((100% - 30px) / 3);
+    margin-right: 0.625rem;
+    display: flex;
+  }
+
+  .swiper-slide>img {
     width: 100%;
     height: auto;
   }
 
-  // 배너 블러 효과
-  &::after {
-    content: '';
+  .swiper-button-prev,
+  .swiper-button-next {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 300px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    top: 60%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .swiper-button-prev {
+    left: 20px;
+  }
+
+  .swiper-button-next {
+    right: 20px;
   }
 
   @include desktop {
-    margin-top: 6.25rem;
+    .swiper-slide {
+      width: calc((100% - 30px) / 2);
+    }
   }
 
   @include tablet {
-    margin-top: 3.5rem;
+    .swiper-slide {
+      width: calc((100% - 30px) / 1);
+    }
   }
 
   @include mobile {
-    margin-top: 2.6875rem;
-  }
-}
-
-
-.contentsName {
-  display: flex;
-  justify-content: space-between;
-
-  div {
-    display: flex;
-    align-items: center;
-    padding-right: 20px;
-  }
-}
-
-.mostContents,
-.quickView,
-.liveProgram,
-.popularLive,
-.onlyTving,
-.ads,
-.events,
-.footer {
-  position: relative;
-
-  i {
-    color: #Fff;
-  }
-
-  h3 {
-    font-size: 1.666rem;
-    color: #fff;
-    font-weight: 700;
-    margin-top: 3.75rem;
-  }
-
-
-  ul {
-    display: flex;
-    width: 100%;
-    gap: 10px;
-    margin-top: 0.9375rem;
-
-    span {
-      font-size: 1.125rem;
-      margin-top: 0.625rem;
-      color: $gnb-color;
-      font-weight: 500;
+    .swiper-slide {
+      width: 100%;
     }
   }
+}
 
-  .prevButton,
-  .nextButton {
-    top: 60%;
-  }
-
-  .prevButton {
-    left: -50px;
-  }
-
-  .nextButton {
-    right: -30px;
+.mostContents__ul__li,
+.quickView__ul__li {
+  div {
+    bottom: -30px;
+    left: 0;
+    position: absolute;
+    margin-top: 0.625rem;
+    color: #fff;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
   }
 }
 
-.mostContents {
-  &__ul {
+.popularLive__name,
+.liveProgram__ul__info {
+  position: absolute;
+  bottom: -40px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+
+  span {
+    margin-left: 0.9375rem;
+    margin-bottom: 0.625rem;
+    display: block;
     white-space: nowrap;
-    overflow-x: hidden;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  img {
+    height: 6vh;
+    max-height: 6vh;
+    max-width: 100%;
+    width: auto;
+    object-fit: contain;
+  }
+}
+
+.liveProgram__ul__info {
+  bottom: -5rem;
+  text-align: left;
+  align-items: start;
+
+  .liveProgram__name {
+    color: #d9d9d9;
+
+    span {
+      margin: 0;
+      font-size: large;
+      font-weight: 600;
+    }
 
     div {
-      color: $gnb-color;
-      margin-top: 0.625rem;
+      font-size: 1rem;
+      margin: 7px 0;
     }
 
-    &__li {
-      width: 100%;
-      max-width: 240px;
-      min-width: 240px;
-      display: flex;
-      flex-flow: column nowrap;
-      overflow-y: hidden;
+    div:nth-child(2) {
+      color: #a6a6a6;
     }
+
+    div:last-child {
+      color: #6b6b6b
+    }
+
+    margin-left: 0.625rem;
   }
 
 }
 
+.onlyTving {
+  margin-top: 6.875rem;
 
-.vod__chapter {
-  margin-top: 0.3125rem;
-  color: grey;
-}
-
-
-.popularLive {
   &__ul {
-    position: relative;
-    white-space: nowrap;
-    // overflow: hidden;
-    overflow-x: auto;
-
-    &__li {
-      width: 100%;
-      max-width: 240px;
-      min-width: 100px;
-      display: flex;
-      flex-flow: column nowrap;
-    }
-
-
-  }
-
-  &__name {
-    width: 100%;
+    margin-top: 1.25rem;
     display: flex;
-    align-items: end;
-    text-align: center;
-    flex: 0 0 auto;
 
-    img {
-      // 숫자 이미지
-      height: 6vh;
-      flex: 0 0 auto;
-    }
-
-    span {
-      flex: 1 1 auto;
-      margin-left: 0.9375rem;
-      padding-bottom: 0.1875rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      text-align: left;
-    }
-  }
-}
-
-.quickView {
-  &__ul {
-    &__li {
-      width: 100%;
-      max-width: 345px;
-      min-width: none;
-      display: flex;
-      flex-flow: column nowrap;
-    }
-  }
-}
-
-.liveProgram__ul {
-
-  &__info {
-    display: flex;
-    margin-top: 0.625rem;
-
-    .liveProgram__name {
-      display: block;
-      margin-left: 0.9375rem;
-
-      span {
-        margin-bottom: 0.625rem;
-        font-weight: 700;
-        font-size: 20px;
-      }
-
-      div:nth-child(2) {
-        color: #A6A6A6;
-        margin: 0.625rem 0;
-      }
-
-      div:last-child {
-        color: #6B6B6B;
-      }
-    }
-
-    img {
-      height: 6vh;
-    }
   }
 }
 
 .ads {
   margin-top: 3.75rem;
+  height: auto;
+  width: 100%;
+
+  @include desktop {
+    height: auto; // 현재 상태 유지
+  }
+
+  @include tablet {
+    height: 61px; // 태블릿에서는 높이를 61px로 설정
+    width: auto; // 비율에 맞게 너비 설정
+  }
+
+  @include mobile {
+    height: 30px; // 모바일에서는 높이를 30px로 설정
+    width: auto; // 비율에 맞게 너비 설정
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.events {
+  h3 {
+    margin-top: 50px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 80%;
+  }
 }
