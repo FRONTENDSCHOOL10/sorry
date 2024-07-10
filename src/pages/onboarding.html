@@ -6,21 +6,21 @@
    <meta charset="UTF-8" />
    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <script type="module" src="/main.js"></script>
 
-   <script type="module" src="/src/js/onboarding.js"></script>
 </head>
 
 <body>
    <header class="header">
-      <a href="#">
+      <!-- <a href="#">
          <h1>Logo</h1>
-      </a>
+      </a> -->
    </header>
    <main class="main">
-      <section class="banner">
+      <section class="main__contents">
          <header class="header">
             <a href="#">
-               <img src="/assets/logo/logo.svg" alt="로고">
+               <img src="/assets/logo/img_logo.svg" alt="로고">
             </a>
          </header>
          <div class="originalContents">
@@ -29,29 +29,31 @@
                방송, 영화, 해외시리즈까지!</br>
                재미를 플레이해보세요.
             </h1>
-            <p>간편하게 가입하고, 원하실 때 해지할 수 있어요.</p>
-            <button class="contentButton"><img src="/assets/logo/mini_logo.svg" alt="새로워진 티빙을 만나보세요">새로워진 티빙을
-               만나보세요!</button>
+            <h2>간편하게 가입하고, 원하실 때 해지할 수 있어요.</h2>
+            <div class="buttonContainer">
+               <button class="contentButton"><img src="/assets/logo/mini_logo.svg" alt="새로워진 티빙을 만나보세요">새로워진 티빙을
+                  만나보세요!</button>
+            </div>
          </div>
       </section>
-      <section class="main_section">
+      <section class="main__section">
          <h1>티빙에만 있는 재미</h1>
          <h2>오리지널 콘텐츠를 만나보세요!</h2>
          <p>차별화된 웰메이드 오리지널 콘텐츠</p>
-         <div class="mainContents">
+         <div class="mainImgs">
             <img src="/assets/poster/lainding_poster1.png" alt="러브캐처 포스터">
             <img src="/assets/poster/lainding_poster2.png" alt="보물찾기 포스터">
             <img src="/assets/poster/lainding_poster3.png" alt="술꾼도시여자들2 포스터">
             <img src="/assets/poster/lainding_poster4.png" alt="아일랜드 포스터">
          </div>
-         <div class="mainContentsMobile">
-            <img src="/src/assets/poster/onboarding_tablet1.png" alt="">
-            <img src="/src/assets/poster/onboarding_tablet2.png" alt="">
-            <img src="/src/assets/poster/onboarding_tablet3.png" alt="">
-            <img src="/src/assets/poster/onboarding_tablet4.png" alt="">
+         <div class="mainImgsMobile">
+            <img src="/assets/poster/onboarding_tablet1.png" alt="">
+            <img src="/assets/poster/onboarding_tablet2.png" alt="">
+            <img src="/assets/poster/onboarding_tablet3.png" alt="">
+            <img src="/assets/poster/onboarding_tablet4.png" alt="">
          </div>
       </section>
-      <section class="main_animation">
+      <section class="main__animation">
          <h1>내가 찾던 재미</h1>
          <h2>보고 싶은 콘텐츠를 발견하세요!</h2>
          <p>최신, 인기 TV프로그램, 영화, 해외시리즈, 파라마운트+ 오리지널 및 독점</p>
@@ -71,10 +73,11 @@
       </section>
       <section class="main__forLogin">
          <a href="#" class="forLoginImg">
-            <img src="/assets/logo/number1_logo.png" alt="NO.1 K-콘텐츠 플랫폼 TVING">
+            <img src="/assets/logo/no1.svg" alt="NO.1 K-콘텐츠 플랫폼 TVING">
          </a>
          <h1>지금 시작해보세요</h1>
-         <button><img src="/assets/logo/mini_logo.svg" alt="새로워진 티빙을 만나보세요"><span>새로워진 티빙을 만나보세요!</span></button>
+         <div class="buttonContainer"><button><img src="/assets/logo/mini_logo.svg" alt="새로워진 티빙을 만나보세요"><span>새로워진 티빙을
+                  만나보세요!</span></button></div>
       </section>
    </main>
    <footer class="footer">
@@ -126,38 +129,22 @@
          </div>
          <ul class="community">
             <li class="youtube">
-               <a href=""><img src="/src/assets/icon/Youtube.png" alt="" /></a>
+               <a href=""><img src="/assets/icon/Youtube.png" alt="" /></a>
             </li>
             <li class="instargram">
-               <a href=""><img src="/src/assets/icon/Instagram.png" alt="" /></a>
+               <a href=""><img src="/assets/icon/Instagram.png" alt="" /></a>
             </li>
             <li class="twitter">
-               <a href=""><img src="/src/assets/icon/Twitter.png" alt="" /></a>
+               <a href=""><img src="/assets/icon/Twitter.png" alt="" /></a>
             </li>
             <li class="facebook">
-               <a href=""><img src="/src/assets/icon/Facebook.png" alt="" /></a>
+               <a href=""><img src="/assets/icon/Facebook.png" alt="" /></a>
             </li>
          </ul>
       </div>
       <div class="copyright">
          <span>Copyright &copy; 주식회사 타잉 All right reservd.</span>
       </div>
-   </footer>
-   <footer class="footer">
-      <div class="util">
-         <div class="goto"></div>
-         <div class="info">
-            <ul class="info_link"></ul>
-            <div class="info_adress"></div>
-         </div>
-         <ul class="community">
-            <li class="youtube"></li>
-            <li class="instargram"></li>
-            <li class="twitter"></li>
-            <li class="facebook"></li>
-         </ul>
-      </div>
-      <div class="copyright"></div>
    </footer>
 </body>
 

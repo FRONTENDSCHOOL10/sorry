@@ -1,155 +1,142 @@
 @use './../modules/' as *;
-@import './footer.scss';
 
-@mixin text-style(
-  $size,
-  $weight: null,
-  $color: null,
-  $line-height: null,
-  $margin-bottom: null
-) {
+@mixin text-style($size, $lineHeight, $color, $weight: normal) {
   font-size: $size;
-  @if $weight {
-    font-weight: $weight;
-  }
-  @if $color {
-    color: $color;
-  }
-  @if $line-height {
-    line-height: $line-height;
-  }
-  @if $margin-bottom {
-    margin-bottom: $margin-bottom;
-  }
+  line-height: $lineHeight;
+  color: $color;
+  font-weight: $weight;
 }
 
 @mixin large-text {
-  @include text-style(3.158rem, 700, null, 140%, 1.25rem);
+  @include text-style(3.15rem, 140%, $white, bold);
 }
 
 @mixin medium-text {
-  @include text-style(1.775rem, 500, #c4c4c4, 150%, 0.5rem);
+  @include text-style(1.775rem, 150%, $gray-400);
 }
 
 @mixin small-text {
-  @include text-style(1.331rem, null, #c4c4c4, 150%);
+  @include text-style(1.33125rem, 160%, $gray-200);
 }
 
-body {
-  background-color: #000;
-  color: #fff;
+@mixin centered-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-main {
-  text-align: center;
-}
-section {
+.main__contents {
   height: 67.5rem;
-}
-
-h1 {
-  @include large-text;
-}
-
-h2 {
-  @include medium-text;
-}
-
-p {
-  @include small-text;
-}
-
-.banner {
+  padding: 0;
   background-image: url('/assets/poster/landing_backgorund.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 -12.5rem;
 }
 
-header {
-  display: flex;
-  justify-content: left;
-}
-
-header img {
-  width: 8.25rem;
-  margin: 1.8125rem 4.375rem;
-}
-
 .originalContents {
-  margin-top: 10rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding-top: 10rem;
+  text-align: center;
+
+  h1 {
+    @include large-text;
+    padding-bottom: 1.25rem;
+  }
+  h2 {
+    @include medium-text;
+    padding-bottom: 3.75rem;
+  }
+}
+
+.buttonContainer {
+  @include centered-flex;
+  width: 100%;
 }
 
 button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 31.625rem;
+  @include centered-flex;
+  width: 31.75rem;
   height: 5rem;
-  background: #e93945;
   @include medium-text;
-  color: white;
-  border-radius: 5px;
+  border-radius: 0.25rem;
+  background: $button-red;
+  color: $white;
+
+  img {
+    margin-bottom: 1.05rem;
+    position: relative;
+    right: 2.5rem;
+  }
 }
 
-.contentButton {
-  margin-top: 3.75rem;
+.main__section,
+.main__animation,
+.main__forLogin {
+  text-align: center;
+
+  h1 {
+    @include large-text;
+    padding-bottom: 1.25rem;
+  }
+
+  h2 {
+    @include medium-text;
+    padding-bottom: 0.5rem;
+  }
+
+  p {
+    @include small-text;
+    padding-bottom: 1.875rem;
+  }
 }
 
-button img {
-  margin-bottom: 1.09375rem;
-  position: relative;
-  right: 2.5rem;
+.main__section {
+  .mainImgs,
+  .mainImgsMobile {
+    display: flex;
+
+    img {
+      margin-left: 1.5rem;
+
+      &.mainImgsMobile {
+        margin-left: 0.75rem;
+      }
+    }
+  }
+
+  .mainImgsMobile {
+    display: none;
+  }
 }
 
-.mainContents {
-  overflow: hidden;
-  margin-top: 1.875rem;
-  display: flex; // 기본적으로 표시
-}
+.main__animation {
+  padding-top: 12.5rem;
 
-.mainContents img {
-  border-radius: 4px;
-  padding-right: 1.5rem;
-}
+  .imgFlow1,
+  .imgFlow2 {
+    display: flex;
 
-.mainContentsMobile {
-  display: none; // 기본적으로 숨기기
-}
+    img {
+      margin-left: 1.25rem;
+    }
+  }
 
-.mainContentsMobile img {
-  padding-right: 12px;
-}
-
-.imgFlow1,
-.imgFlow2 {
-  overflow: hidden;
-  display: flex;
-  margin-top: 1.875rem;
-}
-
-.imgFlow1 img,
-.imgFlow2 img {
-  padding-right: 1.25rem;
-  border-radius: 4px;
+  .imgFlow1 {
+    margin-bottom: 0.75rem;
+  }
 }
 
 .main__forLogin {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+  margin-top: 18.75rem;
 
-.main__forLogin h1 {
-  margin-top: 2.25rem;
-}
+  a img {
+    padding-bottom: 2.25rem;
+  }
 
-.forLoginImg img {
-  width: 17.5rem;
+  h1 {
+    @include large-text;
+    padding-bottom: 2.25rem;
+  }
+
+  margin-bottom: 18.75rem;
 }
