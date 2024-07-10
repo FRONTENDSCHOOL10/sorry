@@ -43,11 +43,16 @@
   line-height: 110%;
   margin-top: 34px;
 }
-form p {
-  font-size: 21.328px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 160%;
+.main__form {
+  input {
+    border: 1px solid black;
+  }
+  p {
+    font-size: 21.328px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+  }
 }
 
 .checkbox__list {
@@ -55,9 +60,32 @@ form p {
   align-items: flex-start;
   flex-direction: column;
   .checkbox1 {
-    padding: 20px;
+    padding-top: 28px;
+    padding-bottom: 28px;
   }
   .checkbox {
     display: none;
   }
+  .main__text {
+    font-weight: bold;
+  }
+  .checkbox__list__first {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .checkbox__list__second {
+    display: flex;
+    width: 732px;
+    padding-left: 36px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+}
+.main__button {
+  background-color: #404040;
 }

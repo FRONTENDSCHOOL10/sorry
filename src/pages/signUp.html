@@ -23,53 +23,70 @@
     <h2>티빙 회원가입</h2>
     <span class="start">아이디와 이메일로 간편하게 티빙을 시작하세요!</span>
 
-    <form action="">
+    <form action="" class="main__form">
       <input type="text" class="userId" placeholder="아이디" />
       <p>영문 또는 영문, 숫자 조합 6~12자리</p>
       <input type="password" class="userPw" placeholder="비밀번호" />
       <p>영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15자리</p>
       <input type="password" class="userPw" placeholder="비밀번호 확인" />
-      <img class="eyes" src="/assets/icon/eyes.png" alt="" />
+      <img class="eyes" src="/assets/icon/eyes.png" alt="hidden_password" />
       <input type="email" class="userEmail" placeholder="이메일" />
     </form>
+
     <section class="checkbox__list">
       <div class="checkbox1">
-        <img src="/assets/icon/check.svg" alt="" />
-        <input type="checkbox" class="checkbox" /> <a>모두 동의합니다.</a>
-      </div>
-      <div>
-        <img src="/assets/icon/check-2.svg" alt="" />
-        <input type="checkbox" class="checkbox" />
-        <a>만 14세 이상입니다.</a>
-      </div>
-      <div>
-        <img src="/assets/icon/check-2.svg" alt="" />
-        <input type="checkbox" class="checkbox" />
-        <a>[필수] 서비스 이용약관 동의</a>
-      </div>
-      <div>
-        <img src="/assets/icon/check-2.svg" alt="" />
-        <input type="checkbox" class="checkbox" />
-        <a>[필수] 개인정보 수집 및 서비스활용 동의</a>
-      </div>
-      <div>
-        <img src="/assets/icon/check-2.svg" alt="" />
-        <input type="checkbox" class="checkbox" />
-        <a>[선택] 개인정보 제3자 제공 동의</a>
-      </div>
-      <div>
-        <img src="/assets/icon/check-2.svg" alt="" />
-        <input type="checkbox" class="checkbox" />
-        <a>[선택] 마케팅정보 SMS 수신 동의</a>
-      </div>
-      <div>
-        <img src="/assets/icon/check-2.svg" alt="" />
-        <input type="checkbox" class="checkbox" />
-        <a>[선택]마케팅 정보 이메일 수신 동의</a>
+        <img src="/assets/icon/check.svg" alt="all_check_icon" />
+        <input type="checkbox" class="checkbox" /><a class="main__text">모두 동의합니다.</a>
       </div>
 
+      <section class="checkbox__list__first">
+        <div>
+          <img src="/assets/icon/check-2.svg" alt="essential_check_icon" />
+          <input type="checkbox" class="checkbox" />
+          <a class="sub__text">만 14세 이상입니다.</a>
+        </div>
+        <div>
+          <img src="/assets/icon/check-2.svg" alt="essential_check_icon" />
+          <input type="checkbox" class="checkbox" />
+          <a class="sub__text">[필수] 서비스 이용약관 동의</a>
+        </div>
+        <div>
+          <img src="/assets/icon/check-2.svg" alt="essential_check_icon" />
+          <input type="checkbox" class="checkbox" />
+          <a class="sub__text">[필수] 개인정보 수집 및 서비스활용 동의</a>
+        </div>
+        <div>
+          <img src=" /assets/icon/check-2.svg" alt="select_check_icon" />
+          <input type="checkbox" class="checkbox" />
+          <a class="sub__text">[필수] 채널 홈페이지 개인정보 제 3자 제공 동의</a>
+        </div>
+        <div>
+          <img src=" /assets/icon/check-2.svg" alt="select_check_icon" />
+          <input type="checkbox" class="checkbox" />
+          <a class="sub__text">[선택] 개인정보 제3자 제공 동의</a>
+        </div>
+        <div>
+          <img src=" /assets/icon/check-2.svg" alt="select_check_icon" />
+          <input type="checkbox" class="checkbox" />
+          <a class="sub__text">[선택] 개인정보 수집 및 서비스 활용 동의</a>
+        </div>
+      </section>
+
+      <section class="checkbox__list__second">
+        <div>
+          <img src="/assets/icon/check-2.svg" alt="select_check_icon" />
+          <input type="checkbox" class="checkbox" />
+          <a>[선택] 마케팅정보 SMS 수신 동의</a>
+        </div>
+        <div>
+          <img src="/assets/icon/check-2.svg" alt="select_check_icon" />
+          <input type="checkbox" class="checkbox" />
+          <a>[선택] 마케팅 정보 이메일 수신 동의</a>
+        </div>
+      </section>
 
     </section>
+    <button type="button" class="main__button" aria-label="회원가입 버튼">가입하기</button>
   </div>
 
   <footer class="footer">
