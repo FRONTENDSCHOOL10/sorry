@@ -14,14 +14,13 @@
   </head>
   <body>
     <!-- 헤더 영역 시작 -->
-
     <header class="header">
       <h1 class="header__logo">
         <a class="header__logo__link" href="/">
           <span class="sr-only">타잉 로고</span>
         </a>
       </h1>
-      <nav class="header__nav">
+      <nav class="header__nav" aria-label="타잉 메뉴">
         <ul class="header__nav__menu">
           <li>
             <a class="nav__live" href="/">
@@ -46,14 +45,33 @@
           <button type="button" class="nav__search">
             <span class="sr-only">검색 아이콘</span>
           </button>
-          <button
-            type="button"
-            class="nav__profile"
-            aria-haspopup="true"
-            aria-controls="my-profile-layer"
-          >
-            <span class="sr-only">사용자 프로필 이미지</span>
-          </button>
+          <div class="nav__profile__wrapper">
+            <button type="button" class="nav__profile" aria-haspopup="true">
+              <span class="sr-only">사용자 프로필 이미지</span>
+            </button>
+            <!-- 마우스호버 레이어 -->
+            <div class="user">
+              <div class="user__info">
+                <div class="user__img"></div>
+                <div class="user__info__detail">
+                  <h4 class="user__name">재송합민한</h4>
+                  <a class="user__change" href="/pages/profiles"
+                    >프로필 전환 &gt;</a
+                  >
+                </div>
+              </div>
+              <div class="user__menu">
+                <ul class="user__menu__list">
+                  <li><a href="/">MY</a></li>
+                  <li><a href="/">이용권</a></li>
+                  <li><a href="/">쿠폰등록</a></li>
+                  <li><a href="/">고객센터</a></li>
+                  <li><a href="/pages/logout">로그아웃</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- 마우스호버 레이어 끝 -->
+          </div>
         </div>
       </nav>
     </header>
@@ -471,16 +489,24 @@
         </div>
         <ul class="community">
           <li class="youtube">
-            <a href=""><img src="/assets/icon/Youtube.png" alt="" /></a>
+            <a href=""
+              ><img src="/assets/icon/Youtube.png" alt="유튜브 바로가기"
+            /></a>
           </li>
           <li class="instargram">
-            <a href=""><img src="/assets/icon/Instagram.png" alt="" /></a>
+            <a href=""
+              ><img src="/assets/icon/Instagram.png" alt="인스타그램 바로가기"
+            /></a>
           </li>
           <li class="twitter">
-            <a href=""><img src="/assets/icon/Twitter.png" alt="" /></a>
+            <a href=""
+              ><img src="/assets/icon/Twitter.png" alt="트위터 바로가기"
+            /></a>
           </li>
           <li class="facebook">
-            <a href=""><img src="/assets/icon/Facebook.png" alt="" /></a>
+            <a href=""
+              ><img src="/assets/icon/Facebook.png" alt="페이스북 바로가기"
+            /></a>
           </li>
         </ul>
       </div>
