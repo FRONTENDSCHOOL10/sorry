@@ -993,7 +993,7 @@ footer {
   width: 100%;
 }
 
-button {
+.contentButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1007,7 +1007,7 @@ button {
   background: #e93945;
   color: #ffffff;
 }
-button img {
+.contentButton img {
   margin-bottom: 1.05rem;
   position: relative;
   right: 2.5rem;
@@ -1090,6 +1090,77 @@ button img {
   color: #ffffff;
   font-weight: bold;
   padding-bottom: 2.25rem;
+}
+
+.main {
+  margin-top: 6.25rem;
+}
+.main .search__input {
+  display: flex;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 1rem;
+}
+.main .search__input input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 1.9rem;
+  color: #404040;
+}
+.main .search__input button {
+  background-color: transparent;
+}
+
+.search__layout {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6.5625rem;
+}
+.search__layout .searchRecent,
+.search__layout .searchPopular {
+  width: 50%;
+}
+.search__layout .searchRecent .recentSearchWords,
+.search__layout .searchRecent .searchPopularWords,
+.search__layout .searchPopular .recentSearchWords,
+.search__layout .searchPopular .searchPopularWords {
+  font-size: 1.775rem;
+  line-height: 150%;
+  color: #898989;
+  margin-bottom: 1.25rem;
+}
+.search__layout .searchRecent .recentNone,
+.search__layout .searchPopular .recentNone {
+  font-size: 1.331rem;
+  line-height: 160%;
+  color: #a6a6a6;
+}
+.search__layout .searchPopular {
+  padding-left: 3.75rem;
+  border-left: 1px solid #2b2b2b;
+}
+.search__layout .searchPopular button {
+  background-color: transparent;
+  display: flex;
+  margin-bottom: 1rem;
+}
+.search__layout .searchPopular button span {
+  font-size: 1.331rem;
+  line-height: 160%;
+  color: #ff153c;
+  font-weight: bold;
+  margin-right: 2.125rem;
+}
+.search__layout .searchPopular button h3 {
+  font-size: 1.331rem;
+  line-height: 160%;
+  color: #a6a6a6;
+}
+
+.time {
+  font-size: 1.331rem;
+  line-height: 160%;
+  color: #a6a6a6;
 }
 
 body {
