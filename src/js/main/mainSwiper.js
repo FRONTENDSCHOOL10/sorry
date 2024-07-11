@@ -5,6 +5,18 @@ const swiper_case1 = new Swiper('.swiper-container__case1', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  a11y: {
+    enabled: true,
+    prevSlideMessage: '이전 포스터입니다',
+    nextSlideMessage: '다음 포스터입니다',
+    firstSlideMessage: '맨 처음 포스터입니다.',
+    lastSlideMessage: '마지막 포스터입니다.',
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
   breakpoints: {
     1: {
       slidesPerView: 3.2,
@@ -30,6 +42,18 @@ const swiper_case2 = new Swiper('.swiper-container__case2', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+  a11y: {
+    enabled: true,
+    prevSlideMessage: '이전 포스터입니다',
+    nextSlideMessage: '다음 포스터입니다',
+    firstSlideMessage: '맨 처음 포스터입니다.',
+    lastSlideMessage: '마지막 포스터입니다.',
   },
   breakpoints: {
     1: {
@@ -57,6 +81,18 @@ const swiper_case3 = new Swiper('.swiper-container__case3', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+  a11y: {
+    enabled: true,
+    prevSlideMessage: '이전 포스터입니다',
+    nextSlideMessage: '다음 포스터입니다',
+    firstSlideMessage: '맨 처음 포스터입니다.',
+    lastSlideMessage: '마지막 포스터입니다.',
+  },
   breakpoints: {
     1: {
       slidesPerView: 3.2,
@@ -83,6 +119,19 @@ const swiper_case4 = new Swiper('.swiper-container__case4', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  a11y: {
+    enabled: true,
+    prevSlideMessage: '이전 포스터입니다',
+    nextSlideMessage: '다음 포스터입니다',
+    firstSlideMessage: '맨 처음 포스터입니다.',
+    lastSlideMessage: '마지막 포스터입니다.',
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+
   breakpoints: {
     1: {
       slidesPerView: 2.1,
@@ -109,6 +158,18 @@ const swiper_case5 = new Swiper('.swiper-container__case5', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  a11y: {
+    enabled: true,
+    prevSlideMessage: '이전 포스터입니다',
+    nextSlideMessage: '다음 포스터입니다',
+    firstSlideMessage: '맨 처음 포스터입니다.',
+    lastSlideMessage: '마지막 포스터입니다.',
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
   breakpoints: {
     1: {
       slidesPerView: 2.1,
@@ -134,6 +195,18 @@ const swiper_case6 = new Swiper('.swiper-container__case6', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+  a11y: {
+    enabled: true,
+    prevSlideMessage: '이전 포스터입니다',
+    nextSlideMessage: '다음 포스터입니다',
+    firstSlideMessage: '맨 처음 포스터입니다.',
+    lastSlideMessage: '마지막 포스터입니다.',
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
   },
   breakpoints: {
     1: {
