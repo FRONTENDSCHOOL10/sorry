@@ -5,92 +5,59 @@
   align-items: center;
   flex-direction: column;
   color: #6b6b6b;
-
-  h2 {
-    color: #fff;
-    font-size: 2.3rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 140%;
-    margin-bottom: 28px;
-  }
 }
-.start {
+
+.signup__title {
+  color: #fff;
+  font-size: 2.3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: 28px;
+}
+
+.signup__span {
   color: #898989;
   text-align: center;
   font-size: 1.75rem;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 150%;
   margin-bottom: 26px;
 }
 
-.userId,
-.userPw,
-.userEmail {
+.signup__form {
   display: flex;
-  width: 732px;
-  height: 96px;
-  padding: 0px 454px 0px 24px;
-  align-items: center;
-  gap: 339px;
-  border-radius: 4px;
-  background-color: #212121;
-  color: #565656;
-  font-size: 1.75rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 110%;
-  margin-top: 34px;
-}
-.main__form {
-  input {
-    border: 1px solid black;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+
+  .signup__userId,
+  .signup__userPw,
+  .signup__userEmail {
+    display: flex;
+    align-items: center;
+    width: 732px;
+    height: 96px;
+    padding-left: 24px;
+    border-radius: 4px;
+    background-color: #212121; //$primary-color
+    color: #565656; //$gray-600
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 110%;
+    margin-top: 34px;
+    border: 1px solid black; //$background-color
   }
   p {
     font-size: 1.3rem;
-    font-style: normal;
-    font-weight: 400;
     line-height: 160%;
   }
 }
 
-.checkbox__list {
+.signup__checkbox {
   display: inline-flex;
   align-items: flex-start;
   flex-direction: column;
-  .checkbox1 {
-    padding-top: 28px;
-    padding-bottom: 28px;
-  }
-  .checkbox {
-    display: none;
-  }
-  .main__text {
-    font-weight: bold;
-  }
-  .checkbox__list__first {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    margin-bottom: 16px;
-  }
-  .checkbox__list__second {
-    display: flex;
-    width: 732px;
-    padding-left: 36px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 36px;
-  }
-}
-.main__button {
-  background-color: #404040;
-  display: flex;
-  width: 732px;
-  height: 86px;
-  justify-content: center;
-  align-items: center;
+  padding: 28px 0px;
 }
