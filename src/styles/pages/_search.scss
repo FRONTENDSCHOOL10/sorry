@@ -14,6 +14,12 @@
   color: $gray-700;
 }
 
+@mixin respond_search($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
 @mixin button-style {
   background-color: transparent;
 }
@@ -23,7 +29,7 @@
 }
 
 .search__main {
-  padding: 120px;
+  padding: 7.5rem;
 
   .search__input {
     display: flex;
@@ -32,10 +38,20 @@
 
     input {
       @include input-style;
+
+      @include respond_search($tablet) {
+        font-size: 1.331rem;
+        line-height: 1.5;
+      }
     }
 
     button {
       @include button-style;
+      img {
+        @include respond_search($tablet) {
+          width: 1.75rem;
+        }
+      }
     }
   }
 }
@@ -45,18 +61,32 @@
   justify-content: space-between;
   margin-top: 6.5625rem;
 
+  // .searchRecent {
+  //   @include respond_search($mobile) {
+  //     display: none;
+  //   }
+  // }
   .searchRecent,
   .searchPopular {
     width: 50%;
 
     .recentSearchWords,
     .searchPopularWords {
-      @include font-style(1.775rem, 150%, $gray-400);
+      @include font-style(1.775rem, 1.5, $gray-400);
       margin-bottom: 1.25rem;
+
+      @include respond_search($tablet) {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
     }
 
     .recentNone {
-      @include font-style(1.331rem, 160%, $gray-300);
+      @include font-style(1.331rem, 1.6, $gray-300);
+      @include respond_search($tablet) {
+        font-size: 0.75rem;
+        line-height: 1.6;
+      }
     }
   }
 
@@ -70,15 +100,24 @@
       margin-bottom: 1rem;
 
       span {
-        @include font-style(1.331rem, 160%, $brand-red);
+        @include font-style(1.331rem, 1.6, $brand-red);
         font-weight: bold;
         margin-right: 2.125rem;
+
+        @include respond_search($tablet) {
+          font-size: 0.75rem;
+          line-height: 1.5;
+        }
       }
 
       h3 {
-        font-weight: 200;
         margin-top: 0;
         @include h3-style;
+
+        @include respond_search($tablet) {
+          font-size: 0.75rem;
+          line-height: 1.5;
+        }
       }
     }
   }
@@ -86,5 +125,9 @@
 
 .time {
   font-weight: 100;
-  @include font-style(1.331rem, 160%, $gray-300);
+  @include font-style(1.331rem, 1.6, $gray-300);
+
+  @include respond_search($tablet) {
+    font-size: 0.75rem;
+  }
 }

@@ -92,7 +92,7 @@ button {
     padding: 1rem 2.5rem;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .header {
     padding: 0.71875rem 1rem;
   }
@@ -108,7 +108,7 @@ button {
     padding-right: 1.75rem;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .header__logo {
     padding-right: 1.75rem;
   }
@@ -130,7 +130,7 @@ button {
     height: 24px;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .header__logo__link {
     background: url("/assets/header/logo/Mobile_logo.svg");
     width: 45px;
@@ -164,7 +164,7 @@ button {
     font-size: 12px;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .header__nav__menu {
     gap: 28px;
     font-size: 12px;
@@ -187,7 +187,7 @@ button {
     background: url("/assets/header/Menu/Tablet_live_hover.svg");
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .header__nav__menu .nav__live:hover .live__img {
     background: url("/assets/header/Menu/Tablet_live_hover.svg");
   }
@@ -212,7 +212,7 @@ button {
     height: 20px;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .header__nav__menu .nav__live {
     gap: 4px;
   }
@@ -238,7 +238,7 @@ button {
     padding: 2.001px 0px 2.999px 0px;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .header__nav__menu .paramount__img {
     background: url("/assets/header/Menu/Tablet-paramount.svg") no-repeat;
     width: 65px;
@@ -256,7 +256,7 @@ button {
     background: url("/assets/header/Menu/Tablet-paramount-hover.svg") no-repeat;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .header__nav__menu .paramount__img:hover {
     background: url("/assets/header/Menu/Tablet-paramount-hover.svg") no-repeat;
   }
@@ -298,7 +298,7 @@ button {
     background: url("/assets/header/Menu/Tablet-gnb-profile.svg") no-repeat;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .header__nav__add {
     gap: 16px;
   }
@@ -340,7 +340,7 @@ button {
     padding: 12px 0;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .user {
     width: 200px;
     right: 16px;
@@ -370,7 +370,7 @@ button {
   color: #c4c4c4;
   font-size: 18px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .user__name {
     font-size: 12px;
   }
@@ -378,7 +378,7 @@ button {
 .user__change {
   font-size: 14px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .user__change {
     font-size: 12px;
   }
@@ -386,7 +386,7 @@ button {
 .user__menu {
   padding: 30px 20px 20px 20px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .user__menu {
     padding: 10px;
   }
@@ -410,15 +410,10 @@ button {
   font-weight: 100;
   color: #6b6b6b;
   position: relative;
+  font-size: 1.125rem;
 }
 .footer i {
   color: #fff;
-}
-.footer h3 {
-  font-size: 1.666rem;
-  color: #fff;
-  font-weight: 700;
-  margin-top: 3.75rem;
 }
 .footer ul {
   display: flex;
@@ -427,7 +422,6 @@ button {
   margin-top: 0.9375rem;
 }
 .footer ul span {
-  font-size: 1.125rem;
   margin-top: 0.625rem;
   color: #c4c4c4;
   font-weight: 500;
@@ -483,6 +477,26 @@ button {
   margin: 1.875rem 0;
 }
 
+@media (min-width: 768px) and (max-width: 1919px) {
+  .footer {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 767px) {
+  .footer {
+    font-size: 0.875rem;
+  }
+  .info__adress {
+    display: none;
+  }
+  .goto {
+    display: none !important;
+  }
+  .info__link span {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
 .banner {
   position: relative;
   overflow: hidden;
@@ -511,7 +525,7 @@ button {
     margin-top: 3.5rem;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .banner {
     margin-top: 2.6875rem;
   }
@@ -524,7 +538,7 @@ html {
   overflow-x: hidden;
 }
 
-h3 {
+.main h3 {
   font-size: 1.666rem;
   color: #fff;
   font-weight: 700;
@@ -533,6 +547,72 @@ h3 {
 
 .main_section {
   padding: 0 70px;
+}
+
+.mainPopup {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #000;
+  z-index: 500;
+}
+.mainPopup__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainPopup__container__buttons {
+  display: flex;
+  align-items: center;
+}
+.mainPopup__container__buttons button {
+  background-color: #000;
+  width: 50%;
+  height: 60px;
+  font-size: larger;
+  color: #fff;
+}
+.mainPopup__container__buttons hr {
+  height: 25px;
+  border-bottom-width: 1px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.mainPopup__container__buttons img {
+  width: 586px;
+  height: auto;
+}
+@media (min-width: 1920px) {
+  .mainPopup__container,
+  .mainPopup img {
+    width: 586px;
+    height: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1919px) {
+  .mainPopup__container,
+  .mainPopup img {
+    width: 328px;
+    height: auto;
+  }
+  .mainPopup button {
+    font-size: small;
+  }
+}
+@media (max-width: 767px) {
+  .mainPopup__container,
+  .mainPopup img {
+    width: 252px;
+    height: auto;
+  }
+  .mainPopup button {
+    font-size: small;
+  }
 }
 
 .contents {
@@ -587,7 +667,7 @@ h3 {
     width: calc((100% - 30px) / 1);
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .contents .swiper-slide {
     width: 100%;
   }
@@ -605,6 +685,13 @@ h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
+}
+
+.quickView .swiper-button-prev,
+.quickView .swiper-button-next,
+.liveProgram .swiper-button-prev,
+.liveProgram .swiper-button-next {
+  top: 70%;
 }
 
 .popularLive__name,
@@ -690,7 +777,7 @@ h3 {
     width: auto;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .ads {
     height: 30px;
     width: auto;
@@ -728,7 +815,7 @@ h3 {
     padding-top: 74px;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .profile__wrapper {
     margin-top: 38px;
     padding-top: 44px;
@@ -749,7 +836,7 @@ h3 {
     gap: 12px;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .profile__image__link {
     gap: 12px;
   }
@@ -780,7 +867,7 @@ h3 {
     font-size: 12.003px;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .profile__button__edit {
     width: 135px;
     height: auto;
@@ -805,7 +892,7 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .profile__title__wrapper {
     padding-top: 28px;
     gap: 16px;
@@ -825,7 +912,7 @@ h3 {
     margin-bottom: 20px;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .profile__title {
     font-size: 16px;
     font-weight: 700;
@@ -844,7 +931,7 @@ h3 {
     font-size: 16px;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .profile__title__sub {
     font-size: 12.003px;
   }
@@ -867,7 +954,7 @@ h3 {
     gap: 32px;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .profile__list {
     padding: 32px 0;
     gap: 24px;
@@ -897,7 +984,7 @@ h3 {
     height: 50px;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .link__container .link__lock {
     background: url(/assets/profile/Mobile&Tablet-lock.svg);
     width: 50px;
@@ -921,7 +1008,7 @@ h3 {
     background: url("/assets/profile/Tablet-seulbi.svg");
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .link__seulbi {
     width: 114px;
     height: 114px;
@@ -945,7 +1032,7 @@ h3 {
     background: url("/assets/profile/Tablet-beom.svg");
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .link__beom {
     width: 114px;
     height: 114px;
@@ -969,7 +1056,7 @@ h3 {
     background: url("/assets/profile/Tablet-yamoo.svg");
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .link__yamoo {
     width: 114px;
     height: 114px;
@@ -993,7 +1080,7 @@ h3 {
     background: url("/assets/profile/Tablet-euid.svg");
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .link__euid {
     width: 114px;
     height: 114px;
@@ -1014,7 +1101,7 @@ h3 {
     font-size: 12.003px;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .link__image__name {
     font-size: 12.003px;
   }
@@ -1040,7 +1127,7 @@ h3 {
     font-size: 12.003px;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .profile__button__done {
     width: 135px;
     height: auto;
@@ -1072,7 +1159,7 @@ h3 {
     height: 50px;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .link__container .link__edit {
     background: url(/assets/profile/Mobile&Tablet-edit.svg);
     width: 50px;
@@ -1333,7 +1420,7 @@ h3 {
 }
 
 .search__main {
-  padding: 120px;
+  padding: 7.5rem;
 }
 .search__main .search__input {
   display: flex;
@@ -1347,8 +1434,19 @@ h3 {
   font-size: 1.9rem;
   color: #404040;
 }
+@media screen and (max-width: 768px) {
+  .search__main .search__input input {
+    font-size: 1.331rem;
+    line-height: 1.5;
+  }
+}
 .search__main .search__input button {
   background-color: transparent;
+}
+@media screen and (max-width: 768px) {
+  .search__main .search__input button img {
+    width: 1.75rem;
+  }
 }
 
 .search__layout {
@@ -1365,15 +1463,31 @@ h3 {
 .search__layout .searchPopular .recentSearchWords,
 .search__layout .searchPopular .searchPopularWords {
   font-size: 1.775rem;
-  line-height: 150%;
+  line-height: 1.5;
   color: #898989;
   margin-bottom: 1.25rem;
+}
+@media screen and (max-width: 768px) {
+  .search__layout .searchRecent .recentSearchWords,
+  .search__layout .searchRecent .searchPopularWords,
+  .search__layout .searchPopular .recentSearchWords,
+  .search__layout .searchPopular .searchPopularWords {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 }
 .search__layout .searchRecent .recentNone,
 .search__layout .searchPopular .recentNone {
   font-size: 1.331rem;
-  line-height: 160%;
+  line-height: 1.6;
   color: #a6a6a6;
+}
+@media screen and (max-width: 768px) {
+  .search__layout .searchRecent .recentNone,
+  .search__layout .searchPopular .recentNone {
+    font-size: 0.75rem;
+    line-height: 1.6;
+  }
 }
 .search__layout .searchPopular {
   padding-left: 3.75rem;
@@ -1386,24 +1500,40 @@ h3 {
 }
 .search__layout .searchPopular button span {
   font-size: 1.331rem;
-  line-height: 160%;
+  line-height: 1.6;
   color: #ff153c;
   font-weight: bold;
   margin-right: 2.125rem;
 }
+@media screen and (max-width: 768px) {
+  .search__layout .searchPopular button span {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+}
 .search__layout .searchPopular button h3 {
-  font-weight: 200;
   margin-top: 0;
   font-size: 1.331rem;
   line-height: 160%;
   color: #a6a6a6;
 }
+@media screen and (max-width: 768px) {
+  .search__layout .searchPopular button h3 {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+}
 
 .time {
   font-weight: 100;
   font-size: 1.331rem;
-  line-height: 160%;
+  line-height: 1.6;
   color: #a6a6a6;
+}
+@media screen and (max-width: 768px) {
+  .time {
+    font-size: 0.75rem;
+  }
 }
 
 body {
