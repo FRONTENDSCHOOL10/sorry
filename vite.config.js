@@ -20,7 +20,6 @@ export default defineConfig({
         logout: resolve(root, 'pages', 'logout.html'),
         onboarding: resolve(root, 'pages', 'onboarding.html'),
         popup: resolve(root, 'pages', 'popup.html'),
-        profilepopup: resolve(root, 'pages', 'profilePopup.html'),
         profiles: resolve(root, 'pages', 'profiles.html'),
         profilesForEdit: resolve(root, 'pages', 'profilesForEdit.html'),
         search: resolve(root, 'pages', 'search.html'),
