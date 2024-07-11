@@ -1,2 +1,2 @@
-import './main/mainSwiper.js';
-import './main/mainPopup.js';
+import '/src/js/main/mainSwiper.js';
+import '/src/js/main/mainPopup.js';
