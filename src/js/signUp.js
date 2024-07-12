@@ -1,4 +1,4 @@
-import client from '/api/pocketbase';
+import client from '/src/api/pocketbase';
 
 console.log('회원가입페이지 연결됐나요?');
 

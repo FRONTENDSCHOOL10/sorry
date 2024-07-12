@@ -1,29 +1,22 @@
 import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 
-const root = resolve(__dirname, 'src');
-const outDir = resolve(__dirname, 'docs');
-const publicDir = resolve(__dirname, 'public');
-
 export default defineConfig({
-  root,
-  publicDir,
   build: {
-    outDir,
-    emptyOutDir: true,
+    outDir: 'docs',
     rollupOptions: {
       input: {
-        main: resolve(root, 'index.html'),
-        findid: resolve(root, 'pages', 'findId.html'),
-        findpw: resolve(root, 'pages', 'findPw.html'),
-        login: resolve(root, 'pages', 'login.html'),
-        logout: resolve(root, 'pages', 'logout.html'),
-        onboarding: resolve(root, 'pages', 'onboarding.html'),
-        popup: resolve(root, 'pages', 'popup.html'),
-        profiles: resolve(root, 'pages', 'profiles.html'),
-        profilesForEdit: resolve(root, 'pages', 'profilesForEdit.html'),
-        search: resolve(root, 'pages', 'search.html'),
-        signup: resolve(root, 'pages', 'signUp.html'),
+        main: resolve(__dirname, 'index.html'),
+        findid: resolve(__dirname, './src/pages/findId.html'),
+        findpw: resolve(__dirname, './src/pages/findPw.html'),
+        login: resolve(__dirname, './src/pages/login.html'),
+        logout: resolve(__dirname, './src/pages/logout.html'),
+        onboarding: resolve(__dirname, './src/pages/onboarding.html'),
+        popup: resolve(__dirname, './src/pages/popup.html'),
+        profiles: resolve(__dirname, './src/pages/profiles.html'),
+        profilesForEdit: resolve(__dirname, './src/pages/profilesForEdit.html'),
+        search: resolve(__dirname, './src/pages/search.html'),
+        signup: resolve(__dirname, './src/pages/signUp.html'),
       },
     },
   },
