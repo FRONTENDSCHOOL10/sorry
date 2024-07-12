@@ -31,6 +31,14 @@
 .search__main {
   padding: 7.5rem;
 
+  @include respond_search($tablet) {
+    padding: 70px;
+  }
+
+  @include respond_search($mobile) {
+    padding: 40px;
+  }
+
   .search__input {
     display: flex;
     border-bottom: 1px solid $white;
@@ -61,14 +69,18 @@
   justify-content: space-between;
   margin-top: 6.5625rem;
 
-  // .searchRecent {
-  //   @include respond_search($mobile) {
-  //     display: none;
-  //   }
-  // }
+  .searchRecent {
+    @include respond_search($mobile) {
+      display: none;
+    }
+  }
   .searchRecent,
   .searchPopular {
     width: 50%;
+
+    @include respond_search($mobile) {
+      width: 100%;
+    }
 
     .recentSearchWords,
     .searchPopularWords {
@@ -93,6 +105,11 @@
   .searchPopular {
     padding-left: 3.75rem;
     border-left: 1px solid $gray-800;
+
+    @include respond_search($mobile) {
+      border: none;
+      padding-left: 0;
+    }
 
     button {
       @include button-style;

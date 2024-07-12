@@ -8,27 +8,27 @@
 }
 
 @mixin large-text {
-  @include text-style(3.15rem, 140%, $white, bold);
+  @include text-style(3.15rem, 1.4, $white, bold);
 }
 
 @mixin medium-text {
-  @include text-style(1.775rem, 150%, $gray-400);
+  @include text-style(1.775rem, 1.5, $gray-400);
 }
 
 @mixin small-text {
-  @include text-style(1.33125rem, 160%, $gray-200);
+  @include text-style(1.33125rem, 1.6, $gray-200);
 }
 
 @mixin xsmall-text {
-  @include text-style(1rem, 150%, $gray-200);
+  @include text-style(1rem, 1.5, $gray-200);
 }
 
 @mixin xsmall-text-white {
-  @include text-style(1rem, 150%, $white);
+  @include text-style(1rem, 1.5, $white);
 }
 
 @mixin xxsmall-text {
-  @include text-style(0.75rem, 160%, $gray-400);
+  @include text-style(0.75rem, 1.6, $gray-400);
 }
 
 @mixin centered-flex {
@@ -64,7 +64,7 @@
   padding-top: 10rem;
   text-align: center;
 
-  h1 {
+  .contentTitle {
     @include large-text;
     padding-bottom: 1.25rem;
 
@@ -72,17 +72,17 @@
       @include small-text;
       padding-bottom: 0.5rem;
       font-weight: bold;
-      color: white;
+      color: $white;
     }
   }
 
-  h2 {
+  .contentServeTitle {
     @include medium-text;
-    padding-bottom: 3.75rem;
+    padding-bottom: 1.75rem;
 
     @include respond($tablet) {
       @include xxsmall-text;
-      padding-bottom: 1.75rem;
+      padding-bottom: 0.75rem;
     }
   }
 }
@@ -108,7 +108,7 @@
   @include respond($tablet) {
     width: 17.6875rem;
     height: 3rem;
-    @include xsmall-text-white();
+    @include xsmall-text-white;
   }
 
   img {
@@ -129,7 +129,7 @@
 .main__forLogin {
   text-align: center;
 
-  h1 {
+  .contentTitle {
     @include large-text;
     padding-bottom: 1.25rem;
 
@@ -137,11 +137,11 @@
       @include small-text;
       padding-bottom: 0.5rem;
       font-weight: bold;
-      color: white;
+      color: $white;
     }
   }
 
-  h2 {
+  .contentServeTitle {
     @include medium-text;
     padding-bottom: 0.5rem;
 
@@ -211,6 +211,10 @@
 }
 
 .main__forLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin-top: 18.75rem;
 
   a img {
@@ -222,7 +226,7 @@
     }
   }
 
-  h1 {
+  .contentTitle {
     @include large-text;
     padding-bottom: 2.25rem;
 
@@ -230,7 +234,7 @@
       @include small-text;
       padding-bottom: 0.875rem;
       font-weight: bold;
-      color: white;
+      color: $white;
     }
   }
 
