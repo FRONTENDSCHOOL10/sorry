@@ -70,7 +70,7 @@
   }
 
   @include mobile {
-    display: none;
+    justify-content: flex-end;
   }
 
   // 내부 메뉴 배치
@@ -87,6 +87,10 @@
       gap: 28px;
       font-size: 12px;
     }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   // 오른쪽 메뉴 배치
@@ -97,6 +101,9 @@
 
       @include tablet {
         gap: 24px;
+      }
+      @include mobile {
+        gap: 16px;
       }
     }
 
@@ -109,6 +116,11 @@
           width: 24px;
           height: 24px;
         }
+
+        @include mobile {
+          width: 24px;
+          height: 24px;
+        }
       }
     }
     .nav__profile {
@@ -116,6 +128,10 @@
         width: 40px;
         height: 40px;
         @include tablet {
+          width: 24px;
+          height: 24px;
+        }
+        @include mobile {
           width: 24px;
           height: 24px;
         }
@@ -197,6 +213,10 @@
     width: 200px;
     right: 40px;
   }
+  @include mobile {
+    width: 200px;
+    right: 40px;
+  }
 
   .user__info {
     display: flex;
@@ -222,11 +242,17 @@
         @include tablet {
           font-size: 14px;
         }
+        @include mobile {
+          font-size: 12px;
+        }
       }
       .user__change {
         font-size: 14px;
         @include tablet {
           font-size: 10px;
+        }
+        @include mobile {
+          font-size: 9px;
         }
       }
     }
