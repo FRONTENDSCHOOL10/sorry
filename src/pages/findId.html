@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/taing.ico" />
   <script type="module" src="/main.js"></script>
   <title>아이디 찾기</title>
 </head>
@@ -16,20 +17,24 @@
       </a>
     </h1>
   </header>
-  <section class="wrapper">
-    <h1>아이디 찾기</h1>
-    <p>이메일로 찾기</p>
-    <p>가입 시 등록한 이메일을 입력해주세요.</p>
+
+  <section class="findid">
+    <h2 class="findid__title">아이디 찾기</h2>
+    <p class="findid__subtitle">이메일로 찾기</p>
+    <span class="findid__text">가입 시 등록한 이메일을 입력해주세요.</span>
 
     <form action="">
-      <input type="email" class="userEmail" placeholder="이메일" />
-      <button type="button" class="button">확인</button>
+      <input type="email" class="findid__user__email" placeholder="이메일" />
+      <button type="button" class="findid__correct">확인</button>
     </form>
 
-    <p>또는</p>
-    <p>본인 인증으로 찾기</p>
-    <p>이미 본인인증이 완료된 계정에 한하여 아이디 찾기가 가능합니다.</p>
-    <button>본인인증하기</button>
+    <p class="findid__or">또는</p>
+
+    <div class="findid__search">
+      <p class="findid__self">본인 인증으로 찾기</p>
+      <p class="findid__self__find">이미 본인인증이 완료된 계정에 한하여 아이디 찾기가 가능합니다.</p>
+    </div>
+    <button type="button" class="findid__button">본인인증하기</button>
   </section>
 
   <footer class="footer">

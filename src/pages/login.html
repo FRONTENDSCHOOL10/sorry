@@ -18,28 +18,25 @@
     </h1>
   </header>
 
-  <section class="main">
+  <section class="login">
     <div>
       <h2>TVING ID 로그인</h2>
       <form>
-        <input type="text" class="main__user__id" placeholder="아이디" />
-        <label class="main__eyes" for="">
-          <input type="password" class="main__user__password" placeholder="비밀번호" />
-          <img class="eyes" src="/src/assets/icon/eyes.svg" alt="hidden_password" />
-        </label>
+        <input type="text" class="login__user__id" placeholder="아이디" />
+        <input type="password" class="login__user__password" placeholder="비밀번호" />
       </form>
-      <div class="auto">
-        <input type="checkbox" class="auto__checkbox" />
-        <img class="auto__image" src="/src/assets/icon/check.svg" alt="check_icon" />
+      <div class="login__auto">
+        <input type="checkbox" class="login__auto__checkbox" />
+        <img class="login__auto__image" src="/src/assets/icon/check.svg" alt="check_icon" />
         <a aria-label="자동 로그인 체크"> 자동로그인</a>
       </div>
-      <button type="button" class="auto__button">로그인하기</button>
-      <div class="find">
-        <a class="find__id" href="/src/pages/findId.html" aria-label="아이디 찾기 페이지로 이동">아이디 찾기</a>
-        <a class="find__line">|</a>
-        <a class="find__password" href="/src/pages/findPw.html" aria-label="비밀번호 찾기 페이지로 이동">비밀번호 찾기</a>
+      <button type="button" class="login__auto__button">로그인하기</button>
+      <div class="login__find">
+        <a class="login__find__id" href="/src/pages/findId.html" aria-label="아이디 찾기 페이지로 이동">아이디 찾기</a>
+        <a class="login__find__line">|</a>
+        <a class="login__find__password" href="/src/pages/findPw.html" aria-label="비밀번호 찾기 페이지로 이동">비밀번호 찾기</a>
       </div>
-      <section class="signUp">
+      <section class="login__signUp">
         <span>아직 계정이 없으신가요?</span>
         <a href="/src/pages/signUp.html" aria-label="회원가입 페이지로 이동">회원가입하기</a>
       </section>
