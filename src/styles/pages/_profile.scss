@@ -42,6 +42,9 @@
       justify-content: center;
     }
     &__edit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border-radius: 4px;
       border: 1px solid $gray-600;
       background-color: transparent;
@@ -122,8 +125,9 @@
 
 .profile__list {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: center;
+
   @include desktop {
     padding: 44px 0;
     gap: 52px;
@@ -133,6 +137,8 @@
     gap: 32px;
   }
   @include mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     padding: 32px 0;
     gap: 24px;
   }
@@ -166,74 +172,58 @@
 
   &__seulbi {
     opacity: 50%;
-    @include desktop {
-      width: 234px;
-      height: 234px;
-      background: url('/src/assets/profile/desktop-seulbi.svg');
-    }
+    width: 234px;
+    height: 234px;
+
     @include tablet {
       width: 132px;
       height: 132px;
-      background: url('/src/assets/profile/tablet-seulbi.svg');
     }
     @include mobile {
       width: 114px;
       height: 114px;
-      background: url('/src/assets/profile/mobile-seulbi.svg');
     }
   }
   &__beom {
     opacity: 50%;
-    @include desktop {
-      width: 234px;
-      height: 234px;
-      background: url('/src/assets/profile/desktop-beom.svg');
-    }
+    width: 234px;
+    height: 234px;
+
     @include tablet {
       width: 132px;
       height: 132px;
-      background: url('/src/assets/profile/tablet-beom.svg');
     }
     @include mobile {
       width: 114px;
       height: 114px;
-      background: url('/src/assets/profile/mobile-beom.svg');
     }
   }
   &__yamoo {
     opacity: 50%;
-    @include desktop {
-      width: 234px;
-      height: 234px;
-      background: url('/src/assets/profile/desktop-yamoo.svg');
-    }
+    width: 234px;
+    height: 234px;
+
     @include tablet {
       width: 132px;
       height: 132px;
-      background: url('/src/assets/profile/tablet-yamoo.svg');
     }
     @include mobile {
       width: 114px;
       height: 114px;
-      background: url('/src/assets/profile/mobile-yamoo.svg');
     }
   }
   &__euid {
     opacity: 50%;
-    @include desktop {
-      width: 234px;
-      height: 234px;
-      background: url('/src/assets/profile/desktop-euid.svg');
-    }
+    width: 234px;
+    height: 234px;
+
     @include tablet {
       width: 132px;
       height: 132px;
-      background: url('/src/assets/profile/tablet-euid.svg');
     }
     @include mobile {
       width: 114px;
       height: 114px;
-      background: url('/src/assets/profile/mobile-euid.svg');
     }
   }
 

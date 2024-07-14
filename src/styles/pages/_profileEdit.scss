@@ -3,6 +3,9 @@
 .profile {
   &__button {
     &__done {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border-radius: 4px;
       background-color: $gray-100;
       color: black;
