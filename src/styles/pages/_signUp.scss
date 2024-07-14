@@ -37,6 +37,7 @@
   .signup__userEmail {
     display: flex;
     align-items: center;
+    flex-direction: column;
     width: 732px;
     height: 96px;
     padding-left: 24px;
@@ -56,8 +57,36 @@
 }
 
 .signup__checkbox {
-  display: inline-flex;
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 28px 0px;
+  width: 732px;
+  font-size: 1.3125rem;
+  font-weight: 600;
+  line-height: 200%;
+
+  .checkbox {
+    display: none;
+    margin-bottom: 12px;
+  }
+
+  .signup__checkbox1 {
+    margin: 28px 0;
+  }
+}
+
+.signup__checkbox__list {
+  font-weight: 500;
+
+  .signup__checkbox__list2 {
+    margin: 0 0 36px 36px;
+  }
+}
+
+.signup__button {
+  width: 732px;
+  height: 86px;
+  border-radius: 4px;
+  background: #404040;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 150%;
+  color: #898989;
 }
