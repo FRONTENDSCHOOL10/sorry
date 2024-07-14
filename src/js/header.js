@@ -1,25 +1,19 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const profileContainer = document.querySelector('.nav__profile');
-  const profileWrapper = document.querySelector('.nav__profile__wrapper');
-  let timer;
+const navProfile = document.querySelector('.nav__profile');
+const navProfileWrapper = document.querySelector('.nav__profile__wrapper');
+let timer;
 
-  profileContainer.addEventListener('mouseover', function () {
-    clearTimeout(timer);
-    profileWrapper.style.display = 'block';
-  });
+function handleProfileLayer() {
+  clearTimeout(timer);
+  navProfileWrapper.style.display = 'block';
+}
 
-  profileContainer.addEventListener('mouseout', function () {
-    timer = setTimeout(function () {
-      profileWrapper.style.display = 'none';
-    }, 300);
-  });
+function handleProfileLayerRemove() {
+  timer = setTimeout(() => {
+    navProfileWrapper.style.display = 'none';
+  }, 300);
+}
 
-  profileWrapper.addEventListener('mouseover', function () {
-    clearTimeout(timer);
-    profileWrapper.style.display = 'block';
-  });
-
-  profileWrapper.addEventListener('mouseout', function () {
-    profileWrapper.style.display = 'none';
-  });
-});
+navProfile.addEventListener('mouseover', handleProfileLayer);
+navProfile.addEventListener('mouseout', handleProfileLayerRemove);
+navProfileWrapper.addEventListener('mouseover', handleProfileLayer);
+navProfileWrapper.addEventListener('mouseout', handleProfileLayerRemove);
