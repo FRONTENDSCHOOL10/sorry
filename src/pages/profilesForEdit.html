@@ -1,139 +1,157 @@
 <!doctype html>
 <html lang="ko-KR">
+  <head>
+    <title>profile-edit</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/taing.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/main.js"></script>
+  </head>
 
-<head>
-  <title>TAING</title>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/taing.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script type="module" src="/main.js"></script>
-</head>
-
-<body>
-  <!-- 헤더 영역 시작 -->
-  <header class="header">
-    <h1 class="header__logo">
-      <a class="header__logo__link" href="/">
-        <span class="sr-only">타잉 로고</span>
-      </a>
-    </h1>
-  </header>
-  <!-- 헤더 영역 끝 -->
-  <main class="profile__wrapper">
-    <div class="profile__title__wrapper">
-      <h1 class="profile__title">프로필 편집</h1>
-      <h3 class="profile__title__sub">편집할 프로필을 선택해주세요</h3>
-    </div>
-    <div class="profile__list__container">
-      <ul class="profile__list">
-        <li class="profile__image">
-          <a class="profile__image__link" href="/">
-            <div class="link__container">
-              <div class="link__seulbi"></div>
-              <div class="link__edit"></div>
-            </div>
-            <span class="link__image__name">슬비님</span>
-          </a>
-        </li>
-        <li class="profile__image">
-          <a class="profile__image__link" href="/">
-            <div class="link__container">
-              <div class="link__beom"></div>
-              <div class="link__edit"></div>
-            </div>
-            <span class="link__image__name">범쌤</span>
-          </a>
-        </li>
-        <li class="profile__image">
-          <a class="profile__image__link" href="/">
-            <div class="link__container">
-              <div class="link__yamoo"></div>
-              <div class="link__edit"></div>
-            </div>
-            <span class="link__image__name">야무</span>
-          </a>
-        </li>
-        <li class="profile__image">
-          <a class="profile__image__link" href="/">
-            <div class="link__container">
-              <div class="link__euid"></div>
-              <div class="link__edit"></div>
-            </div>
-            <span class="link__image__name">이듬</span>
-          </a>
-        </li>
-      </ul>
-      <div class="profile__button__wrapper">
-        <button type="button" class="profile__button__done">완료</button>
+  <body>
+    <!-- 헤더 영역 시작 -->
+    <header class="header">
+      <h1 class="header__logo">
+        <a class="header__logo__link" href="/">
+          <img src="/assets/desktop_logo.svg" alt="타잉" />
+        </a>
+      </h1>
+    </header>
+    <!-- 헤더 영역 끝 -->
+    <main class="profile__wrapper">
+      <div class="profile__title__wrapper">
+        <h1 class="profile__title">프로필 편집</h1>
+        <p class="profile__title__sub">편집할 프로필을 선택해주세요</p>
       </div>
-    </div>
-  </main>
-  <footer class="footer">
-    <div class="util">
-      <div class="util__div">
-        <div class="announce">
-          <p>공지사항</p>
-          <a href="/sorry/index.html">[안내] 합병보고 주주총회에 갈음하는 공고</a>
-        </div>
-        <div class="goto">
-          <div>브랜드 바로가기 +</div>
-          <hr />
-          <div>그룹 계열사 바로가기 +</div>
+      <div class="profile__list__container">
+        <ul class="profile__list">
+          <li class="profile__image">
+            <a class="profile__image__link" href="/">
+              <div class="link__container">
+                <img src="/src/assets/profile/desktop-seulbi.svg" alt="슬비님" class="link__seulbi"></img>
+                <span class="link__edit"></span>
+              </div>
+              <span class="link__image__name">슬비님</span>
+            </a>
+          </li>
+          <li class="profile__image">
+            <a class="profile__image__link" href="/">
+              <div class="link__container">
+                <img src="/src/assets/profile/desktop-beom.svg" alt="범쌤" class="link__beom"></img>
+                <span class="link__edit"></span>
+              </div>
+              <span class="link__image__name">범쌤</span>
+            </a>
+          </li>
+          <li class="profile__image">
+            <a class="profile__image__link" href="/">
+              <div class="link__container">
+                <img src="/src/assets/profile/desktop-yamoo.svg" alt="야무" class="link__yamoo"></img>
+                <span class="link__edit"></span>
+              </div>
+              <span class="link__image__name">야무</span>
+            </a>
+          </li>
+          <li class="profile__image">
+            <a class="profile__image__link" href="/">
+              <div class="link__container">
+                <img src="/src/assets/profile/desktop-euid.svg" alt="이듬" class="link__euid"></img>
+                <span class="link__edit"></span>
+              </div>
+              <span class="link__image__name">이듬</span>
+            </a>
+          </li>
+        </ul>
+        <div class="profile__button__wrapper">
+          <a class="profile__button__done" href="/src/pages/profiles">완료</a>
         </div>
       </div>
-      <div class="info">
-        <div class="info__link">
-          <span>고객센터</span>
-          <span>이용약관</span>
-          <span>개인정보처리방침</span>
-          <span>청소년 보호정책</span>
-          <span>법적고지</span>
-          <span>이벤트</span>
-          <span>인재채용</span>
+    </main>
+    <footer class="footer">
+      <div class="util">
+        <div class="util__div">
+          <div class="announce">
+            <p>공지사항</p>
+            <a href="/sorry/index.html"
+              >[안내] 합병보고 주주총회에 갈음하는 공고</a
+            >
+          </div>
+          <div class="goto">
+            <div>브랜드 바로가기 +</div>
+            <hr />
+            <div>그룹 계열사 바로가기 +</div>
+          </div>
         </div>
-        <div class="info__adress">
-          <p>
-            <span>대표이사 : YANG JIEUL</span>
-            <span><a href="">사업자정보확인</a></span>
-            <span>사업자등록번호 : 188-88-01893</span>
-            <span>통신판매신고번호 : 2020-서울마포-3641호</span>
-          </p>
-          <p>
-            <span>사업장 : 서울특별지 마포구 상암산로 34, DMC디지털큐브
-              15층(상암동)</span>
-            <span>호스팅사업자 : 씨제이올리브네트웍스(주)</span>
-          </p>
-          <p>
-            <span><a href="">고객문의 바로가기</a></span>
-            <span><a href="">대표메일 : taing@cj.net</a></span>
-            <span><a href="">고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무)</a></span>
-          </p>
-          <p>
-            <span>ENM 시청자 상담식 (편성 문의 및 시청자 의견) :
-              080-080-0780</span>
-            <span>Mnet 고객센터(반송편성문의) : 1855-1631</span>
-          </p>
+        <div class="info">
+          <div class="info__link">
+            <span>고객센터</span>
+            <span>이용약관</span>
+            <span>개인정보처리방침</span>
+            <span>청소년 보호정책</span>
+            <span>법적고지</span>
+            <span>이벤트</span>
+            <span>인재채용</span>
+          </div>
+          <div class="info__adress">
+            <p>
+              <span>대표이사 : YANG JIEUL</span>
+              <span><a href="">사업자정보확인</a></span>
+              <span>사업자등록번호 : 188-88-01893</span>
+              <span>통신판매신고번호 : 2020-서울마포-3641호</span>
+            </p>
+            <p>
+              <span
+                >사업장 : 서울특별지 마포구 상암산로 34, DMC디지털큐브
+                15층(상암동)</span
+              >
+              <span>호스팅사업자 : 씨제이올리브네트웍스(주)</span>
+            </p>
+            <p>
+              <span><a href="">고객문의 바로가기</a></span>
+              <span><a href="">대표메일 : taing@cj.net</a></span>
+              <span
+                ><a href=""
+                  >고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무)</a
+                ></span
+              >
+            </p>
+            <p>
+              <span
+                >ENM 시청자 상담식 (편성 문의 및 시청자 의견) :
+                080-080-0780</span
+              >
+              <span>Mnet 고객센터(반송편성문의) : 1855-1631</span>
+            </p>
+          </div>
         </div>
+        <ul class="community">
+          <li class="youtube">
+            <a href=""
+              ><img src="/src/assets/icon/Youtube.png" alt="유튜브 바로가기"
+            /></a>
+          </li>
+          <li class="instargram">
+            <a href=""
+              ><img
+                src="/src/assets/icon/Instagram.png"
+                alt="인스타그램 바로가기"
+            /></a>
+          </li>
+          <li class="twitter">
+            <a href=""
+              ><img src="/src/assets/icon/Twitter.png" alt="트위터 바로가기"
+            /></a>
+          </li>
+          <li class="facebook">
+            <a href=""
+              ><img src="/src/assets/icon/Facebook.png" alt="페이스북 바로가기"
+            /></a>
+          </li>
+        </ul>
       </div>
-      <ul class="community">
-        <li class="youtube">
-          <a href=""><img src="/src/assets/icon/Youtube.png" alt="유튜브 바로가기" /></a>
-        </li>
-        <li class="instargram">
-          <a href=""><img src="/src/assets/icon/Instagram.png" alt="인스타그램 바로가기" /></a>
-        </li>
-        <li class="twitter">
-          <a href=""><img src="/src/assets/icon/Twitter.png" alt="트위터 바로가기" /></a>
-        </li>
-        <li class="facebook">
-          <a href=""><img src="/src/assets/icon/Facebook.png" alt="페이스북 바로가기" /></a>
-        </li>
-      </ul>
-    </div>
-    <div class="copyright">
-      <span>Copyright &copy; 주식회사 타잉 All right reservd.</span>
-    </div>
-  </footer>
-</body>
-
+      <div class="copyright">
+        <span>Copyright &copy; 주식회사 타잉 All right reservd.</span>
+      </div>
+    </footer>
+  </body>
 </html>
