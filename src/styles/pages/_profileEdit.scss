@@ -3,6 +3,9 @@
 .profile {
   &__button {
     &__done {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border-radius: 4px;
       background-color: $gray-100;
       color: black;
@@ -37,17 +40,17 @@
       top: 50%;
       transform: translate(-50%, -50%);
       @include desktop {
-        background: url(/src/assets/profile/Desktop-edit.svg);
+        background: url(/src/assets/profile/desktop-edit.svg);
         width: 60px;
         height: 60px;
       }
       @include tablet {
-        background: url(/src/assets/profile/Mobile&Tablet-edit.svg);
+        background: url(/src/assets/profile/mobile&tablet-edit.svg);
         width: 50px;
         height: 50px;
       }
       @include mobile {
-        background: url(/src/assets/profile/Mobile&Tablet-edit.svg);
+        background: url(/src/assets/profile/mobile&tablet-edit.svg);
         width: 50px;
         height: 50px;
       }
