@@ -2,6 +2,9 @@ import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  resolve: {
+    alias: { '@': resolve(__dirname, 'src') },
+  },
   build: {
     outDir: 'docs',
     rollupOptions: {
@@ -16,7 +19,7 @@ export default defineConfig({
         profiles: resolve(__dirname, './src/pages/profiles.html'),
         profilesForEdit: resolve(__dirname, './src/pages/profilesForEdit.html'),
         search: resolve(__dirname, './src/pages/search.html'),
-        signup: resolve(__dirname, './src/pages/signUp.html'),
+        signup: resolve(__dirname, '/src/pages/signup/signUp.html'),
       },
     },
   },
