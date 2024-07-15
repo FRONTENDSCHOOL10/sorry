@@ -143,7 +143,7 @@ html {
   .swiper-button-prev,
   .swiper-button-next {
     position: absolute;
-    top: 65%;
+    top: 50%;
     transform: translateY(-50%);
     z-index: 10;
     cursor: pointer;
@@ -206,7 +206,7 @@ html {
 
   .swiper-button-prev,
   .swiper-button-next {
-    top: 75%;
+    top: 40%;
   }
 }
 
@@ -305,6 +305,11 @@ html {
     display: flex;
 
   }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 45%;
+  }
 }
 
 .ads {
@@ -339,6 +344,16 @@ html {
 
   .swiper-button-prev,
   .swiper-button-next {
-    top: 80%;
+    top: 35%;
   }
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 30px;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
 }
