@@ -24,10 +24,14 @@
 
       <form action="" class="main__form">
         <input type="text" class="userId" placeholder="아이디" />
-        <p>영문 또는 영문, 숫자 조합 6~12자리</p>
+        <p class="id__error">영문 또는 영문, 숫자 조합 6~12자리</p>
         <input type="password" class="userPw" placeholder="비밀번호" />
-        <p>영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15자리</p>
-        <input type="password" class="userPw" placeholder="비밀번호 확인" />
+        <p class="pw__error">영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15자리</p>
+        <input
+          type="password"
+          class="userPw__confirm"
+          placeholder="비밀번호 확인"
+        />
         <img
           class="eyes"
           src="/src/assets/icon/eyes.png"
