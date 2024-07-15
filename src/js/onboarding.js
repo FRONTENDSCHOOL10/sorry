@@ -1,43 +1,50 @@
-document.addEventListener('DOMContentLoaded', () => {
-   // 기본 Swiper 초기화
-   const swiper = new Swiper('.Sample', {
-      loop: true,
-      navigation: {
-         nextEl: '.swiper-button-next',
-         prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-         el: '.swiper-pagination',
-         clickable: true,
-      },
-      autoplay: {
-         delay: 3000,
-         disableOnInteraction: false,
-      },
-      speed: 600,
-   });
+let swiperDesktop;
+let swiperMobile;
 
-   // 모바일 전용 Swiper 초기화
-   const swiperMobile = new Swiper('.mainImgsMobile', {
-      loop: true,
-      navigation: {
-         nextEl: '.swiper-button-next',
-         prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-         el: '.swiper-pagination',
-         clickable: true,
-      },
-      autoplay: {
-         delay: 3000,
-         disableOnInteraction: false,
-      },
-      speed: 600,
-   });
+function initializeSwipers() {
+  if (window.innerWidth <= 768) {
+    if (!swiperMobile) {
+      swiperMobile = new Swiper('.mainImgsMobile', {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 10,
+        navigation: {
+          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next',
+        },
+        autoplay: {
+          delay: 1500,
+        },
+      });
+    }
+    if (swiperDesktop) {
+      swiperDesktop.destroy(true, true);
+      swiperDesktop = null;
+    }
+  } else {
+    if (!swiperDesktop) {
+      swiperDesktop = new Swiper('.mainImgs', {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 10,
+        navigation: {
+          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next',
+        },
+        autoplay: {
+          delay: 1500,
+        },
+      });
+    }
+    if (swiperMobile) {
+      swiperMobile.destroy(true, true);
+      swiperMobile = null;
+    }
+  }
+}
 
-   // 리사이즈 이벤트 처리
-   window.addEventListener('resize', () => {
-      swiper.update();
-      swiperMobile.update();
-   });
+initializeSwipers();
+
+window.addEventListener('resize', () => {
+  initializeSwipers();
 });
