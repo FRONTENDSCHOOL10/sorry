@@ -7,66 +7,59 @@
   left: 0;
   right: 0;
   width: 100%;
+  height: 100px;
   z-index: 200;
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
+  padding: 1.8125rem 4.375rem;
   background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0) 100%
+    to bottom,
+    rgba(0, 0, 0, 0.7) 100%,
+    rgba(0, 0, 0, 0) 50%
   );
 
-  @include desktop {
-    padding: 1.8125rem 4.375rem;
-  }
-
   @include tablet {
+    height: 56px;
     padding: 1rem 2.5rem;
   }
 
   @include mobile {
-    padding: 0.71875rem 1rem;
+    height: 56px;
+    padding: 1rem 2.5rem;
   }
 }
 
 // 헤더 로고
 .header__logo {
-  @include desktop {
-    padding-right: 3.25rem;
-  }
-
-  @include tablet {
-    padding-right: 1.75rem;
-  }
-
-  @include mobile {
-    padding-right: 1.75rem;
-  }
-
   &__link {
-    display: flex;
-
-    @include desktop {
-      background: url('/src/assets/header/logo/Desktop_logo.svg');
+    padding-right: 3.25rem;
+    img {
       width: 132px;
       height: 42px;
     }
 
     @include tablet {
-      background: url('/src/assets/header/logo/Tablet_logo.svg');
-      width: 75px;
-      height: 24px;
+      padding-right: 1.75rem;
+      img {
+        width: 75px;
+        height: 24px;
+        content: url('/assets/tablet_logo.svg');
+      }
     }
 
     @include mobile {
-      background: url('/src/assets/header/logo/Mobile_logo.svg');
-      width: 45px;
-      height: 15px;
+      padding-right: 1.75rem;
+      img {
+        width: 75px;
+        height: 24px;
+        content: url('/assets/tablet_logo.svg');
+      }
     }
   }
 }
 
-// 헤더 메뉴와 검색, 프로필
+// 헤더 메뉴 배치
 .header__nav {
   display: flex;
   flex-flow: row nowrap;
@@ -74,18 +67,23 @@
   align-items: center;
   width: 100%;
 
-  // 내부 메뉴
+  a:hover {
+    color: white;
+  }
+
+  @include mobile {
+    justify-content: flex-end;
+  }
+
+  // 내부 메뉴 배치
   &__menu {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     color: $gnb-color;
-
-    @include desktop {
-      gap: 52px;
-      font-size: 21px;
-    }
+    gap: 52px;
+    font-size: 21px;
 
     @include tablet {
       gap: 28px;
@@ -93,214 +91,154 @@
     }
 
     @include mobile {
-      gap: 28px;
-      font-size: 12px;
-    }
-
-    // 실시간
-    .nav__live {
-      display: flex;
-      align-items: center;
-
-      &:hover {
-        color: $white;
-
-        @include desktop {
-          .live__img {
-            background: url('/src/assets/header/Menu/Desktop_live_hover.svg');
-          }
-        }
-
-        @include tablet {
-          .live__img {
-            background: url('/src/assets/header/Menu/Tablet_live_hover.svg');
-          }
-        }
-
-        @include mobile {
-          .live__img {
-            background: url('/src/assets/header/Menu/Tablet_live_hover.svg');
-          }
-        }
-      }
-
-      @include desktop {
-        gap: 10px;
-
-        .live__img {
-          background: url('/src/assets/header/Menu/Desktop_live.svg') no-repeat;
-          width: 34px;
-          height: 34px;
-        }
-      }
-
-      @include tablet {
-        gap: 4px;
-
-        .live__img {
-          background: url('/src/assets/header/Menu/Tablet_live.svg') no-repeat;
-          width: 20px;
-          height: 20px;
-        }
-      }
-
-      @include mobile {
-        gap: 4px;
-
-        .live__img {
-          background: url('/src/assets/header/Menu/Tablet_live.svg') no-repeat;
-          width: 20px;
-          height: 20px;
-        }
-      }
-    }
-
-    // 파라마운트
-    .paramount__img {
-      @include desktop {
-        background: url('/src/assets/header/Menu/Desktop-paramount.svg')
-          no-repeat;
-
-        width: 111.917px;
-        height: 34px;
-        padding: 4.958px 0.006px 3.54px 1.422px;
-      }
-
-      @include tablet {
-        background: url('/src/assets/header/Menu/Tablet-paramount.svg')
-          no-repeat;
-
-        width: 65px;
-        height: 20px;
-        padding: 2.001px 0px 2.999px 0px;
-      }
-
-      @include mobile {
-        background: url('/src/assets/header/Menu/Tablet-paramount.svg')
-          no-repeat;
-
-        width: 65px;
-        height: 20px;
-        padding: 2.001px 0px 2.999px 0px;
-      }
-
-      &:hover {
-        @include desktop {
-          background: url('/src/assets/header/Menu/Desktop-paramount-hover.svg')
-            no-repeat;
-        }
-
-        @include tablet {
-          background: url('/src/assets/header/Menu/Tablet-paramount-hover.svg')
-            no-repeat;
-        }
-
-        @include mobile {
-          background: url('/src/assets/header/Menu/Tablet-paramount-hover.svg')
-            no-repeat;
-        }
-      }
+      display: none;
     }
   }
 
+  // 오른쪽 메뉴 배치
   &__add {
-    display: flex;
-    flex-flow: row nowrap;
-
-    button {
-      cursor: pointer;
-    }
-
-    @include desktop {
+    .nav__add__wrapper {
+      display: flex;
       gap: 40px;
 
-      button {
+      @include tablet {
+        gap: 24px;
+      }
+      @include mobile {
+        gap: 16px;
+      }
+    }
+
+    .nav__search {
+      img {
         width: 40px;
         height: 40px;
+
+        @include tablet {
+          content: url('/assets/tablet-search.svg');
+          width: 24px;
+          height: 24px;
+        }
+
+        @include mobile {
+          content: url('/assets/tablet-search.svg');
+          width: 24px;
+          height: 24px;
+        }
       }
 
-      .nav__search {
-        background: url('/src/assets/header/Menu/Desktop-search.svg') no-repeat;
-      }
-
-      .nav__profile {
-        background: url('/src/assets/header/Menu/Desktop-gnb-profile.svg')
-          no-repeat;
+      &:hover {
+        img {
+          content: url('/assets/desktop-search-hover.svg');
+        }
+        @include tablet {
+          img {
+            content: url('/assets/tablet-search-hover.svg');
+          }
+        }
+        @include mobile {
+          img {
+            content: url('/assets/tablet-search-hover.svg');
+          }
+        }
       }
     }
-
-    @include tablet {
-      gap: 20px;
-
-      button {
-        width: 24px;
-        height: 24px;
-      }
-
-      .nav__search {
-        background: url('/src/assets/header/Menu/Tablet-search.svg') no-repeat;
-      }
-
-      .nav__profile {
-        background: url('/src/assets/header/Menu/Tablet-gnb-profile.svg')
-          no-repeat;
-      }
-    }
-
-    @include mobile {
-      gap: 16px;
-
-      button {
-        width: 18px;
-        height: 18px;
-      }
-
-      .nav__search {
-        background: url('/src/assets/header/Menu/Mobile-search.svg') no-repeat;
-      }
-
-      .nav__profile {
-        background: url('/src/assets/header/Menu/Mobile-gnb-profile.svg')
-          no-repeat;
+    .nav__profile {
+      img {
+        width: 40px;
+        height: 40px;
+        @include tablet {
+          width: 24px;
+          height: 24px;
+        }
+        @include mobile {
+          width: 24px;
+          height: 24px;
+        }
       }
     }
   }
+}
 
-  a:hover {
-    color: $white;
+// 실시간 메뉴
+.nav__live {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  align-items: center;
+
+  @include tablet {
+    gap: 4px;
+    img {
+      content: url('/assets/tablet_live.svg');
+    }
+  }
+
+  &:hover {
+    img {
+      content: url('/assets/desktop_live_hover.svg');
+    }
+    @include tablet {
+      img {
+        content: url('/assets/tablet_live_hover.svg');
+      }
+    }
+  }
+}
+
+// 파라마운트
+.nav__paramount {
+  width: 111.917px;
+  height: 34px;
+  padding: 4.958px 0.006px 3.54px 1.422px;
+
+  @include tablet {
+    img {
+      content: url('/assets/tablet-paramount.svg');
+    }
+    width: 65px;
+    height: 20px;
+    padding: 2.001px 0px 2.999px 0px;
+  }
+
+  &:hover {
+    img {
+      content: url('/assets/desktop-paramount-hover.svg');
+    }
+
+    @include tablet {
+      img {
+        content: url('/assets/tablet-paramount-hover.svg');
+      }
+    }
   }
 }
 
 // 프로필 레이어
-.user {
+
+.nav__profile__wrapper {
   display: none;
+  z-index: 10;
+  width: 260px;
   position: absolute;
+  right: 70px;
+  padding: 12px 12px;
   color: $gray-600;
   z-index: 10;
   border: 1px solid $gray-700;
-
   border-radius: 5px;
   background-color: $primary-color;
 
-  @include desktop {
-    width: 260px;
-    right: 70px;
-    padding: 12px 0;
-  }
-
   @include tablet {
-    width: 260px;
+    width: 200px;
     right: 40px;
-    padding: 12px 0;
   }
-
   @include mobile {
     width: 200px;
-    right: 16px;
-    padding: 12px 0;
+    right: 40px;
   }
 
-  &__info {
+  .user__info {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -309,57 +247,83 @@
     gap: 20px;
     border-bottom: 1px solid $gray-700;
 
+    @include tablet {
+      padding: 10px 10px 20px 10px;
+      gap: 10px;
+    }
+
     &__detail {
       display: flex;
       flex-flow: column nowrap;
       gap: 4px;
+      .user__name {
+        color: $gnb-color;
+        font-size: 18px;
+        @include tablet {
+          font-size: 14px;
+        }
+        @include mobile {
+          font-size: 12px;
+        }
+      }
+      .user__change {
+        font-size: 14px;
+        @include tablet {
+          font-size: 10px;
+        }
+        @include mobile {
+          font-size: 9px;
+        }
+      }
     }
   }
 
-  &__img {
-    width: 40px;
-    height: 40px;
-    background: url('/src/assets/header/Menu/Desktop-gnb-profile.svg');
-  }
-
-  &__name {
-    color: $gnb-color;
-    font-size: 18px;
-
-    @include mobile {
-      font-size: 12px;
-    }
-  }
-
-  &__change {
-    font-size: 14px;
-
-    @include mobile {
-      font-size: 12px;
-    }
-  }
-
-  &__menu {
+  .user__menu {
     padding: 30px 20px 20px 20px;
 
-    @include mobile {
-      padding: 10px;
+    @include tablet {
+      padding: 20px 10px 10px 10px;
     }
 
     &__list {
       display: flex;
       flex-flow: column nowrap;
-      gap: 10px;
+      gap: 5px;
     }
-  }
-
-  a:hover {
-    color: $white;
   }
 }
 
-.nav__profile__wrapper {
-  &:hover .user {
-    display: block;
+.nav__search__x {
+  img {
+    width: 50px;
+    height: 50px;
+
+    @include tablet {
+      content: url('/assets/tablet-x.svg');
+      width: 28px;
+      height: 28px;
+    }
+
+    @include mobile {
+      content: url('/assets/tablet-x.svg');
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  &:hover {
+    img {
+      content: url('/assets/desktop-x-hover.svg');
+    }
+    @include tablet {
+      img {
+        content: url('/assets/tablet-x-hover.svg');
+      }
+    }
+    @include mobile {
+      img {
+        content: url('/assets/tablet-x-hover.svg');
+      }
+    }
   }
 }
