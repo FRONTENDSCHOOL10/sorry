@@ -1,162 +1,196 @@
 <!doctype html>
 <html lang="ko">
+  <head>
+    <title>티빙 회원가입</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/taing.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="/src/js/signUp.js"></script>
+  </head>
 
-<head>
-  <title>티빙 회원가입</title>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/taing.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script type="module" src="/main.js"></script>
-</head>
+  <body>
+    <header class="header">
+      <h1 class="header__logo">
+        <a class="header__logo__link" href="/">
+          <img src="/assets/desktop_logo.svg" alt="타잉" />
+        </a>
+      </h1>
+    </header>
 
-<body>
-  <header class="header">
-    <h1 class="header__logo">
-      <a class="header__logo__link" href="/">
-        <img src="/assets/desktop_logo.svg" alt="타잉" />
-      </a>
-    </h1>
-  </header>
+    <div class="signup">
+      <h2 class="signup__title">티빙 회원가입</h2>
+      <span class="signup__span"
+        >아이디와 이메일로 간편하게 티빙을 시작하세요!</span
+      >
 
-  <div class="signup">
-    <h2 class="signup__title">티빙 회원가입</h2>
-    <span class="signup__span">아이디와 이메일로 간편하게 티빙을 시작하세요!</span>
+      <form action="" class="signup__form">
+        <input type="text" class="signup__userId" placeholder="아이디" />
+        <p class="id__error">영문 또는 영문, 숫자 조합 6~12자리</p>
+        <input
+          type="password"
+          class="signup__user__password"
+          placeholder="비밀번호"
+        />
+        <p class="pw__error">영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15자리</p>
+        <input
+          type="password"
+          class="signup__user__passwordConfirm"
+          placeholder="비밀번호 확인"
+        />
+        <input type="email" class="signup__user__email" placeholder="이메일" />
+      </form>
 
-    <form action="" class="signup__form">
-      <input type="text" class="signup__userId" placeholder="아이디" />
-      <p>영문 또는 영문, 숫자 조합 6~12자리</p>
-      <input type="password" class="signup__user__password" placeholder="비밀번호" />
-      <p>영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15자리</p>
-      <input type="password" class="signup__user__password" placeholder="비밀번호 확인" />
-      <input type="email" class="signup__user__email" placeholder="이메일" />
-    </form>
-
-    <section class="signup__checkbox">
-      <div class="signup__checkbox1">
-        <img src="/src/assets/icon/check.svg" alt="all_check_icon" />
-        <input type="checkbox" class="checkbox" />
-        <a>모두 동의합니다.</a>
-      </div>
-
-      <section class="signup__checkbox__list">
-        <div>
-          <img src="/src/assets/icon/check-2.svg" alt="essential_check_icon" />
-          <input type="checkbox" class="checkbox" />
-          <a class="sub__text">만 14세 이상입니다.</a>
+      <section class="signup__checkbox">
+        <div class="signup__checkbox__all">
+          <input type="checkbox" id="checkbox" class="agree__checkbox" />
+          <label for="checkbox" class="check__all"
+            ><p>[필수] 서비스 이용 약관 동의</p></label
+          >
         </div>
 
-        <div>
-          <img src="/src/assets/icon/check-2.svg" alt="essential_check_icon" />
-          <input type="checkbox" class="checkbox" />
-          <a class="sub__text">[필수] 서비스 이용약관 동의</a>
-        </div>
-
-        <div>
-          <img src="/src/assets/icon/check-2.svg" alt="essential_check_icon" />
-          <input type="checkbox" class="checkbox" />
-          <a class="sub__text">[필수] 개인정보 수집 및 서비스활용 동의</a>
-        </div>
-
-        <div>
-          <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
-          <input type="checkbox" class="checkbox" />
-          <a class="sub__text">[필수] 채널 홈페이지 개인정보 제 3자 제공 동의</a>
-        </div>
-
-        <div>
-          <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
-          <input type="checkbox" class="checkbox" />
-          <a class="sub__text">[선택] 개인정보 제3자 제공 동의</a>
-        </div>
-
-        <div>
-          <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
-          <input type="checkbox" class="checkbox" />
-          <a class="sub__text">[선택] 개인정보 수집 및 서비스 활용 동의</a>
-        </div>
-
-        <section class="signup__checkbox__list2">
+        <!-- <section class="signup__checkbox__list">
           <div>
-            <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
             <input type="checkbox" class="checkbox" />
-            <a class="sub__text">[선택] 마케팅정보 SMS 수신 동의</a>
+            <img
+              src="/src/assets/icon/check-2.svg"
+              alt="essential_check_icon"
+            />
+            <a class="sub__text">만 14세 이상입니다.</a>
           </div>
 
           <div>
-            <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
             <input type="checkbox" class="checkbox" />
-            <a class="sub__text">[선택] 마케팅 정보 이메일 수신 동의</a>
+            <img
+              src="/src/assets/icon/check-2.svg"
+              alt="essential_check_icon"
+            />
+            <a class="sub__text">[필수] 서비스 이용약관 동의</a>
           </div>
-        </section>
+
+          <div>
+            <input type="checkbox" class="checkbox" />
+            <img
+              src="/src/assets/icon/check-2.svg"
+              alt="essential_check_icon"
+            />
+            <a class="sub__text">[필수] 개인정보 수집 및 서비스활용 동의</a>
+          </div>
+
+          <div>
+            <input type="checkbox" class="checkbox" />
+            <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
+            <a class="sub__text"
+              >[필수] 채널 홈페이지 개인정보 제 3자 제공 동의</a
+            >
+          </div>
+
+          <div>
+            <input type="checkbox" class="checkbox" />
+            <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
+            <a class="sub__text">[선택] 개인정보 제3자 제공 동의</a>
+          </div>
+
+          <div>
+            <input type="checkbox" class="checkbox" />
+            <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
+            <a class="sub__text">[선택] 개인정보 수집 및 서비스 활용 동의</a>
+          </div>
+
+          <section class="signup__checkbox__list2">
+            <div>
+              <input type="checkbox" class="checkbox" />
+              <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
+              <a class="sub__text">[선택] 마케팅정보 SMS 수신 동의</a>
+            </div>
+
+            <div>
+              <input type="checkbox" class="checkbox" />
+              <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
+              <a class="sub__text">[선택] 마케팅 정보 이메일 수신 동의</a>
+            </div>
+          </section>
+        </section> -->
       </section>
-
-
-    </section>
-    <button type="button" class="signup__button" value="signup__button" aria-label="회원가입 버튼">가입하기</button>
-  </div>
-
-  <footer class="footer">
-    <div class="util">
-      <div class="util__div">
-        <div class="goto">
-          <div>브랜드 바로가기 +</div>
-          <hr />
-          <div>그룹 계열사 바로가기 +</div>
-        </div>
-      </div>
-      <div class="info">
-        <div class="info__link">
-          <span>고객센터</span>
-          <span>이용약관</span>
-          <span>개인정보처리방침</span>
-          <span>청소년 보호정책</span>
-          <span>법적고지</span>
-          <span>이벤트</span>
-          <span>인재채용</span>
-        </div>
-        <div class="info__adress">
-          <p>
-            <span>대표이사 : YANG JIEUL</span>
-            <span><a href="">사업자정보확인</a></span>
-            <span>사업자등록번호 : 188-88-01893</span>
-            <span>통신판매신고번호 : 2020-서울마포-3641호</span>
-          </p>
-          <p>
-            <span>사업장 : 서울특별지 마포구 상암산로 34, DMC디지털큐브
-              15층(상암동)</span>
-            <span>호스팅사업자 : 씨제이올리브네트웍스(주)</span>
-          </p>
-          <p>
-            <span><a href="">고객문의 바로가기</a></span>
-            <span><a href="">대표메일 : taing@cj.net</a></span>
-            <span><a href="">고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무)</a></span>
-          </p>
-          <p>
-            <span>ENM 시청자 상담식 (편성 문의 및 시청자 의견) :
-              080-080-0780</span>
-            <span>Mnet 고객센터(반송편성문의) : 1855-1631</span>
-          </p>
-        </div>
-      </div>
-      <ul class="community">
-        <li class="youtube">
-          <a href=""><img src="/src/assets/icon/Youtube.png" alt="" /></a>
-        </li>
-        <li class="instargram">
-          <a href=""><img src="/src/assets/icon/Instagram.png" alt="" /></a>
-        </li>
-        <li class="twitter">
-          <a href=""><img src="/src/assets/icon/Twitter.png" alt="" /></a>
-        </li>
-        <li class="facebook">
-          <a href=""><img src="/src/assets/icon/Facebook.png" alt="" /></a>
-        </li>
-      </ul>
+      <button
+        type="button"
+        class="signup__button"
+        value="signup__button"
+        aria-label="회원가입 버튼"
+      >
+        가입하기
+      </button>
     </div>
-    <div class="copyright">
-      <span>Copyright &copy; 주식회사 타잉 All right reservd.</span>
-    </div>
-  </footer>
-</body>
 
+    <footer class="footer">
+      <div class="util">
+        <div class="util__div">
+          <div class="goto">
+            <div>브랜드 바로가기 +</div>
+            <hr />
+            <div>그룹 계열사 바로가기 +</div>
+          </div>
+        </div>
+        <div class="info">
+          <div class="info__link">
+            <span>고객센터</span>
+            <span>이용약관</span>
+            <span>개인정보처리방침</span>
+            <span>청소년 보호정책</span>
+            <span>법적고지</span>
+            <span>이벤트</span>
+            <span>인재채용</span>
+          </div>
+          <div class="info__adress">
+            <p>
+              <span>대표이사 : YANG JIEUL</span>
+              <span><a href="">사업자정보확인</a></span>
+              <span>사업자등록번호 : 188-88-01893</span>
+              <span>통신판매신고번호 : 2020-서울마포-3641호</span>
+            </p>
+            <p>
+              <span
+                >사업장 : 서울특별지 마포구 상암산로 34, DMC디지털큐브
+                15층(상암동)</span
+              >
+              <span>호스팅사업자 : 씨제이올리브네트웍스(주)</span>
+            </p>
+            <p>
+              <span><a href="">고객문의 바로가기</a></span>
+              <span><a href="">대표메일 : taing@cj.net</a></span>
+              <span
+                ><a href=""
+                  >고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무)</a
+                ></span
+              >
+            </p>
+            <p>
+              <span
+                >ENM 시청자 상담식 (편성 문의 및 시청자 의견) :
+                080-080-0780</span
+              >
+              <span>Mnet 고객센터(반송편성문의) : 1855-1631</span>
+            </p>
+          </div>
+        </div>
+        <ul class="community">
+          <li class="youtube">
+            <a href=""><img src="/src/assets/icon/Youtube.png" alt="" /></a>
+          </li>
+          <li class="instargram">
+            <a href=""><img src="/src/assets/icon/Instagram.png" alt="" /></a>
+          </li>
+          <li class="twitter">
+            <a href=""><img src="/src/assets/icon/Twitter.png" alt="" /></a>
+          </li>
+          <li class="facebook">
+            <a href=""><img src="/src/assets/icon/Facebook.png" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <span>Copyright &copy; 주식회사 타잉 All right reservd.</span>
+      </div>
+    </footer>
+  </body>
 </html>
