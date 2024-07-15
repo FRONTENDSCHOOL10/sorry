@@ -146,6 +146,5 @@ document.addEventListener('DOMContentLoaded', () => {
   agreeCheckbox.addEventListener('change', updateButtonState);
   registerBtn.addEventListener('click', register);
 
-  // 초기 상태 업데이트
   updateButtonState();
 });
