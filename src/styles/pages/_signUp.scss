@@ -34,6 +34,7 @@
 
   .signup__userId,
   .signup__user__password,
+  .signup__user__passwordConfirm,
   .signup__user__email {
     display: flex;
     align-items: center;
@@ -62,13 +63,35 @@
   font-weight: 600;
   line-height: 200%;
 
-  .checkbox {
-    display: none;
-    margin-bottom: 12px;
-  }
-
-  .signup__checkbox1 {
+  .signup__checkbox__all {
     margin: 28px 0;
+    display: flex;
+    position: relative;
+
+    .agree__checkbox {
+      position: absolute;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .check__all {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      gap: 8px;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        background: url('/src/assets/icon/check.svg') no-repeat;
+      }
+    }
+
+    .agree__checkbox:checked + .check__all::before {
+      background: url('/src/assets/icon/checked.svg') no-repeat;
+    }
   }
 }
 
@@ -89,4 +112,9 @@
   font-weight: 600;
   line-height: 150%;
   color: #898989;
+}
+
+.signup__button.is--active {
+  background: #e1e1e1;
+  color: black;
 }
