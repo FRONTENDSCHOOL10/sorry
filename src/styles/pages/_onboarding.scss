@@ -60,6 +60,11 @@
   }
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  margin-top: 50px;
+}
+
 .originalContents {
   padding-top: 10rem;
   text-align: center;
@@ -167,6 +172,8 @@
     display: flex;
 
     img {
+      overflow: hidden;
+      max-width: 1200px;
       margin-left: 1.5rem;
     }
 
