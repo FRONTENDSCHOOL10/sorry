@@ -1,6 +1,6 @@
 import PocketBase from 'pocketbase';
 
-const url = 'https://songyi.pockethost.io/';
+const url = 'https://vanilla.pockethost.io/';
 const client = new PocketBase(url);
 
 export default client;

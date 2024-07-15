@@ -1,12 +1,13 @@
 import client from '/src/api/pocketbase';
 
-const idField = document.querySelector('.userId');
-const pwField = document.querySelector('.userPw');
-const pwConfirmField = document.querySelector('.userPw__confirm');
-const emailField = document.querySelector('.userEmail');
-const registerBtn = document.querySelector('.main__button');
+const idField = document.querySelector('.signup__userId');
+const pwField = document.querySelector('.signup__user__password');
+const pwConfirmField = document.querySelector('.signup__user__passwordConfirm');
+const emailField = document.querySelector('.signup__user__email');
+const registerBtn = document.querySelector('.signup__button');
 const idError = document.querySelector('.id__error');
 const pwError = document.querySelector('.pw__error');
+const agreeCheckbox = document.querySelector('.agree__checkbox');
 
 function setFieldEventListeners(field, errorField, validate, blurMsg) {
   field.addEventListener('focus', () => {
@@ -20,6 +21,7 @@ function setFieldEventListeners(field, errorField, validate, blurMsg) {
       errorField.innerText = '';
     }
   });
+  field.addEventListener('input', updateButtonState);
 }
 
 function showError(field, errorField, msg) {
@@ -46,8 +48,8 @@ function emailCheck(userEmail) {
   return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/.test(userEmail);
 }
 
-function isValidForm(memberId, password, passwordConfirm, email) {
-  if (!idCheck(memberId)) {
+function isValidForm(memberid, password, passwordConfirm, email) {
+  if (!idCheck(memberid)) {
     showError(
       idField,
       idError,
@@ -79,17 +81,17 @@ function isValidForm(memberId, password, passwordConfirm, email) {
 }
 
 async function register() {
-  const memberId = idField.value;
+  const memberid = idField.value;
   const password = pwField.value;
   const passwordConfirm = pwConfirmField.value;
   const email = emailField.value;
 
-  if (!isValidForm(memberId, password, passwordConfirm, email)) return;
+  if (!isValidForm(memberid, password, passwordConfirm, email)) return;
 
   try {
     await client
       .collection('member')
-      .create({ memberId, password, passwordConfirm, email });
+      .create({ memberid, password, passwordConfirm, email });
     alert('회원 가입이 완료되었습니다! 로그인 페이지로 이동합니다.');
     location.href = '/';
   } catch (error) {
@@ -98,6 +100,19 @@ async function register() {
     idField.value = '';
     pwField.value = '';
     emailField.value = '';
+  }
+}
+
+function updateButtonState() {
+  if (
+    idField.value &&
+    pwField.value &&
+    pwConfirmField.value &&
+    emailField.value
+  ) {
+    registerBtn.classList.add('is--active');
+  } else {
+    registerBtn.classList.remove('is--active');
   }
 }
 
@@ -115,4 +130,10 @@ setFieldEventListeners(
   '영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15자리'
 );
 
-registerBtn.addEventListener('click', register);
+registerBtn.addEventListener('click', () => {
+  if (!agreeCheckbox.checked) {
+    alert('필수 약관에 동의하세요.');
+  } else {
+    register();
+  }
+});

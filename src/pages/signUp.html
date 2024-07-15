@@ -6,6 +6,7 @@
     <link rel="icon" type="image/svg+xml" href="/taing.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="/main.js"></script>
+    <script type="module" src="/src/js/signUp.js"></script>
   </head>
 
   <body>
@@ -25,90 +26,91 @@
 
       <form action="" class="signup__form">
         <input type="text" class="signup__userId" placeholder="아이디" />
-        <p>영문 또는 영문, 숫자 조합 6~12자리</p>
+        <p class="id__error">영문 또는 영문, 숫자 조합 6~12자리</p>
         <input
           type="password"
           class="signup__user__password"
           placeholder="비밀번호"
         />
-        <p>영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15자리</p>
+        <p class="pw__error">영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15자리</p>
         <input
           type="password"
-          class="signup__user__password"
+          class="signup__user__passwordConfirm"
           placeholder="비밀번호 확인"
         />
         <input type="email" class="signup__user__email" placeholder="이메일" />
       </form>
 
       <section class="signup__checkbox">
-        <div class="signup__checkbox1">
-          <img src="/src/assets/icon/check.svg" alt="all_check_icon" />
-          <input type="checkbox" class="checkbox" />
-          <a>모두 동의합니다.</a>
+        <div class="signup__checkbox__all">
+          <input type="checkbox" id="checkbox" class="agree__checkbox" />
+          <label for="checkbox" class="check__all"
+            ><p>[필수] 서비스 이용 약관 동의</p></label
+          >
         </div>
 
-        <section class="signup__checkbox__list">
+        <!-- <section class="signup__checkbox__list">
           <div>
+            <input type="checkbox" class="checkbox" />
             <img
               src="/src/assets/icon/check-2.svg"
               alt="essential_check_icon"
             />
-            <input type="checkbox" class="checkbox" />
             <a class="sub__text">만 14세 이상입니다.</a>
           </div>
 
           <div>
+            <input type="checkbox" class="checkbox" />
             <img
               src="/src/assets/icon/check-2.svg"
               alt="essential_check_icon"
             />
-            <input type="checkbox" class="checkbox" />
             <a class="sub__text">[필수] 서비스 이용약관 동의</a>
           </div>
 
           <div>
+            <input type="checkbox" class="checkbox" />
             <img
               src="/src/assets/icon/check-2.svg"
               alt="essential_check_icon"
             />
-            <input type="checkbox" class="checkbox" />
             <a class="sub__text">[필수] 개인정보 수집 및 서비스활용 동의</a>
           </div>
 
           <div>
-            <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
             <input type="checkbox" class="checkbox" />
+            <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
             <a class="sub__text"
               >[필수] 채널 홈페이지 개인정보 제 3자 제공 동의</a
             >
           </div>
 
           <div>
-            <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
             <input type="checkbox" class="checkbox" />
+            <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
             <a class="sub__text">[선택] 개인정보 제3자 제공 동의</a>
           </div>
 
           <div>
-            <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
             <input type="checkbox" class="checkbox" />
+            <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
             <a class="sub__text">[선택] 개인정보 수집 및 서비스 활용 동의</a>
           </div>
 
           <section class="signup__checkbox__list2">
             <div>
-              <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
               <input type="checkbox" class="checkbox" />
+              <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
               <a class="sub__text">[선택] 마케팅정보 SMS 수신 동의</a>
             </div>
 
             <div>
-              <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
               <input type="checkbox" class="checkbox" />
+              <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
               <a class="sub__text">[선택] 마케팅 정보 이메일 수신 동의</a>
             </div>
           </section>
-        </section>
+        </section> -->
       </section>
       <button
         type="button"
