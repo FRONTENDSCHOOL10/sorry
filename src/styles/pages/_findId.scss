@@ -1,0 +1,87 @@
+.findid {
+  display: flex;
+  padding-top: 70px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #6b6b6b;
+  font-size: 28.43px;
+  font-weight: 500;
+  line-height: 150%;
+
+  .findid__title {
+    color: #fff;
+    font-size: 37.897px;
+    font-weight: 700;
+    margin-bottom: 60px;
+  }
+  .findid__subtitle {
+    width: 732px;
+    color: #fff;
+  }
+  .findid__text {
+    width: 732px;
+    color: #898989;
+    margin-bottom: 24px;
+  }
+
+  .findid__user__email {
+    display: flex;
+    flex-direction: column;
+    width: 732px;
+    height: 86px;
+    padding: 0px 300px 0px 24px;
+    border-radius: 4px;
+    background: #212121;
+    border: solid 1px black;
+    color: #565656;
+    margin-bottom: 36px;
+  }
+  .findid__correct {
+    display: flex;
+    width: 732px;
+    height: 86px;
+    justify-content: center;
+    align-items: center;
+    background: #404040;
+    color: #898989;
+    border-radius: 4px;
+  }
+  .findid__or {
+    display: flex;
+    height: 156px;
+    justify-content: center;
+    align-items: center;
+    color: #404040;
+    font-size: 16px;
+  }
+
+  .findid__search {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: -100px;
+
+    .findid__self {
+      color: #fff;
+    }
+    .findid__self__find {
+      color: #898989;
+      font-size: 21.328px;
+      margin-bottom: 36px;
+    }
+  }
+
+  .findid__button {
+    display: flex;
+    width: 732px;
+    height: 86px;
+    padding: 0px 174px;
+    justify-content: center;
+    align-items: center;
+    background: #e1e1e1;
+    color: #000;
+    font-weight: 600;
+    border-radius: 4px;
+  }
+}

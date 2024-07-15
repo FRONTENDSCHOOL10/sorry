@@ -118,21 +118,21 @@ button {
 }
 @media (min-width: 1920px) {
   .header__logo__link {
-    background: url("/assets/header/logo/Desktop_logo.svg");
+    background: url("/src/assets/header/logo/Desktop_logo.svg");
     width: 132px;
     height: 42px;
   }
 }
 @media (min-width: 768px) and (max-width: 1919px) {
   .header__logo__link {
-    background: url("/assets/header/logo/Tablet_logo.svg");
+    background: url("/src/assets/header/logo/Tablet_logo.svg");
     width: 75px;
     height: 24px;
   }
 }
 @media (max-width: 767px) {
   .header__logo__link {
-    background: url("/assets/header/logo/Mobile_logo.svg");
+    background: url("/src/assets/header/logo/Mobile_logo.svg");
     width: 45px;
     height: 15px;
   }
@@ -179,17 +179,17 @@ button {
 }
 @media (min-width: 1920px) {
   .header__nav__menu .nav__live:hover .live__img {
-    background: url("/assets/header/Menu/Desktop_live_hover.svg");
+    background: url("/src/assets/header/Menu/Desktop_live_hover.svg");
   }
 }
 @media (min-width: 768px) and (max-width: 1919px) {
   .header__nav__menu .nav__live:hover .live__img {
-    background: url("/assets/header/Menu/Tablet_live_hover.svg");
+    background: url("/src/assets/header/Menu/Tablet_live_hover.svg");
   }
 }
 @media (max-width: 767px) {
   .header__nav__menu .nav__live:hover .live__img {
-    background: url("/assets/header/Menu/Tablet_live_hover.svg");
+    background: url("/src/assets/header/Menu/Tablet_live_hover.svg");
   }
 }
 @media (min-width: 1920px) {
@@ -197,7 +197,7 @@ button {
     gap: 10px;
   }
   .header__nav__menu .nav__live .live__img {
-    background: url("/assets/header/Menu/Desktop_live.svg") no-repeat;
+    background: url("/src/assets/header/Menu/Desktop_live.svg") no-repeat;
     width: 34px;
     height: 34px;
   }
@@ -207,7 +207,7 @@ button {
     gap: 4px;
   }
   .header__nav__menu .nav__live .live__img {
-    background: url("/assets/header/Menu/Tablet_live.svg") no-repeat;
+    background: url("/src/assets/header/Menu/Tablet_live.svg") no-repeat;
     width: 20px;
     height: 20px;
   }
@@ -217,14 +217,14 @@ button {
     gap: 4px;
   }
   .header__nav__menu .nav__live .live__img {
-    background: url("/assets/header/Menu/Tablet_live.svg") no-repeat;
+    background: url("/src/assets/header/Menu/Tablet_live.svg") no-repeat;
     width: 20px;
     height: 20px;
   }
 }
 @media (min-width: 1920px) {
   .header__nav__menu .paramount__img {
-    background: url("/assets/header/Menu/Desktop-paramount.svg") no-repeat;
+    background: url("/src/assets/header/Menu/Desktop-paramount.svg") no-repeat;
     width: 111.917px;
     height: 34px;
     padding: 4.958px 0.006px 3.54px 1.422px;
@@ -232,7 +232,7 @@ button {
 }
 @media (min-width: 768px) and (max-width: 1919px) {
   .header__nav__menu .paramount__img {
-    background: url("/assets/header/Menu/Tablet-paramount.svg") no-repeat;
+    background: url("/src/assets/header/Menu/Tablet-paramount.svg") no-repeat;
     width: 65px;
     height: 20px;
     padding: 2.001px 0px 2.999px 0px;
@@ -240,7 +240,7 @@ button {
 }
 @media (max-width: 767px) {
   .header__nav__menu .paramount__img {
-    background: url("/assets/header/Menu/Tablet-paramount.svg") no-repeat;
+    background: url("/src/assets/header/Menu/Tablet-paramount.svg") no-repeat;
     width: 65px;
     height: 20px;
     padding: 2.001px 0px 2.999px 0px;
@@ -248,17 +248,17 @@ button {
 }
 @media (min-width: 1920px) {
   .header__nav__menu .paramount__img:hover {
-    background: url("/assets/header/Menu/Desktop-paramount-hover.svg") no-repeat;
+    background: url("/src/assets/header/Menu/Desktop-paramount-hover.svg") no-repeat;
   }
 }
 @media (min-width: 768px) and (max-width: 1919px) {
   .header__nav__menu .paramount__img:hover {
-    background: url("/assets/header/Menu/Tablet-paramount-hover.svg") no-repeat;
+    background: url("/src/assets/header/Menu/Tablet-paramount-hover.svg") no-repeat;
   }
 }
 @media (max-width: 767px) {
   .header__nav__menu .paramount__img:hover {
-    background: url("/assets/header/Menu/Tablet-paramount-hover.svg") no-repeat;
+    background: url("/src/assets/header/Menu/Tablet-paramount-hover.svg") no-repeat;
   }
 }
 .header__nav__add {
@@ -277,10 +277,10 @@ button {
     height: 40px;
   }
   .header__nav__add .nav__search {
-    background: url("/assets/header/Menu/Desktop-search.svg") no-repeat;
+    background: url("/src/assets/header/Menu/Desktop-search.svg") no-repeat;
   }
   .header__nav__add .nav__profile {
-    background: url("/assets/header/Menu/Desktop-gnb-profile.svg") no-repeat;
+    background: url("/src/assets/header/Menu/Desktop-gnb-profile.svg") no-repeat;
   }
 }
 @media (min-width: 768px) and (max-width: 1919px) {
@@ -292,10 +292,10 @@ button {
     height: 24px;
   }
   .header__nav__add .nav__search {
-    background: url("/assets/header/Menu/Tablet-search.svg") no-repeat;
+    background: url("/src/assets/header/Menu/Tablet-search.svg") no-repeat;
   }
   .header__nav__add .nav__profile {
-    background: url("/assets/header/Menu/Tablet-gnb-profile.svg") no-repeat;
+    background: url("/src/assets/header/Menu/Tablet-gnb-profile.svg") no-repeat;
   }
 }
 @media (max-width: 767px) {
@@ -307,10 +307,10 @@ button {
     height: 18px;
   }
   .header__nav__add .nav__search {
-    background: url("/assets/header/Menu/Mobile-search.svg") no-repeat;
+    background: url("/src/assets/header/Menu/Mobile-search.svg") no-repeat;
   }
   .header__nav__add .nav__profile {
-    background: url("/assets/header/Menu/Mobile-gnb-profile.svg") no-repeat;
+    background: url("/src/assets/header/Menu/Mobile-gnb-profile.svg") no-repeat;
   }
 }
 .header__nav a:hover {
@@ -364,7 +364,7 @@ button {
 .user__img {
   width: 40px;
   height: 40px;
-  background: url("/assets/header/Menu/Desktop-gnb-profile.svg");
+  background: url("/src/assets/header/Menu/Desktop-gnb-profile.svg");
 }
 .user__name {
   color: #c4c4c4;
@@ -988,21 +988,21 @@ html {
 }
 @media (min-width: 1920px) {
   .link__container .link__lock {
-    background: url(/assets/profile/Desktop-lock.svg);
+    background: url(/src/assets/profile/Desktop-lock.svg);
     width: 60px;
     height: 60px;
   }
 }
 @media (min-width: 768px) and (max-width: 1919px) {
   .link__container .link__lock {
-    background: url(/assets/profile/Mobile&Tablet-lock.svg);
+    background: url(/src/assets/profile/Mobile&Tablet-lock.svg);
     width: 50px;
     height: 50px;
   }
 }
 @media (max-width: 767px) {
   .link__container .link__lock {
-    background: url(/assets/profile/Mobile&Tablet-lock.svg);
+    background: url(/src/assets/profile/Mobile&Tablet-lock.svg);
     width: 50px;
     height: 50px;
   }
@@ -1014,21 +1014,21 @@ html {
   .link__seulbi {
     width: 234px;
     height: 234px;
-    background: url("/assets/profile/Desktop-seulbi.svg");
+    background: url("/src/assets/profile/Desktop-seulbi.svg");
   }
 }
 @media (min-width: 768px) and (max-width: 1919px) {
   .link__seulbi {
     width: 132px;
     height: 132px;
-    background: url("/assets/profile/Tablet-seulbi.svg");
+    background: url("/src/assets/profile/Tablet-seulbi.svg");
   }
 }
 @media (max-width: 767px) {
   .link__seulbi {
     width: 114px;
     height: 114px;
-    background: url("/assets/profile/Mobile-seulbi.svg");
+    background: url("/src/assets/profile/Mobile-seulbi.svg");
   }
 }
 .link__beom {
@@ -1038,21 +1038,21 @@ html {
   .link__beom {
     width: 234px;
     height: 234px;
-    background: url("/assets/profile/Desktop-beom.svg");
+    background: url("/src/assets/profile/Desktop-beom.svg");
   }
 }
 @media (min-width: 768px) and (max-width: 1919px) {
   .link__beom {
     width: 132px;
     height: 132px;
-    background: url("/assets/profile/Tablet-beom.svg");
+    background: url("/src/assets/profile/Tablet-beom.svg");
   }
 }
 @media (max-width: 767px) {
   .link__beom {
     width: 114px;
     height: 114px;
-    background: url("/assets/profile/Mobile-beom.svg");
+    background: url("/src/assets/profile/Mobile-beom.svg");
   }
 }
 .link__yamoo {
@@ -1062,21 +1062,21 @@ html {
   .link__yamoo {
     width: 234px;
     height: 234px;
-    background: url("/assets/profile/Desktop-yamoo.svg");
+    background: url("/src/assets/profile/Desktop-yamoo.svg");
   }
 }
 @media (min-width: 768px) and (max-width: 1919px) {
   .link__yamoo {
     width: 132px;
     height: 132px;
-    background: url("/assets/profile/Tablet-yamoo.svg");
+    background: url("/src/assets/profile/Tablet-yamoo.svg");
   }
 }
 @media (max-width: 767px) {
   .link__yamoo {
     width: 114px;
     height: 114px;
-    background: url("/assets/profile/Mobile-yamoo.svg");
+    background: url("/src/assets/profile/Mobile-yamoo.svg");
   }
 }
 .link__euid {
@@ -1086,21 +1086,21 @@ html {
   .link__euid {
     width: 234px;
     height: 234px;
-    background: url("/assets/profile/Desktop-euid.svg");
+    background: url("/src/assets/profile/Desktop-euid.svg");
   }
 }
 @media (min-width: 768px) and (max-width: 1919px) {
   .link__euid {
     width: 132px;
     height: 132px;
-    background: url("/assets/profile/Tablet-euid.svg");
+    background: url("/src/assets/profile/Tablet-euid.svg");
   }
 }
 @media (max-width: 767px) {
   .link__euid {
     width: 114px;
     height: 114px;
-    background: url("/assets/profile/Mobile-euid.svg");
+    background: url("/src/assets/profile/Mobile-euid.svg");
   }
 }
 .link__image__name {
@@ -1163,21 +1163,21 @@ html {
 }
 @media (min-width: 1920px) {
   .link__container .link__edit {
-    background: url(/assets/profile/Desktop-edit.svg);
+    background: url(/src/assets/profile/Desktop-edit.svg);
     width: 60px;
     height: 60px;
   }
 }
 @media (min-width: 768px) and (max-width: 1919px) {
   .link__container .link__edit {
-    background: url(/assets/profile/Mobile&Tablet-edit.svg);
+    background: url(/src/assets/profile/Mobile&Tablet-edit.svg);
     width: 50px;
     height: 50px;
   }
 }
 @media (max-width: 767px) {
   .link__container .link__edit {
-    background: url(/assets/profile/Mobile&Tablet-edit.svg);
+    background: url(/src/assets/profile/Mobile&Tablet-edit.svg);
     width: 50px;
     height: 50px;
   }
@@ -1186,7 +1186,7 @@ html {
 .main__contents {
   height: 67.5rem;
   padding: 0;
-  background-image: url("/assets/poster/landing_backgorund.png");
+  background-image: url("/src/assets/poster/landing_backgorund.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 -12.5rem;
@@ -1200,6 +1200,11 @@ html {
   .main__contents {
     height: 40rem;
   }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  margin-top: 50px;
 }
 
 .originalContents {
@@ -1362,6 +1367,8 @@ html {
   display: flex;
 }
 .main__section .mainImgs img {
+  overflow: hidden;
+  max-width: 1200px;
   margin-left: 1.5rem;
 }
 @media screen and (max-width: 768px) {
