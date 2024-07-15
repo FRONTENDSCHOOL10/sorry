@@ -1,0 +1,99 @@
+@use './../modules/' as *;
+
+@mixin logout-text {
+  font-size: 21.6px;
+  line-height: 160%;
+}
+
+@mixin logout-text-tablet {
+  font-size: 12px;
+  line-height: 160%;
+}
+
+.logout__popup {
+  width: 526px;
+  height: 192px;
+  background-color: $primary-color;
+  text-align: center;
+  padding-top: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include tablet {
+    padding-top: 16px;
+    width: 296px;
+    height: 110px;
+  }
+
+  @include mobile {
+    padding: 12px;
+    width: 196px;
+    height: 91px;
+  }
+}
+
+h2 {
+  @include logout-text;
+  color: $white;
+  padding-bottom: 36px;
+
+  @include tablet {
+    @include logout-text-tablet;
+    padding-bottom: 16px;
+  }
+
+  @include mobile {
+    @include logout-text-tablet;
+    padding-bottom: 12px;
+  }
+}
+
+.logout__button {
+  display: flex;
+  width: 173px;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mobile {
+    width: 146px;
+  }
+
+  button {
+    @include logout-text;
+    color: $gray-300;
+    background-color: transparent;
+    flex: 1;
+    border: none;
+    cursor: pointer;
+
+    @include tablet {
+      @include logout-text-tablet;
+    }
+
+    @include mobile {
+      @include logout-text-tablet;
+    }
+  }
+
+  .logoutCheck {
+    border-right: 1px solid $gray-700;
+    line-height: 20px;
+    padding-right: 8px;
+    margin-right: 8px;
+  }
+
+  .logoutCheck:hover {
+    font-weight: bold;
+  }
+
+  .logoutCance:hover {
+    font-weight: bold;
+  }
+}
