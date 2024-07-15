@@ -172,8 +172,6 @@
     display: flex;
 
     img {
-      overflow: hidden;
-      max-width: 1200px;
       margin-left: 1.5rem;
     }
 
@@ -185,15 +183,21 @@
   .mainImgsMobile {
     display: none;
 
+    width: 100%;
+    height: auto;
+
     img {
       margin-right: 0.75rem;
     }
-
     @include respond($tablet) {
       display: flex;
       width: 17.3125rem;
     }
   }
+}
+
+.swiper-slide img {
+  max-width: 50%;
 }
 
 .main__animation {
