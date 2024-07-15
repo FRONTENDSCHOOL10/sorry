@@ -60,11 +60,6 @@
   }
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  margin-top: 50px;
-}
-
 .originalContents {
   padding-top: 10rem;
   text-align: center;
@@ -180,6 +175,11 @@
     }
   }
 
+  .swiper-button-prev,
+  .swiper-button-next {
+    margin-top: 50px;
+  }
+
   .mainImgsMobile {
     display: none;
 
@@ -194,10 +194,6 @@
       width: 17.3125rem;
     }
   }
-}
-
-.swiper-slide img {
-  max-width: 50%;
 }
 
 .main__animation {
