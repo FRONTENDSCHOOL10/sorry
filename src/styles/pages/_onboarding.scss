@@ -162,61 +162,6 @@
   }
 }
 
-.main__section {
-  .mainImgs {
-    display: flex;
-
-    img {
-      margin-left: 1.5rem;
-    }
-
-    @include respond($tablet) {
-      display: none;
-    }
-  }
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    margin-top: 50px;
-  }
-
-  .mainImgsMobile {
-    display: none;
-
-    width: 100%;
-    height: auto;
-
-    img {
-      margin-right: 0.75rem;
-    }
-    @include respond($tablet) {
-      display: flex;
-      width: 17.3125rem;
-    }
-  }
-}
-
-.main__animation {
-  padding-top: 12.5rem;
-
-  .imgFlow1,
-  .imgFlow2 {
-    display: flex;
-
-    img {
-      margin-left: 1.25rem;
-
-      @include respond($tablet) {
-        width: 11.25rem;
-      }
-    }
-  }
-
-  .imgFlow1 {
-    margin-bottom: 0.75rem;
-  }
-}
-
 .main__forLogin {
   display: flex;
   justify-content: center;
@@ -246,4 +191,115 @@
   }
 
   margin-bottom: 18.75rem;
+}
+
+
+//////// swiper 코드 ////////
+//////// desktop ////////
+.mainImgs {
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    max-width: 907px;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 30px);
+    box-sizing: border-box;
+    margin-right: 10px;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    cursor: pointer;
+    color: #fff;
+    transform: translateY(-50%);
+  }
+
+  .swiper-button-prev {
+    left: 10px;
+  }
+
+  .swiper-button-next {
+    right: 10px;
+  }
+
+  @include respond($tablet) {
+    display: none;
+  }
+}
+
+.mainImgsMobile {
+  display: none;
+
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  .swiper-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    max-width: 277px;
+    box-sizing: border-box;
+    margin-right: 10px;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    cursor: pointer;
+    color: #fff;
+    transform: translateY(-50%);
+  }
+
+  .swiper-button-prev {
+    left: 10px;
+  }
+
+  .swiper-button-next {
+    right: 10px;
+  }
+
+  @include respond($tablet) {
+    display: block;
+  }
 }
