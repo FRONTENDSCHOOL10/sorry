@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         email: email,
       });
       alert('회원 가입이 완료되었습니다! 로그인 페이지로 이동합니다.');
-      location.href = '/src/pages/login';
+      location.href = '/src/pages/login/login';
     } catch (error) {
       console.error('error : ', error);
       alert('동일한 이메일이 존재합니다.');
