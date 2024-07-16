@@ -1,7 +1,7 @@
 const defaultAuthData = {
   isAuth: false,
   user: null,
-  token: "",
+  token: '',
 };
 
 export default defaultAuthData;
