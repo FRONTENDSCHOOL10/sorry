@@ -1,4 +1,5 @@
 import client from '/src/api/pocketbase';
+import '/src/styles/style.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
   const idField = document.querySelector('.signup__userId');
