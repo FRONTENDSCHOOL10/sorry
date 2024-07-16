@@ -1,5 +1,8 @@
+import { getStorage } from 'kind-tiger';
+
 const navProfile = document.querySelector('.nav__profile');
 const navProfileWrapper = document.querySelector('.nav__profile__wrapper');
+const userName = navProfileWrapper.querySelector('.user__name');
 let timer;
 
 function handleProfileLayer() {
@@ -17,3 +20,9 @@ navProfile.addEventListener('mouseover', handleProfileLayer);
 navProfile.addEventListener('mouseout', handleProfileLayerRemove);
 navProfileWrapper.addEventListener('mouseover', handleProfileLayer);
 navProfileWrapper.addEventListener('mouseout', handleProfileLayerRemove);
+
+if (localStorage.getItem('auth')) {
+  getStorage('auth').then(({ isAuth, user }) => {
+    if (isAuth) userName.textContent = user.username;
+  });
+}

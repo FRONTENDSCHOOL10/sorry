@@ -1,4 +1,4 @@
-import client from '/src/api/pocketbase';
+import pb from '/src/api/pocketbase';
 import '/src/styles/style.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -93,11 +93,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!isValidForm(memberid, password, passwordConfirm, email)) return;
 
     try {
-      await client
-        .collection('member')
-        .create({ memberid, password, passwordConfirm, email });
+      await pb.collection('users').create({
+        username: memberid,
+        password: password,
+        passwordConfirm: passwordConfirm,
+        email: email,
+      });
       alert('회원 가입이 완료되었습니다! 로그인 페이지로 이동합니다.');
-      location.href = '/';
+      location.href = '/src/pages/login';
     } catch (error) {
       console.error('error : ', error);
       alert('동일한 이메일이 존재합니다.');
@@ -108,14 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateButtonState() {
-    console.log(
-      'Checking fields:',
-      idField.value,
-      pwField.value,
-      pwConfirmField.value,
-      emailField.value,
-      agreeCheckbox.checked
-    );
     if (
       idField.value &&
       pwField.value &&
@@ -123,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
       emailField.value &&
       agreeCheckbox.checked
     ) {
-      console.log('입력값 입력 완료');
       registerBtn.classList.add('is--active');
     } else {
       registerBtn.classList.remove('is--active');
