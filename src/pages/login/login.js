@@ -6,16 +6,33 @@ const loginId = document.querySelector('.login__user__id');
 const loginPw = document.querySelector('.login__user__password');
 const loginBtn = document.querySelector('.login__button');
 
+const validateInputs = () => {
+  const username = loginId.value.trim();
+  const password = loginPw.value.trim();
+
+  if (username && password) {
+    loginBtn.classList.remove('disabled');
+    loginBtn.disabled = false;
+  } else {
+    loginBtn.classList.add('disabled');
+    loginBtn.disabled = true;
+  }
+};
+
+loginId.addEventListener('input', validateInputs);
+loginPw.addEventListener('input', validateInputs);
+
 loginBtn.addEventListener('click', (event) => {
   event.preventDefault();
-  const username = loginId.value;
-  const password = loginPw.value;
+  const username = loginId.value.trim();
+  const password = loginPw.value.trim();
 
   if (!username) {
     alert('아이디를 입력해 주세요!');
     return;
   } else if (!password) {
     alert('비밀번호를 입력해 주세요!');
+    return;
   } else {
     pb.collection('users')
       .authWithPassword(username, password)
