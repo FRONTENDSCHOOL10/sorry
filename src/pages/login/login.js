@@ -22,8 +22,7 @@ const validateInputs = () => {
 loginId.addEventListener('input', validateInputs);
 loginPw.addEventListener('input', validateInputs);
 
-loginBtn.addEventListener('click', (event) => {
-  event.preventDefault();
+const login = () => {
   const username = loginId.value.trim();
   const password = loginPw.value.trim();
 
@@ -58,5 +57,19 @@ loginBtn.addEventListener('click', (event) => {
           }
         }
       );
+  }
+};
+
+loginBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  login();
+});
+
+document.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    if (!loginBtn.disabled) {
+      login();
+    }
   }
 });
