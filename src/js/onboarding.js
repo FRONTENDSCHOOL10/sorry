@@ -1,3 +1,6 @@
+import '/src/styles/style.scss';
+import '/src/js/header.js';
+
 let swiperDesktop;
 let swiperMobile;
 import '/src/styles/style.scss';
