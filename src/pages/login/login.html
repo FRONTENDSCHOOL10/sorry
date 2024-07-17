@@ -1,112 +1,151 @@
 <!doctype html>
 <html lang="ko-KR">
+  <head>
+    <title>로그인</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/taing.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/src/pages/login/login.js"></script>
+  </head>
 
-<head>
-  <title>TAING</title>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/taing.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script type="module" src="/src/pages/login/login.js"></script>
-</head>
+  <body>
+    <!-- 헤더 영역 시작 -->
+    <header class="header">
+      <h1 class="header__logo">
+        <a class="header__logo__link" href="/">
+          <img src="/assets/desktop_logo.svg" alt="타잉" />
+        </a>
+      </h1>
+    </header>
+    <!-- 헤더 영역 끝 -->
 
-<body>
-  <!-- 헤더 영역 시작 -->
-  <header class="header">
-    <h1 class="header__logo">
-      <a class="header__logo__link" href="/">
-        <img src="/assets/desktop_logo.svg" alt="타잉" />
-      </a>
-    </h1>
-  </header>
-  <!-- 헤더 영역 끝 -->
-
-  <section class="login">
-    <div>
-      <h2>TVING ID 로그인</h2>
-      <form>
-        <input type="text" class="login__user__id" placeholder="아이디" />
-        <input type="password" class="login__user__password" placeholder="비밀번호" />
-      </form>
-      <!-- <div class="login__auto">
+    <section class="login">
+      <div>
+        <h2>TVING ID 로그인</h2>
+        <form>
+          <input type="text" class="login__user__id" placeholder="아이디" />
+          <input
+            type="password"
+            class="login__user__password"
+            placeholder="비밀번호"
+          />
+        </form>
+        <!-- <div class="login__auto">
         <input type="checkbox" class="login__auto__checkbox" />
         <img class="login__auto__image" src="/src/assets/icon/check.svg" alt="check_icon" />
         <a aria-label="자동 로그인 체크"> 자동로그인</a>
       </div> -->
-      <button type="submit" class="login__button" value="login__button">로그인하기</button>
-      <div class="login__find">
-        <a class="login__find__id" aria-label="아이디 찾기 페이지로 이동">아이디 찾기</a>
-        <a class="login__find__line">|</a>
-        <a class="login__find__password" aria-label="비밀번호 찾기 페이지로 이동">비밀번호 찾기</a>
+        <button
+          type="submit"
+          class="login__button disabled"
+          value="login__button"
+          disabled
+        >
+          로그인하기
+        </button>
+        <div class="login__find">
+          <a
+            class="login__find__id"
+            href="/src/pages/findId.html"
+            aria-label="아이디 찾기 페이지로 이동"
+            >아이디 찾기</a
+          >
+          <a class="login__find__line">|</a>
+          <a
+            class="login__find__password"
+            href="/src/pages/findPw.html"
+            aria-label="비밀번호 찾기 페이지로 이동"
+            >비밀번호 찾기</a
+          >
+        </div>
+        <section class="login__signUp">
+          <span>아직 계정이 없으신가요?</span>
+          <a
+            href="/src/pages/signup/signUp.html"
+            aria-label="회원가입 페이지로 이동"
+            >회원가입하기</a
+          >
+        </section>
       </div>
-      <section class="login__signUp">
-        <span>아직 계정이 없으신가요?</span>
-        <a href="/src/pages/signup/signUp.html" aria-label="회원가입 페이지로 이동">회원가입하기</a>
-      </section>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer">
-    <div class="util">
-      <div class="util__div">
-        <div class="goto">
-          <div>브랜드 바로가기 +</div>
-          <hr />
-          <div>그룹 계열사 바로가기 +</div>
+    <footer class="footer">
+      <div class="util">
+        <div class="util__div">
+          <div class="goto">
+            <div>브랜드 바로가기 +</div>
+            <hr />
+            <div>그룹 계열사 바로가기 +</div>
+          </div>
         </div>
+        <div class="info">
+          <div class="info__link">
+            <span>고객센터</span>
+            <span>이용약관</span>
+            <span>개인정보처리방침</span>
+            <span>청소년 보호정책</span>
+            <span>법적고지</span>
+            <span>이벤트</span>
+            <span>인재채용</span>
+          </div>
+          <div class="info__adress">
+            <p>
+              <span>대표이사 : YANG JIEUL</span>
+              <span><a href="">사업자정보확인</a></span>
+              <span>사업자등록번호 : 188-88-01893</span>
+              <span>통신판매신고번호 : 2020-서울마포-3641호</span>
+            </p>
+            <p>
+              <span
+                >사업장 : 서울특별지 마포구 상암산로 34, DMC디지털큐브
+                15층(상암동)</span
+              >
+              <span>호스팅사업자 : 씨제이올리브네트웍스(주)</span>
+            </p>
+            <p>
+              <span><a href="">고객문의 바로가기</a></span>
+              <span><a href="">대표메일 : taing@cj.net</a></span>
+              <span
+                ><a href=""
+                  >고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무)</a
+                ></span
+              >
+            </p>
+            <p>
+              <span
+                >ENM 시청자 상담식 (편성 문의 및 시청자 의견) :
+                080-080-0780</span
+              >
+              <span>Mnet 고객센터(반송편성문의) : 1855-1631</span>
+            </p>
+          </div>
+        </div>
+        <ul class="community">
+          <li class="youtube">
+            <a href=""
+              ><img src="/src/assets/icon/Youtube.png" alt="youtube"
+            /></a>
+          </li>
+          <li class="instargram">
+            <a href=""
+              ><img src="/src/assets/icon/Instagram.png" alt="instagram"
+            /></a>
+          </li>
+          <li class="twitter">
+            <a href=""
+              ><img src="/src/assets/icon/Twitter.png" alt="twitter"
+            /></a>
+          </li>
+          <li class="facebook">
+            <a href=""
+              ><img src="/src/assets/icon/Facebook.png" alt="facebook"
+            /></a>
+          </li>
+        </ul>
       </div>
-      <div class="info">
-        <div class="info__link">
-          <span>고객센터</span>
-          <span>이용약관</span>
-          <span>개인정보처리방침</span>
-          <span>청소년 보호정책</span>
-          <span>법적고지</span>
-          <span>이벤트</span>
-          <span>인재채용</span>
-        </div>
-        <div class="info__adress">
-          <p>
-            <span>대표이사 : YANG JIEUL</span>
-            <span><a href="">사업자정보확인</a></span>
-            <span>사업자등록번호 : 188-88-01893</span>
-            <span>통신판매신고번호 : 2020-서울마포-3641호</span>
-          </p>
-          <p>
-            <span>사업장 : 서울특별지 마포구 상암산로 34, DMC디지털큐브
-              15층(상암동)</span>
-            <span>호스팅사업자 : 씨제이올리브네트웍스(주)</span>
-          </p>
-          <p>
-            <span><a href="">고객문의 바로가기</a></span>
-            <span><a href="">대표메일 : taing@cj.net</a></span>
-            <span><a href="">고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무)</a></span>
-          </p>
-          <p>
-            <span>ENM 시청자 상담식 (편성 문의 및 시청자 의견) :
-              080-080-0780</span>
-            <span>Mnet 고객센터(반송편성문의) : 1855-1631</span>
-          </p>
-        </div>
+      <div class="copyright">
+        <span>Copyright &copy; 주식회사 타잉 All right reservd.</span>
       </div>
-      <ul class="community">
-        <li class="youtube">
-          <a href=""><img src="/src/assets/icon/Youtube.png" alt="youtube" /></a>
-        </li>
-        <li class="instargram">
-          <a href=""><img src="/src/assets/icon/Instagram.png" alt="instagram" /></a>
-        </li>
-        <li class="twitter">
-          <a href=""><img src="/src/assets/icon/Twitter.png" alt="twitter" /></a>
-        </li>
-        <li class="facebook">
-          <a href=""><img src="/src/assets/icon/Facebook.png" alt="facebook" /></a>
-        </li>
-      </ul>
-    </div>
-    <div class="copyright">
-      <span>Copyright &copy; 주식회사 타잉 All right reservd.</span>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
