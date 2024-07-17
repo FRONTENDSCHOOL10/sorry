@@ -1,4 +1,7 @@
+import '/src/styles/style.scss';
+
 document.addEventListener('DOMContentLoaded', () => {
+
    const searchInput = document.getElementById('searchInput');
    const searchButton = document.getElementById('searchButton');
    const recentList = document.getElementById('searchRecent');
@@ -81,4 +84,5 @@ document.addEventListener('DOMContentLoaded', () => {
    clearAllButton.addEventListener('click', clearAllSearchTerms);
 
    loadRecentSearches(); // 페이지 로드 시 최근 검색어를 불러와서 표시
+
 });
