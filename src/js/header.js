@@ -35,7 +35,7 @@ headerTemplate.innerHTML = `
       </ul>
       <div class="header__nav__add">
         <div class="nav__add__wrapper">
-          <a href="/src/pages/search" class="nav__search"
+          <a href="/src/pages/search.html" class="nav__search"
             ><img src="/assets/desktop-search.svg" alt="검색"
           /></a>
 
