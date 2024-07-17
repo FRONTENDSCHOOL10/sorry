@@ -13,7 +13,7 @@ export default defineConfig({
         findid: resolve(__dirname, './src/pages/findId.html'),
         findpw: resolve(__dirname, './src/pages/findPw.html'),
         login: resolve(__dirname, './src/pages/login/login.html'),
-        logout: resolve(__dirname, './src/pages/logout.html'),
+        logout: resolve(__dirname, './src/pages/logout/logout.html'),
         onboarding: resolve(__dirname, './src/pages/onboarding.html'),
         popup: resolve(__dirname, './src/pages/popup.html'),
         profiles: resolve(__dirname, './src/pages/profiles.html'),
