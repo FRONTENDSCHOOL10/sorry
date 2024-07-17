@@ -61,7 +61,7 @@ headerTemplate.innerHTML = `
               <li><a href="/">이용권</a></li>
               <li><a href="/">쿠폰등록</a></li>
               <li><a href="/">고객센터</a></li>
-              <li><a href="/src/pages/onboarding">로그아웃</a></li>
+              <li><a href="/src/pages/logout/logout">로그아웃</a></li>
             </ul>
           </div>
         </div>
