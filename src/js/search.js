@@ -1,4 +1,5 @@
 import '/src/styles/style.scss';
+import img from '/src/assets/icon/x.svg';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // 삭제 버튼 추가
             const button = document.createElement('button');
             button.classList.add('removeButton');
-            button.innerHTML = '<img src="/src/assets/icon/X.svg" alt="삭제">';
+            button.innerHTML = `<img src="${img}" alt="삭제">`;
             button.addEventListener('click', () => {
                removeSearchTerm(term);
             });
