@@ -1,5 +1,6 @@
 import '/src/styles/style.scss';
 import img from '/src/assets/icon/x.svg';
+import '/src/js/header.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
