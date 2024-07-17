@@ -1,0 +1,1 @@
+import"./style-BCY5TPei.js";import{d as t}from"./defaultAuthData-KuEUxMHY.js";import{a as o,s as e}from"./storage-SRs95MA1.js";const a=o(".logoutCheck");a.addEventListener("click",()=>{localStorage.removeItem("pocketbase_auth"),e("auth",t).then(()=>{location.href="/src/pages/onboarding"})});
