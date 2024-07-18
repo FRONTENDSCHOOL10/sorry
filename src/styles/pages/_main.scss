@@ -11,10 +11,14 @@ html {
 
 .main {
   h3 {
-    font-size: 1.666rem;
+    font-size: 1.6875rem;
     color: #fff;
     font-weight: 700;
     margin-top: 4.375rem;
+
+    @include mobile {
+      font-size: 1.25rem;
+    }
   }
 
 
@@ -368,6 +372,12 @@ html {
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-  width: 10%;
+  width: 100px;
   bottom: 30px;
+  left: 30px;
+
+  @include mobile {
+    bottom: 20px;
+    left: 20px;
+  }
 }
