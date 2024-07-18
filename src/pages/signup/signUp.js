@@ -1,5 +1,7 @@
 import pb from '/src/api/pocketbase';
 import '/src/styles/style.scss';
+import '/src/js/header.js';
+import '/src/js/footer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const idField = document.querySelector('.signup__userId');
