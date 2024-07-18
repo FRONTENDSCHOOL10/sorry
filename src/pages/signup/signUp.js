@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
       location.href = '/src/pages/login/login.html';
     } catch (error) {
       console.error('error : ', error);
-      alert('동일한 이메일이 존재합니다.');
+      alert('동일한 아이디가 존재합니다.');
       idField.value = '';
       pwField.value = '';
       emailField.value = '';
