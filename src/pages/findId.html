@@ -1,113 +1,39 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/taing.ico" />
-    <script type="module" src="/src/js/header.js"></script>
-    <title>아이디 찾기</title>
-  </head>
 
-  <body>
-    <mini-header-component></mini-header-component>
-    <section class="findid">
-      <h2 class="findid__title">아이디 찾기</h2>
-      <p class="findid__subtitle">이메일로 찾기</p>
-      <span class="findid__text">가입 시 등록한 이메일을 입력해주세요.</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/taing.ico" />
+  <script type="module" src="/src/js/header.js"></script>
+  <script type="module" src="/src/js/footer.js"></script>
+  <title>아이디 찾기</title>
+</head>
 
-      <form action="">
-        <input type="email" class="findid__user__email" placeholder="이메일" />
-        <button type="button" class="findid__correct">확인</button>
-      </form>
+<body>
+  <mini-header-component></mini-header-component>
+  <section class="findid">
+    <h2 class="findid__title">아이디 찾기</h2>
+    <p class="findid__subtitle">이메일로 찾기</p>
+    <span class="findid__text">가입 시 등록한 이메일을 입력해주세요.</span>
 
-      <p class="findid__or">또는</p>
+    <form action="">
+      <input type="email" class="findid__user__email" placeholder="이메일" />
+      <button type="button" class="findid__correct">확인</button>
+    </form>
 
-      <div class="findid__search">
-        <p class="findid__self">본인 인증으로 찾기</p>
-        <p class="findid__self__find">
-          이미 본인인증이 완료된 계정에 한하여 아이디 찾기가 가능합니다.
-        </p>
-      </div>
-      <button type="button" class="findid__button">본인인증하기</button>
-    </section>
+    <p class="findid__or">또는</p>
 
-    <footer class="footer">
-      <div class="util">
-        <div class="util__div">
-          <div class="goto">
-            <div>브랜드 바로가기 +</div>
-            <hr />
-            <div>그룹 계열사 바로가기 +</div>
-          </div>
-        </div>
-        <div class="info">
-          <div class="info__link">
-            <span>고객센터</span>
-            <span>이용약관</span>
-            <span>개인정보처리방침</span>
-            <span>청소년 보호정책</span>
-            <span>법적고지</span>
-            <span>이벤트</span>
-            <span>인재채용</span>
-          </div>
-          <div class="info__adress">
-            <p>
-              <span>대표이사 : YANG JIEUL</span>
-              <span><a href="">사업자정보확인</a></span>
-              <span>사업자등록번호 : 188-88-01893</span>
-              <span>통신판매신고번호 : 2020-서울마포-3641호</span>
-            </p>
-            <p>
-              <span
-                >사업장 : 서울특별지 마포구 상암산로 34, DMC디지털큐브
-                15층(상암동)</span
-              >
-              <span>호스팅사업자 : 씨제이올리브네트웍스(주)</span>
-            </p>
-            <p>
-              <span><a href="">고객문의 바로가기</a></span>
-              <span><a href="">대표메일 : taing@cj.net</a></span>
-              <span
-                ><a href=""
-                  >고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무)</a
-                ></span
-              >
-            </p>
-            <p>
-              <span
-                >ENM 시청자 상담식 (편성 문의 및 시청자 의견) :
-                080-080-0780</span
-              >
-              <span>Mnet 고객센터(반송편성문의) : 1855-1631</span>
-            </p>
-          </div>
-        </div>
-        <ul class="community">
-          <li class="youtube">
-            <a href=""
-              ><img src="/src/assets/icon/Youtube.png" alt="youtube"
-            /></a>
-          </li>
-          <li class="instargram">
-            <a href=""
-              ><img src="/src/assets/icon/Instagram.png" alt="instagram"
-            /></a>
-          </li>
-          <li class="twitter">
-            <a href=""
-              ><img src="/src/assets/icon/Twitter.png" alt="twitter"
-            /></a>
-          </li>
-          <li class="facebook">
-            <a href=""
-              ><img src="/src/assets/icon/Facebook.png" alt="facebook"
-            /></a>
-          </li>
-        </ul>
-      </div>
-      <div class="copyright">
-        <span>Copyright &copy; 주식회사 타잉 All right reservd.</span>
-      </div>
-    </footer>
-  </body>
+    <div class="findid__search">
+      <p class="findid__self">본인 인증으로 찾기</p>
+      <p class="findid__self__find">
+        이미 본인인증이 완료된 계정에 한하여 아이디 찾기가 가능합니다.
+      </p>
+    </div>
+    <button type="button" class="findid__button">본인인증하기</button>
+  </section>
+
+  <footer-component></footer-component>
+</body>
+
 </html>
