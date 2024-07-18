@@ -93,6 +93,7 @@
 }
 
 .contentButton {
+  font-style: $base-font-family;
   @include centered-flex;
   @include medium-text;
   width: 31.625rem;
