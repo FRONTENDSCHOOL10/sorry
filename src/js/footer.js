@@ -72,16 +72,16 @@ community().then((urlList) => {
         </div>
         <ul class="community">
           <li class="youtube">
-            <a href=""><img src="${urlList.youtube || '/src/assets/icon/Youtube.png'}" alt="유튜브 바로가기" /></a>
+            <a href="https://www.youtube.com/c/TVING_official"><img src="${urlList.youtube || '/src/assets/icon/Youtube.png'}" alt="유튜브 바로가기" /></a>
           </li>
           <li class="instargram">
-            <a href=""><img src="${urlList.instagram || '/src/assets/icon/Instagram.png'}" alt="인스타그램 바로가기" /></a>
+            <a href="https://www.instagram.com/tving.official/"><img src="${urlList.instagram || '/src/assets/icon/Instagram.png'}" alt="인스타그램 바로가기" /></a>
           </li>
           <li class="twitter">
-            <a href=""><img src="${urlList.twitter || '/src/assets/icon/Twitter.png'}" alt="트위터 바로가기" /></a>
+            <a href="https://twitter.com/tvingdotcom"><img src="${urlList.twitter || '/src/assets/icon/Twitter.png'}" alt="트위터 바로가기" /></a>
           </li>
           <li class="facebook">
-            <a href=""><img src="${urlList.facebook || '/src/assets/icon/Facebook.png'}" alt="페이스북 바로가기" /></a>
+            <a href="https://www.facebook.com/CJTVING/"><img src="${urlList.facebook || '/src/assets/icon/Facebook.png'}" alt="페이스북 바로가기" /></a>
           </li>
         </ul>
       </div>
