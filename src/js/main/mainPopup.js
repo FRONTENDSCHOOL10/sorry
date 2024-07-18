@@ -1,6 +1,5 @@
 function removePopup() {
   const popup = document.querySelector('.mainPopup');
-  document.body.classList.remove('noScroll');
   if (popup) {
     popup.remove();
   }
@@ -47,6 +46,5 @@ window.addEventListener('DOMContentLoaded', () => {
     if (popup) {
       popup.style.display = 'none';
     }
-    document.body.classList.remove('noScroll');
   }
 });
