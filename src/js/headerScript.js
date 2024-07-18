@@ -17,6 +17,11 @@ export default function headerScript(shadowRoot) {
   navProfile.addEventListener('click', (e) => {
     e.preventDefault();
   });
+  navProfile.addEventListener('keyup', (e) => {
+    if (e.key === 'Enter') {
+      handleProfileLayer();
+    }
+  });
   navProfile.addEventListener('mouseover', handleProfileLayer);
   navProfile.addEventListener('mouseout', handleProfileLayerRemove);
   navProfileWrapper.addEventListener('mouseover', handleProfileLayer);
