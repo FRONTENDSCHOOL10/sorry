@@ -1,6 +1,7 @@
 @use './../modules/' as *;
 @use 'footer' as *;
 @use './mainpages/banner' as *;
+@use './mainpages/popup' as *;
 
 
 body,
@@ -8,108 +9,23 @@ html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-}
 
-.main {
-  h3 {
-    font-size: 1.666rem;
-    color: #fff;
-    font-weight: 700;
-    margin-top: 4.375rem;
-  }
 }
 
 .main_section {
   padding: 0 70px;
 }
 
-.mainPopup {
-  position: fixed;
-  top: 0px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  background-color: #000;
-  z-index: 500;
 
-
-
-
-  &__container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    &__buttons {
-      display: flex;
-      align-items: center;
-
-      button {
-        background-color: #000;
-        width: 50%;
-        height: 60px;
-        font-size: larger;
-        color: #fff;
-      }
-
-      hr {
-        height: 25px;
-        border-bottom-width: 1px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-      }
-
-      img {
-        width: 586px;
-        height: auto;
-      }
-    }
-  }
-
-  @include desktop {
-
-    &__container,
-    img {
-      width: 586px;
-      height: auto;
-    }
-
-
-  }
-
-  @include tablet {
-
-    &__container,
-    img {
-      width: 328px;
-      height: auto;
-    }
-
-    button {
-      font-size: small;
-    }
-
-  }
-
-  @include mobile {
-
-    &__container,
-    img {
-      width: 252px;
-      height: auto;
-    }
-
-    button {
-      font-size: small;
-    }
-
-  }
-}
 
 .contents {
+  h3 {
+    font-size: 1.666rem;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 4.375rem;
+  }
+
   position: relative;
   width: 100%;
   height: auto;
@@ -143,7 +59,7 @@ html {
   .swiper-button-prev,
   .swiper-button-next {
     position: absolute;
-    top: 50%;
+    top: 65%;
     transform: translateY(-50%);
     z-index: 10;
     cursor: pointer;
@@ -206,7 +122,7 @@ html {
 
   .swiper-button-prev,
   .swiper-button-next {
-    top: 40%;
+    top: 70%;
   }
 }
 
@@ -308,7 +224,7 @@ html {
 
   .swiper-button-prev,
   .swiper-button-next {
-    top: 45%;
+    top: 55%;
   }
 }
 
@@ -344,7 +260,7 @@ html {
 
   .swiper-button-prev,
   .swiper-button-next {
-    top: 35%;
+    top: 75%;
   }
 }
 

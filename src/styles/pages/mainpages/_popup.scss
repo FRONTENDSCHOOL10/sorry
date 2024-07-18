@@ -1,0 +1,88 @@
+@use './../../modules/' as *;
+
+
+.mainPopup {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #000;
+  z-index: 500;
+
+
+
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &__buttons {
+      display: flex;
+      align-items: center;
+
+      button {
+        background-color: #000;
+        width: 50%;
+        height: 60px;
+        font-size: larger;
+        color: #fff;
+      }
+
+      hr {
+        height: 25px;
+        border-bottom-width: 1px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      img {
+        width: 586px;
+        height: auto;
+      }
+    }
+  }
+
+  @include desktop {
+
+    &__container,
+    img {
+      width: 586px;
+      height: auto;
+    }
+
+
+  }
+
+  @include tablet {
+
+    &__container,
+    img {
+      width: 328px;
+      height: auto;
+    }
+
+    button {
+      font-size: small;
+    }
+
+  }
+
+  @include mobile {
+
+    &__container,
+    img {
+      width: 252px;
+      height: auto;
+    }
+
+    button {
+      font-size: small;
+    }
+
+  }
+}
