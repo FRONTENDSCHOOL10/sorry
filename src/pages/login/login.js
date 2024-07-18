@@ -3,6 +3,8 @@ import '/src/js/header.js';
 import '/src/js/footer.js';
 import pb from '/src/api/pocketbase';
 import { getStorage, setStorage } from 'kind-tiger';
+import '/src/js/header.js';
+import '/src/js/footer.js';
 
 const loginId = document.querySelector('.login__user__id');
 const loginPw = document.querySelector('.login__user__password');

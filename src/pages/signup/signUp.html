@@ -1,120 +1,92 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <title>회원가입</title>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/taing.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="/src/pages/signup/signUp.js"></script>
-  </head>
 
-  <body>
-    <mini-header-component></mini-header-component>
+<head>
+  <title>티빙 회원가입</title>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/taing.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="module" src="/src/pages/signup/signUp.js"></script>
+</head>
 
-    <div class="signup">
-      <h2 class="signup__title">티빙 회원가입</h2>
-      <span class="signup__span"
-        >아이디와 이메일로 간편하게 티빙을 시작하세요!</span
-      >
+<body>
+  <mini-header-component></mini-header-component>
 
-      <form action="" class="signup__form">
-        <input type="text" class="signup__userId" placeholder="아이디" />
-        <p class="id__error">영문 또는 영문, 숫자 조합 6~12자리</p>
-        <input
-          type="password"
-          class="signup__user__password"
-          placeholder="비밀번호"
-        />
-        <p class="pw__error">영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15자리</p>
-        <input
-          type="password"
-          class="signup__user__passwordConfirm"
-          placeholder="비밀번호 확인"
-        />
-        <input type="email" class="signup__user__email" placeholder="이메일" />
-      </form>
+  <div class="signup">
+    <h2 class="signup__title">티빙 회원가입</h2>
+    <span class="signup__span">아이디와 이메일로 간편하게 티빙을 시작하세요!</span>
 
-      <section class="signup__checkbox">
-        <div class="signup__checkbox__all">
-          <input type="checkbox" id="checkbox" class="agree__checkbox" />
-          <label for="checkbox" class="check__all"
-            ><p>[필수] 서비스 이용 약관 동의</p></label
-          >
-        </div>
+    <form action="" class="signup__form">
+      <input type="text" class="signup__userId" placeholder="아이디" />
+      <p class="id__error">영문 또는 영문, 숫자 조합 6~12자리</p>
+      <input type="password" class="signup__user__password" placeholder="비밀번호" />
+      <p class="pw__error">영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15자리</p>
+      <input type="password" class="signup__user__passwordConfirm" placeholder="비밀번호 확인" />
+      <input type="email" class="signup__user__email" placeholder="이메일" />
+    </form>
 
-        <!-- <section class="signup__checkbox__list">
-          <div>
-            <input type="checkbox" class="checkbox" />
-            <img
-              src="/src/assets/icon/check-2.svg"
-              alt="essential_check_icon"
-            />
-            <a class="sub__text">만 14세 이상입니다.</a>
-          </div>
+    <section class="signup__checkbox">
+      <div class="signup__checkbox__all">
+        <input type="checkbox" id="checkbox_all" class="agree__checkbox" />
+        <label for="checkbox_all" class="check__all">
+          <p>모두 동의합니다</p>
+        </label>
+      </div>
+      <div class="signup__checkbox1">
+        <input type="checkbox" id="checkbox1" class="agree__checkbox1" />
+        <label for="checkbox1" class="check__essential">
+          <p>만 14세 이상입니다.</p>
+        </label>
+      </div>
+      <div class="signup__checkbox1">
+        <input type="checkbox" id="checkbox2" class="agree__checkbox1" />
+        <label for="checkbox2" class="check__essential">
+          <p>[필수] 서비스 이용 약관 동의</p>
+        </label>
+      </div>
+      <div class="signup__checkbox1">
+        <input type="checkbox" id="checkbox3" class="agree__checkbox1" />
+        <label for="checkbox3" class="check__essential">
+          <p>[필수] 개인정보 수집 및 서비스 활용 동의</p>
+        </label>
+      </div>
+      <div class="signup__checkbox1">
+        <input type="checkbox" id="checkbox4" class="agree__checkbox1" />
+        <label for="checkbox4" class="check__essential">
+          <p>[필수] 채널 홈페이지 개인정보 제 3자 제공 동의</p>
+        </label>
+      </div>
+      <div class="signup__checkbox2">
+        <input type="checkbox" id="checkbox5" class="agree__checkbox2" />
+        <label for="checkbox5" class="check__option">
+          <p>[선택] 개인정보 제 3자 제공 동의</p>
+        </label>
+      </div>
+      <div class="signup__checkbox2">
+        <input type="checkbox" id="checkbox6" class="agree__checkbox2" />
+        <label for="checkbox6" class="check__option">
+          <p>[선택] 개인정보 수집 및 서비스 활용 동의</p>
+        </label>
+      </div>
+      <div class="signup__checkbox3">
+        <input type="checkbox" id="checkbox7" class="agree__checkbox2" />
+        <label for="checkbox7" class="check__option">
+          <p>[선택] 마케팅 정보 SMS 수신 동의</p>
+        </label>
+      </div>
+      <div class="signup__checkbox3">
+        <input type="checkbox" id="checkbox8" class="agree__checkbox2" />
+        <label for="checkbox8" class="check__option">
+          <p>[선택] 마케팅 정보 이메일 수신 동의</p>
+        </label>
+      </div>
+    </section>
+    <button type="button" class="signup__button" value="signup__button" aria-label="회원가입 버튼">
+      가입하기
+    </button>
+  </div>
 
-          <div>
-            <input type="checkbox" class="checkbox" />
-            <img
-              src="/src/assets/icon/check-2.svg"
-              alt="essential_check_icon"
-            />
-            <a class="sub__text">[필수] 서비스 이용약관 동의</a>
-          </div>
+  <footer-component></footer-component>
+</body>
 
-          <div>
-            <input type="checkbox" class="checkbox" />
-            <img
-              src="/src/assets/icon/check-2.svg"
-              alt="essential_check_icon"
-            />
-            <a class="sub__text">[필수] 개인정보 수집 및 서비스활용 동의</a>
-          </div>
-
-          <div>
-            <input type="checkbox" class="checkbox" />
-            <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
-            <a class="sub__text"
-              >[필수] 채널 홈페이지 개인정보 제 3자 제공 동의</a
-            >
-          </div>
-
-          <div>
-            <input type="checkbox" class="checkbox" />
-            <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
-            <a class="sub__text">[선택] 개인정보 제3자 제공 동의</a>
-          </div>
-
-          <div>
-            <input type="checkbox" class="checkbox" />
-            <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
-            <a class="sub__text">[선택] 개인정보 수집 및 서비스 활용 동의</a>
-          </div>
-
-          <section class="signup__checkbox__list2">
-            <div>
-              <input type="checkbox" class="checkbox" />
-              <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
-              <a class="sub__text">[선택] 마케팅정보 SMS 수신 동의</a>
-            </div>
-
-            <div>
-              <input type="checkbox" class="checkbox" />
-              <img src="/src/assets/icon/check-2.svg" alt="select_check_icon" />
-              <a class="sub__text">[선택] 마케팅 정보 이메일 수신 동의</a>
-            </div>
-          </section>
-        </section> -->
-      </section>
-      <button
-        type="button"
-        class="signup__button"
-        value="signup__button"
-        aria-label="회원가입 버튼"
-      >
-        가입하기
-      </button>
-    </div>
-
-    <footer-component></footer-component>
-  </body>
 </html>

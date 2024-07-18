@@ -11,7 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
   );
   const emailField = document.querySelector('.signup__user__email');
   const registerBtn = document.querySelector('.signup__button');
-  const agreeCheckbox = document.querySelector('.agree__checkbox');
+  const agreeCheckboxAll = document.querySelector('#checkbox_all');
+  const agreeCheckboxes = document.querySelectorAll(
+    '.agree__checkbox1, .agree__checkbox2'
+  );
+  const agreeCheckbox6 = document.querySelector('#checkbox6');
+  const agreeCheckbox7 = document.querySelector('#checkbox7');
+  const agreeCheckbox8 = document.querySelector('#checkbox8');
   const idError = document.querySelector('.id__error');
   const pwError = document.querySelector('.pw__error');
 
@@ -83,6 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
       return false;
     }
 
+    if (!Array.from(agreeCheckboxes).every((checkbox) => checkbox.checked)) {
+      alert('모든 필수 약관에 동의해야 합니다.');
+      return false;
+    }
+
     return true;
   }
 
@@ -102,10 +113,10 @@ document.addEventListener('DOMContentLoaded', () => {
         email: email,
       });
       alert('회원 가입이 완료되었습니다! 로그인 페이지로 이동합니다.');
-      location.href = '/src/pages/login/login';
+      location.href = '/src/pages/login/login.html';
     } catch (error) {
       console.error('error : ', error);
-      alert('동일한 이메일이 존재합니다.');
+      alert('동일한 아이디가 존재합니다.');
       idField.value = '';
       pwField.value = '';
       emailField.value = '';
@@ -113,12 +124,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateButtonState() {
+    const allChecked = Array.from(agreeCheckboxes).every(
+      (checkbox) => checkbox.checked
+    );
     if (
       idField.value &&
       pwField.value &&
       pwConfirmField.value &&
       emailField.value &&
-      agreeCheckbox.checked
+      allChecked
     ) {
       registerBtn.classList.add('is--active');
     } else {
@@ -126,13 +140,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  agreeCheckboxAll.addEventListener('change', (e) => {
+    const isChecked = e.target.checked;
+    agreeCheckboxes.forEach((checkbox) => {
+      checkbox.checked = isChecked;
+    });
+    updateButtonState();
+  });
+
+  agreeCheckbox6.addEventListener('change', (e) => {
+    const isChecked = e.target.checked;
+    agreeCheckbox7.checked = isChecked;
+    agreeCheckbox8.checked = isChecked;
+    updateButtonState();
+  });
+
+  agreeCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', () => {
+      const allChecked = Array.from(agreeCheckboxes).every((cb) => cb.checked);
+      agreeCheckboxAll.checked = allChecked;
+      updateButtonState();
+    });
+  });
+
   setFieldEventListeners(
     idField,
     idError,
     idCheck,
     '영문 또는 영문, 숫자 조합 6~12자리'
   );
-
   setFieldEventListeners(
     pwField,
     pwError,
@@ -140,7 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
     '영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15자리'
   );
 
-  agreeCheckbox.addEventListener('change', updateButtonState);
   registerBtn.addEventListener('click', register);
 
   updateButtonState();
