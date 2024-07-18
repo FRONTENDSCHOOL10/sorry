@@ -18,6 +18,13 @@
     right: 0;
     height: 300px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    z-index: 3;
+  }
+
+  .swiper-wrapper {
+    position: relative;
+    z-index: 0;
+    /* ::after 요소가 이미지 위에 위치하도록 조정 */
   }
 
   @include desktop {

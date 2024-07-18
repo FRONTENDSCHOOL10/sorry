@@ -1,3 +1,17 @@
+const swiper_case0 = new Swiper('.swiper-container__case0', {
+  slidesPerView: 1,
+  loop: true,
+
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
+
 const swiper_case1 = new Swiper('.swiper-container__case1', {
   slidesPerView: 7.3, // 기본적으로 큰 화면에서 보여지는 슬라이드 개수
   spaceBetween: 10, // 슬라이드 간의 간격
