@@ -33,7 +33,7 @@ html {
 
   span,
   div {
-    color: #d9d9d9
+    color: #d9d9d9;
   }
 
   .swiper-wrapper {
@@ -205,7 +205,7 @@ html {
     }
 
     div:last-child {
-      color: #6b6b6b
+      color: #6b6b6b;
     }
 
     margin-left: 0.625rem;
@@ -234,7 +234,6 @@ html {
   display: block;
 
   img {
-    @include desktop {}
 
     @include tablet {
       height: 61px;
