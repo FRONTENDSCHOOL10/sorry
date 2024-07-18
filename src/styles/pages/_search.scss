@@ -73,6 +73,53 @@
     @include respond_search($mobile) {
       display: none;
     }
+    li {
+      @include h3-style;
+      @include respond_search($tablet) {
+        font-size: 0.75rem;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .removeButton {
+    width: 16px;
+    height: 16px;
+    background: transparent;
+
+    img {
+      width: 16px;
+      margin-left: 10px;
+    }
+
+    @include respond_search($tablet) {
+      img {
+        width: 8px;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .clearAllButton {
+    @include h3-style();
+    color: $gray-600;
+    background: transparent;
+
+    @include respond_search($tablet) {
+      font-size: 0.75rem;
+      line-height: 1.6;
+    }
+
+    img {
+      margin-top: 5px;
+      margin-left: 10px;
+
+      @include respond_search($tablet) {
+        width: 10px;
+        margin-top: 3px;
+        margin-left: 5px;
+      }
+    }
   }
   .searchRecent,
   .searchPopular {
@@ -135,6 +182,10 @@
           font-size: 0.75rem;
           line-height: 1.5;
         }
+      }
+
+      h3:hover {
+        font-weight: bold;
       }
     }
   }

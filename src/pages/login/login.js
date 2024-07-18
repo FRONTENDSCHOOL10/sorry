@@ -1,4 +1,5 @@
 import '/src/styles/style.scss';
+import '/src/js/header.js';
 import pb from '/src/api/pocketbase';
 import { getStorage, setStorage } from 'kind-tiger';
 import '/src/js/header.js';
