@@ -2,7 +2,6 @@
 @use 'footer' as *;
 @use './mainpages/banner' as *;
 
-
 body,
 html {
   margin: 0;
@@ -16,6 +15,14 @@ html {
     color: #fff;
     font-weight: 700;
     margin-top: 4.375rem;
+  }
+
+  li {
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+    &:hover {
+      transform: translateY(-10px);
+    }
   }
 }
 
@@ -33,9 +40,6 @@ html {
   display: flex;
   background-color: #000;
   z-index: 500;
-
-
-
 
   &__container {
     position: absolute;
@@ -70,18 +74,14 @@ html {
   }
 
   @include desktop {
-
     &__container,
     img {
       width: 586px;
       height: auto;
     }
-
-
   }
 
   @include tablet {
-
     &__container,
     img {
       width: 328px;
@@ -91,11 +91,9 @@ html {
     button {
       font-size: small;
     }
-
   }
 
   @include mobile {
-
     &__container,
     img {
       width: 252px;
@@ -105,7 +103,6 @@ html {
     button {
       font-size: small;
     }
-
   }
 }
 
@@ -117,7 +114,7 @@ html {
 
   span,
   div {
-    color: #d9d9d9
+    color: #d9d9d9;
   }
 
   .swiper-wrapper {
@@ -135,7 +132,7 @@ html {
     display: flex;
   }
 
-  .swiper-slide>img {
+  .swiper-slide > img {
     width: 100%;
     height: auto;
   }
@@ -203,13 +200,11 @@ html {
 
 .quickView,
 .liveProgram {
-
   .swiper-button-prev,
   .swiper-button-next {
     top: 40%;
   }
 }
-
 
 .popularLive__name,
 .liveProgram__ul__info {
@@ -260,10 +255,7 @@ html {
       width: auto;
     }
   }
-
 }
-
-
 
 .liveProgram__ul__info {
   bottom: -5rem;
@@ -289,12 +281,11 @@ html {
     }
 
     div:last-child {
-      color: #6b6b6b
+      color: #6b6b6b;
     }
 
     margin-left: 0.625rem;
   }
-
 }
 
 .onlyTving {
@@ -303,7 +294,6 @@ html {
   &__ul {
     margin-top: 1.25rem;
     display: flex;
-
   }
 
   .swiper-button-prev,
@@ -318,7 +308,8 @@ html {
   display: block;
 
   img {
-    @include desktop {}
+    @include desktop {
+    }
 
     @include tablet {
       height: 61px;
@@ -328,7 +319,6 @@ html {
       height: 30px;
     }
   }
-
 
   img {
     height: 100%;
